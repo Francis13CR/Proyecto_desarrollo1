@@ -1,0 +1,81 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+}
+
+.inner-grid {
+    width: 80%;
+    margin: auto;
+}
+
+.background-img {
+    width: 100%;
+    background: url(../img/fondo.png);
+    background-size: cover;
+}
+
+.form-item{
+    width: 45%;
+    padding: .8em;
+    border: 1px solid #000000;
+}
+
+.title {
+    font-family: 'Book Antiqua', arial;
+    font-size: 3em;
+    font-style: italic;
+    color: #603644;
+    text-align: center;
+}
+
+.email-text {
+    display: inline-block;
+    padding: 1em;
+    font-family: 'Agency FB', arial;
+    font-size: 2.25em;
+    color: #603644;
+}
+
+.recovery-button {
+    font-family: 'Agency FB', arial;
+    font-size: 2.25em;
+    color: #ffffff;
+    background-color: #603644;
+    border-radius: .3em;
+    padding: .2em 1.5em .2em 1.5em;
+    text-decoration: none;
+}
+
+.back-btn {
+    font-family: 'Agency FB', arial;
+    font-size: 1.88em;
+    color: #ffffff;
+    background-color: #603644;
+    border-radius: .3em;
+    padding: .2em 1em .2em 1em;
+    text-decoration: none;
+}
+
+.form-square{
+    margin-left: 8.7em;
+    margin-right: 8.7em;
+    margin-top: 5em;
+    background: rgba(255, 255, 255, 0.57);
+    padding-bottom: 6.25em;
+}
+
+.mt-1-8{margin-top: 1.81em;}
+.ml-3-1{margin-left: 3.125em;}
+.mt-9-3{margin-top: 9.3em;}
+.mt-2{margin-top: 3.5em;}
+.centered{display: grid;
+    justify-content: center;}
+.txt-r{text-align: right;}
