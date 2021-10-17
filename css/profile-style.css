@@ -1,0 +1,91 @@
+html{
+    font-size: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: grid;
+}
+
+.inner-grid{
+    width: 90%;
+    margin: auto;
+}
+
+.inner-col{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 3em;
+}
+
+.top-section{
+    width: 100%;
+    background: url(../imgs/FondoProfile.png) no-repeat;
+    background-size:cover;
+    padding-bottom: 3em;
+}
+
+.profile-name{
+    font-family:  'Book Antiqua', arial;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3em;
+    text-align: right;
+    color: white;
+    margin-top: 6em;
+}
+
+.inner-title{
+    font-family:  'Book Antiqua', arial;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 3em;
+    text-align: left;
+    color: #09312e;
+    margin-left: 1.8em;
+}
+
+.inner-text{
+    font-family: 'Agency FB', arial;
+    font-size: 1.8em;
+    color: #284d1f;
+    text-align: center;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.horizontal-img{
+    width: 70%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.vertical-img{
+    width: 40%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-logo{
+    background-color: #09312e;
+    padding: 1em-;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.ml-5{margin-left: 5em;}
+.ml-6-25{margin-left: 6.25em;}
+
+.mt-3{margin-top: 3em;}
+.mt-6-25{margin-top: 6.25em;}
