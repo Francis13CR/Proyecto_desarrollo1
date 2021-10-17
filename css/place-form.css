@@ -1,0 +1,140 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: url(/imgs/sanCarlos.jpg) no-repeat;
+    background-size: cover;
+    padding-bottom: 6em;
+    /*display:grid;*/
+
+
+}
+
+/*
+.container-white{
+      width: 100%;
+      height: 100vh;
+    background-color:rgba(255, 255, 255, .1);
+    
+      background-size: cover;
+      
+     
+}
+*/
+.form-container {
+    background-color: rgba(255, 255, 255, .5);
+    width: 40%;
+    height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.form-group {
+    width: 80%;
+    margin: auto;
+}
+
+.form-input {
+
+    width: 50%;
+    margin-left: 13em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+    padding: 1em;
+    text-align: justify;
+
+}
+
+.btn {
+    text-align: center;
+    background-color: #39303e;
+    border: none;
+    color: white;
+    font-family: 'Agency FB', arial;
+    font-size: 2em;
+    border-radius: .3em;
+    padding: .2em 1.5em .2em 1.5em;
+    text-decoration: none;
+    margin: 1em 0em 0em 7.5em;
+
+}
+
+.form-label {
+    font-family: 'Agency FB', arial;
+    color: #57465f;
+    font-size: 1.5em;
+    padding: 1em;
+    position: relative;
+    top: 2em;
+}
+
+.title {
+    font-family: 'Book Antiqua', serif;
+    font-size: 2em;
+    position: relative;
+    top: 1em;
+    text-align: center;
+}
+
+.logo {
+    text-align: center;
+    padding-top: 1em;
+}
+
+@media (max-width: 767.98px) {
+
+    .container {
+        background: url(/imgs/sendForm.jpg) no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        padding-bottom: 0em;
+    }
+
+    .form-container {
+        width: 90%;
+        height: 80vh;
+    }
+
+    .form-group {
+        width: 90%;
+    }
+
+    .form-input {
+
+        width: 50%;
+        margin-left: 9em;
+
+        padding: .8em;
+
+
+    }
+    .form-label {
+        
+        font-size: 1.3em;
+        padding: .2em;
+        
+    }
+    .btn {
+       
+        font-size: 1.5em;
+        border-radius: .3em;
+        padding: .2em 1.5em .2em 1.5em;
+        text-decoration: none;
+        margin: 1em 0em 0em 5em;
+
+    }
+
+
+
+}
