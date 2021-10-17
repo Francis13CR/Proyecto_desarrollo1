@@ -1,0 +1,93 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+}
+
+.inner-grid {
+    width: 80%;
+    margin: auto;
+}
+
+.logo {
+    margin-left: 41em;
+}
+
+.top-square {
+    background: #144a46;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+}
+
+.bottom-square {
+    background: #144a46;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+}
+
+.title {
+    font-family: 'Book Antiqua';
+    font-style: bold;
+    font-size: 3em;
+    color: #394c34;
+    text-align: center;
+}
+
+.text {
+    font-family: 'Agency FB';
+    font-size: 2.5em;
+    color: #394c34;
+    text-align: center;
+}
+
+.votes {
+    font-family: 'Agency FB';
+    font-size: 1.7em;
+    color: #276863;
+    text-align: right;
+    margin-right: 2em;
+}
+
+.button {
+    font-family: 'Agency FB';
+    font-size: 2em;
+    color: #ffffff;
+    background-color: #276863;
+    border-radius: .3em;
+    padding: .2em 1em;
+    text-decoration: none;
+    margin-left: 40em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.img {
+    width: 98%;
+    background-size: auto;
+    margin-left: 1em;
+}
+
+.mt-3 {
+    margin-top: 3em;
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
+.mb-3 {
+    margin-bottom: 3em;
+}
+
+.ml-4 {
+    margin-left: .4em;
+}
