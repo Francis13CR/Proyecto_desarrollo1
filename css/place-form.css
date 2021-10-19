@@ -90,7 +90,12 @@ body {
     text-align: center;
     padding-top: 1em;
 }
-
+.cursor {
+    cursor: pointer;
+}
+.btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
+}
 @media (max-width: 767.98px) {
 
     .container {
@@ -132,9 +137,9 @@ body {
         padding: .2em 1.5em .2em 1.5em;
         text-decoration: none;
         margin: 1em 0em 0em 5em;
-
+       
     }
-
+   
 
 
 }
