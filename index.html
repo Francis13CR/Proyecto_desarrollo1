@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./css/style.css">
+    <link href="https://allfont.es/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
+    <link href="https://allfont.es/allfont.css?fonts=book-antiqua" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/style.css">
     <title>FotoTop</title>
 </head>
 
@@ -12,8 +14,8 @@
 <section class = "container">
 <!--HEADER-->
 <header class = "background-img">
-    <section>
-        <nav>
+    <section class="inner-grid">
+        <nav class="top-menu">
             <!--Menu de navegacion-->
             <a href = "index.html">
                 <img src = "./imgs/logo.png" alt = "FotoTop" class = "logo">
@@ -22,12 +24,16 @@
             <label>
 
             </label>
-            <ul>
-                <li><a href = "#">Facebook</a></li>
-                <li><a href = "#">Twitter</a></li>
-                <li><a href = "#">Instagram</a></li>
+            <ul class="top-menu-items">
+                <li class="top-menu-item"><a href = "#">Facebook</a></li>
+                <li class="top-menu-item"><a href = "#">Twitter</a></li>
+                <li class="top-menu-item"><a href = "#">Instagram</a></li>
             </ul>
         </nav>
+
+        <h1 class="slogan"> comparte tus aventuras<br>con el mundo</h1>
+
+        <a class="login-btn" href="#">Iniciar sesión</a>
     </section>
 </header>
 <!--HEADER-->
@@ -42,6 +48,9 @@
 
     <a href="placeForm.html">
       <button>Enviar un lugar </button>
+    </a>
+    <a href="gallery.html">
+        <button>Galeria </button>
     </a>
 </body>
 </html>

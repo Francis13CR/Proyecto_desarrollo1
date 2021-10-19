@@ -12,7 +12,7 @@ body{
 }
 
 .inner-grid{
-    width: 80%;
+    width: 90%;
     margin :auto;
 }
 
@@ -23,7 +23,52 @@ body{
 
 .background-img{
     width: 100%;
-    background: url(../imgs/header.jpg);
+    background: url(../imgs/header.jpg) no-repeat;
     background-size: cover;
-    padding-bottom: 10em;
+    padding-bottom: 3em;
+}
+
+.top-menu{
+    display: inline-flex;
+}
+
+.top-menu-items{
+    display: inline-flex;
+    list-style-type: none;
+    align-items: right;
+    font-family: "Book Anti antiqua", arial;
+}
+
+.top-menu-item{
+    margin: 0 1em;
+}
+
+.top-menu-social{
+    color: #f0454c;
+    text-decoration: none;
+    transition: color .5s ease;
+}
+
+.top-menu-social:hover{
+    color: #314a5b;
+}
+
+.slogan{
+    font-family: 'Book Antiqua', arial;
+    font-size: 2.6em;
+    text-align: right;
+    color: white;
+    margin-top: 9em;
+}
+
+.login-btn{
+    display: grid;
+    font-family: 'Book Antiqua', arial;
+    font-weight: 700;
+    font-size: 1.6em;
+    text-align: right;
+    text-decoration: none;
+    color: white;
+    margin-top: 9em;
+    
 }
