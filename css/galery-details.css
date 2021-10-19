@@ -17,8 +17,8 @@ body {
 }
 
 .logo {
-    display: grid;
-    align-items: center;
+    display: block;
+    margin: auto;
 }
 
 .top-square {
