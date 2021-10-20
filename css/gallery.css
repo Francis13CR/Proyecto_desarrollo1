@@ -1,11 +1,15 @@
 html {
     font-size: 100%;
+    
+
 }
 
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+   
+
 }
 
 .container {
@@ -147,4 +151,34 @@ body {
     right: 50em;
 
 
+}
+
+.btn {
+    text-align: center;
+    background-color: #39303e;
+    border: none;
+    color: white;
+    font-family: 'Agency FB', arial;
+    font-size: 1.8em;
+    border-radius: .3em;
+    padding: .2em 1.5em .2em 1.5em;
+    text-decoration: none;
+    margin: 4em 0em 0em 7em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
+}
+
+footer{
+    background-color: #144a46;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+}
+.logo-footer{
+   position: relative;
+   left: 45%;
 }
