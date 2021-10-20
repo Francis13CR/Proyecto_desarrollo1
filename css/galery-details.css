@@ -7,15 +7,6 @@ body {
     padding: 0;
 }
 
-.container {
-    display: grid;
-}
-
-.inner-grid {
-    width: 80%;
-    margin: auto;
-}
-
 .logo {
     display: block;
     margin: auto;
