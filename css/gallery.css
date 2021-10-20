@@ -1,11 +1,15 @@
 html {
     font-size: 100%;
+    
+
 }
 
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+   
+
 }
 
 .container {
@@ -52,14 +56,58 @@ body {
     position: relative;
     bottom: 30em;
     left: 4.5em;
+
 }
 
 .inner-col {
     display: grid;
     grid-auto-flow: column;
+    gap: 4em;
+
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+  
+    border-radius: 5px;
+  margin: 2em;
+    padding: 1em;
+}
+
+.card:hover {
+    box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 
+.media {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+
+
+.image {
+
+    width: 60%;
+    height: 90%;
+    border-radius: 5px;
+
+
+}
+
+.image-right {
+
+    width: 60%;
+    height: 90%;
+    position: relative;
+    left: 42em;
+    border-radius: 5px;
+    top: 0em;
+
+}
 
 .inner-title {
     font-family: 'Book Antiqua',
@@ -85,7 +133,8 @@ body {
 }
 
 .inner-content {
-
+    flex: 1;
+    padding: 1em;
 
 
     position: relative;
@@ -94,9 +143,42 @@ body {
 
 }
 
-.image {
+.inner-content-right {
+    flex: 1;
+    padding: 1em;
+    position: relative;
+    bottom: 5em;
+    right: 50em;
 
-    width: 60%;
-    height: 100%;
 
+}
+
+.btn {
+    text-align: center;
+    background-color: #39303e;
+    border: none;
+    color: white;
+    font-family: 'Agency FB', arial;
+    font-size: 1.8em;
+    border-radius: .3em;
+    padding: .2em 1.5em .2em 1.5em;
+    text-decoration: none;
+    margin: 4em 0em 0em 7em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
+}
+
+footer{
+    background-color: #144a46;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    
+}
+.logo-footer{
+   position: relative;
+   left: 45%;
 }
