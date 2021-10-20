@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/gallery.css">
     <title>Galeria</title>
 </head>
@@ -14,28 +15,68 @@
         <header class="top-section">
             <img src="/imgs/logo.png" class="logo" alt="logo">
             <h1 class="top-title">Galeria</h1>
-            <p class="top-p"> categorias </p>
+            <p class="top-p"> lugares</p>
         </header>
 
         <section class="inner-grid">
-            <section class="inner-col">
-                <div>
+            <section data-aos="fade-right" class="inner-col card">
+                <div class="media">
                     <img class="image" src="/imgs/insta-.jpg" alt="mountain">
                 </div>
                 <div class="inner-content">
-                    <h2 class="inner-title">Montaña</h2>
-                    <p class="inner-p">aqui veras los lugares <br> de la categoria montaña</p>
-                    <a class="btn" href="#">ver mas</a>
+                    <h2 class="inner-title">Autor</h2>
+                     <p class="inner-p"> fecha de publicacion 20/12/2020</p>
+                     <p class="inner-p"> Autor:</p>
+                     <a href="#">
+                         <button class="btn">Ver mas</button>
+                     </a>
                 </div>
 
             </section>
+            <section data-aos="fade-left" class="inner-col card">
+                <div class="media">
+                    <img class="image-right" src="/imgs/insecto.jpg" alt="insect">
+                </div>
+                <div class="inner-content-right">
+                    <h2 class="inner-title">Autor</h2>
+                    <p class="inner-p"> fecha de publicacion 20/12/2020</p>
+                    <p class="inner-p"> Autor:</p>
+                    <a href="#">
+                        <button class="btn">Ver mas</button>
+                    </a>
+                </div>
+
+            </section>
+             <section data-aos="fade-right" class="inner-col card">
+                 <div class="media">
+                     <img class="image" src="/imgs/angryBird.jpg" alt="bird">
+                 </div>
+                 <div class="inner-content">
+                     <h2 class="inner-title">Titulo</h2>
+                     <p class="inner-p"> fecha de publicacion 20/12/2020</p>
+                     <p class="inner-p"> Autor:</p>
+                       <a href="#">
+                           <button class="btn">Ver mas</button>
+                       </a>
+                 </div>
+
+             </section>
 
 
 
-            <footer>
-
-            </footer>
+           
         </section>
+        
+
+  </section>
+   <footer class="footer">
+       <img src="/imgs/logo.png"  class="logo-footer" alt="logo">
+   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+      AOS.init();
+  </script>
 
 </body>
 
