@@ -116,6 +116,24 @@ body{
     width: 10em;
 }
 
+.inner-bg{
+    background: rgba(152, 152, 152, .50);
+}
+
+.footer {
+    height: 4em;
+    background-color: #144a46;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo-footer {
+    position: relative;
+    left: 45%;
+}
+
 .mt-1{margin-top: 1em;}
 .mt-3{margin-top: 3em;}
 .mt-9{margin-top: 9em;}
