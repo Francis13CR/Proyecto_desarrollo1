@@ -29,15 +29,10 @@ body {
 
 .top-square {
     background: #144a46;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 3em;
 }
 
 .bottom-square {
     background: #144a46;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 3em;
 }
 
@@ -98,3 +93,47 @@ body {
 
 .centered{display: flex;
     justify-content: center;}
+
+
+/*MEDIA QUERIES*/
+/*Small devices*/
+@media (max-width: 600px) {
+
+    .inner-grid {
+        width: 90%;
+        gap: 1em;
+        text-align: center;
+    }
+
+    .inner-col{
+        grid-auto-flow: row;  
+    }
+
+    .logo{
+        margin-left: auto;
+    }
+
+    .img-first{
+        width: 90%;
+    }
+    
+    .img{
+        width: 90%;
+    }
+
+    .title{
+        font-size: 3em;
+    }
+
+    .subtitle{
+        font-size: 1.5em;
+    }
+
+    .btn-rigth{
+        right: 1em;
+    }
+
+    .btn-left{
+        left: 1em;
+    }
+}
