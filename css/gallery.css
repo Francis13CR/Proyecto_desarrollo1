@@ -1,25 +1,27 @@
 html {
     font-size: 100%;
-    
-
+    height: 100%
 }
 
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-   
-
+    height: 100%
 }
 
 .container {
+
     display: grid;
+    min-height: 100%;
+    position: relative;
+
 }
 
 .top-section {
     width: 100%;
     height: 100vh;
-    background: url(/imgs/face_pano_2.0.jpg) no-repeat;
+    background: url(../imgs/face_pano_2.0.jpg) no-repeat;
     background-size: 100% 40%;
     padding-bottom: 6em;
 
@@ -56,6 +58,7 @@ body {
     position: relative;
     bottom: 30em;
     left: 4.5em;
+    padding-bottom: 5em;
 
 }
 
@@ -70,21 +73,14 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 100%;
-  
+
     border-radius: 5px;
-  margin: 2em;
-    padding: 1em;
+    margin-top: 2em;
+
 }
 
 .card:hover {
     box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-
-.media {
-    display: flex;
-    align-items: flex-start;
-
 }
 
 
@@ -103,7 +99,7 @@ body {
     width: 60%;
     height: 90%;
     position: relative;
-    left: 42em;
+    left: 80%;
     border-radius: 5px;
     top: 0em;
 
@@ -130,6 +126,33 @@ body {
     right: 10em;
     color: #5e827f;
 
+}
+
+.inner-title-right {
+    font-family: 'Book Antiqua',
+        serif;
+    font-size: 3em;
+    color: #09312e;
+    position: relative;
+    top: 2em;
+    text-align: center;
+
+
+    text-align: center;
+    right: 40%;
+}
+
+.inner-p-right {
+    font-family: 'Angecy FB',
+        serif;
+    font-size: 1.5em;
+
+    text-align: center;
+
+    color: #5e827f;
+    position: relative;
+    top: 20%;
+    right: 40%;
 }
 
 .inner-content {
@@ -167,18 +190,876 @@ body {
     cursor: pointer;
 }
 
-.btn:hover {
+.btn-right {
+    text-align: center;
+    background-color: #39303e;
+    border: none;
+    color: white;
+    font-family: 'Agency FB', arial;
+    font-size: 1.8em;
+    border-radius: .3em;
+    padding: .2em 1.5em .2em 1.5em;
+    text-decoration: none;
+    margin: 4em 0em 0em 7em;
+    cursor: pointer;
+}
+
+
+.btn:hover,
+.btn-right:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
 }
 
-footer{
+.footer {
+    height: 4em;
     background-color: #144a46;
     position: relative;
     bottom: 0;
+    left: 0;
     width: 100%;
-    
+
+
 }
-.logo-footer{
-   position: relative;
-   left: 45%;
+
+.logo-footer {
+    position: relative;
+    left: 45%;
+}
+
+@media (min-width: 1440px) {
+    .top-section {
+
+        width: 100%;
+        height: 80%;
+        background-size: cover;
+        padding-bottom: 0em;
+    }
+
+    .top-title {
+
+        position: relative;
+        left: 13em;
+    }
+
+    .top-p {
+
+        position: relative;
+        text-align: right;
+        right: 4em;
+
+    }
+
+    .inner-grid {
+
+        position: relative;
+        bottom: 0em;
+
+        padding-bottom: 5em;
+
+    }
+
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 100%;
+
+        border-radius: 5px;
+        margin: 0em;
+        margin-top: 4em;
+        padding: 0em;
+    }
+
+    .image {
+
+        width: 90%;
+        height: 80%;
+        padding-top: 2em;
+        padding-left: 1em;
+
+
+
+    }
+
+    .image-right {
+
+        width: 80%;
+        height: 80%;
+        position: relative;
+        left: 65%;
+
+        top: 1em;
+
+    }
+
+    .inner-title {
+
+        padding-left: 7em;
+        text-align: center;
+        right: 5em;
+    }
+
+    .inner-p {
+        font-family: 'Angecy FB',
+            serif;
+        font-size: 1.5em;
+        position: relative;
+        top: 3em;
+        text-align: center;
+        right: 3.5em;
+        color: #5e827f;
+
+    }
+
+    .inner-title-right {
+
+        position: relative;
+        top: 2em;
+
+        right: 10%;
+    }
+
+    .inner-p-right {
+
+        position: relative;
+        top: 20%;
+        right: 10%;
+    }
+
+    .inner-content {
+        flex: 1;
+        padding: 1em;
+
+
+        position: relative;
+        top: -5em;
+        right: 1em;
+
+    }
+
+    .inner-content-right {
+        flex: 1;
+        padding: 1em;
+        position: relative;
+        bottom: 5em;
+        right: 50em;
+
+
+    }
+
+
+
+
+
+}
+
+@media (max-width: 1440px) {
+    .top-section {
+
+        width: 100%;
+        height: 80%;
+        background-size: cover;
+        padding-bottom: 0em;
+    }
+
+    .top-title {
+
+        position: relative;
+        left: 10em;
+    }
+
+    .top-p {
+
+        position: relative;
+        text-align: right;
+        right: 4em;
+
+    }
+
+    .inner-grid {
+
+        position: relative;
+        bottom: 0em;
+
+        padding-bottom: 5em;
+
+    }
+
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 100%;
+
+        border-radius: 5px;
+        margin: 0em;
+        margin-top: 4em;
+        padding: 0em;
+    }
+
+    .image {
+
+        width: 90%;
+        height: 80%;
+        padding-top: 2em;
+        padding-left: 1em;
+
+
+
+    }
+
+    .image-right {
+
+        width: 80%;
+        height: 80%;
+        position: relative;
+        left: 70%;
+
+        top: 1em;
+
+    }
+
+    .inner-title {
+
+        padding-left: 7em;
+        text-align: center;
+        right: 5em;
+    }
+
+    .inner-p {
+        font-family: 'Angecy FB',
+            serif;
+        font-size: 1.5em;
+        position: relative;
+        top: 3em;
+        text-align: center;
+        right: 3.5em;
+        color: #5e827f;
+
+    }
+
+    .inner-title-right {
+
+        position: relative;
+        top: 2em;
+
+        right: 1%;
+    }
+
+    .inner-p-right {
+
+        position: relative;
+        top: 20%;
+        right: 1%;
+    }
+
+    .inner-content {
+        flex: 1;
+        padding: 1em;
+
+
+        position: relative;
+        top: -5em;
+        right: 1em;
+
+    }
+
+    .inner-content-right {
+        flex: 1;
+        padding: 1em;
+        position: relative;
+        bottom: 5em;
+        right: 50em;
+
+
+    }
+
+
+
+
+
+}
+
+@media (max-width: 1280px) {
+    .top-section {
+
+        width: 100%;
+        height: 80%;
+        background-size: cover;
+        padding-bottom: 0em;
+    }
+
+    .top-title {
+
+        position: relative;
+        left: 9em;
+    }
+
+    .inner-title-right {
+
+        position: relative;
+        top: 2em;
+
+        left: 35%;
+    }
+
+    .inner-p-right {
+
+        position: relative;
+        top: 20%;
+        left: 30%;
+    }
+
+    .image-right {
+
+        width: 80%;
+        height: 80%;
+        position: relative;
+        left: 80%;
+
+        top: 1em;
+
+    }
+
+
+
+
+
+
+
+
+}
+
+
+@media (max-width: 768px) {
+    .top-section {
+
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        padding-bottom: 0em;
+    }
+
+    .logo {
+        padding: 1em 0 0 1em;
+
+    }
+
+    .top-title {
+
+        position: relative;
+        left: 6em;
+        bottom: 1.5em;
+        font-size: 2.5em;
+    }
+
+    .top-p {
+        font-size: 1em;
+        position: relative;
+        bottom: 6.5em;
+
+
+    }
+
+    .inner-grid {
+
+        position: relative;
+        bottom: 0em;
+
+        padding-bottom: 9em;
+
+    }
+
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        width: 80%;
+
+        border-radius: 5px;
+        margin: 0em;
+        margin-top: 1em;
+        padding: 0em;
+    }
+
+
+
+
+
+    .image {
+
+        width: 90%;
+        height: 100%;
+        border-radius: 5px;
+        position: relative;
+        left: 0em;
+        top: 0em;
+
+    }
+
+    .inner-col {
+        display: inherit;
+    }
+
+    .image-right {
+
+        width: 90%;
+        height: 100%;
+        border-radius: 5px;
+        position: relative;
+        left: 1em;
+        top: 1em;
+
+    }
+
+    .inner-title {
+        font-size: 1.5em;
+        position: relative;
+        text-align: center;
+        left: -2.5em;
+        top: 2em;
+
+    }
+
+    .inner-p {
+
+        font-size: .8em;
+        position: relative;
+        top: 4em;
+        text-align: center;
+        left: 1.5em;
+        color: #5e827f;
+
+    }
+
+    .inner-title-right {
+
+        font-size: 1.5em;
+        position: relative;
+        text-align: center;
+        left: 33.5em;
+        top: 4em;
+    }
+
+    .inner-p-right {
+        font-size: .8em;
+        position: relative;
+        top: 8em;
+        text-align: center;
+        left: 63em;
+
+
+    }
+
+    .inner-content {
+        flex: 1;
+        padding: 1em;
+
+
+        position: relative;
+        top: -5em;
+        right: 1em;
+
+    }
+
+    .inner-content-right {
+        flex: 1;
+        padding: 1em;
+        position: relative;
+        bottom: 5em;
+        right: 50em;
+
+
+    }
+
+    .btn {
+
+        font-size: 1em;
+        position: relative;
+        top: 3em;
+    }
+
+    .btn-right {
+        font-size: 1em;
+
+        position: relative;
+        top: 4em;
+        text-align: center;
+        left: 49em;
+    }
+
+    .logo-footer {
+        position: relative;
+        left: 30%;
+    }
+}
+
+
+
+/* tablets*/
+@media (max-width: 1024px) {
+
+    .top-section {
+
+        width: 100%;
+        height: 80%;
+        background-size: cover;
+        padding-bottom: 10em;
+        background-size: 100% 60%;
+    }
+
+    .logo {
+        padding: 1em 0 0 2em;
+
+    }
+
+    .top-title {
+
+        position: relative;
+        left: 16em;
+        bottom: 1.5em;
+        font-size: 2.5em;
+    }
+
+    .top-p {
+        font-size: 1em;
+        position: relative;
+        bottom: 6.5em;
+
+
+    }
+
+    .inner-grid {
+
+        position: relative;
+        bottom: 0em;
+        width: 100%;
+        padding-bottom: 10em;
+
+    }
+
+
+    .card {
+
+        width: 100%;
+
+        border-radius: 5px;
+        margin: 0em;
+        margin-top: 1em;
+        padding: 0em;
+        position: relative;
+        right: 4em;
+        top: 2em;
+    }
+
+
+
+
+
+    .image {
+
+        width: 95%;
+        height: 100%;
+        border-radius: 5px;
+        position: relative;
+        left: 0em;
+        top: 0em;
+
+    }
+
+    .inner-col {
+        display: inherit;
+    }
+
+    .image-right {
+
+        width: 95%;
+        height: 100%;
+        border-radius: 5px;
+        position: relative;
+        left: 1em;
+        top: 1em;
+
+    }
+
+    .inner-title {
+        font-size: 1.5em;
+        position: relative;
+        text-align: center;
+        left: -2.5em;
+        top: 3em;
+
+    }
+
+    .inner-p {
+
+        font-size: .8em;
+        position: relative;
+        top: 5em;
+        text-align: center;
+        left: 1.5em;
+        color: #5e827f;
+
+    }
+
+    .inner-title-right {
+
+        font-size: 1.5em;
+        position: relative;
+        text-align: center;
+        left: 33.5em;
+        top: 4em;
+    }
+
+    .inner-p-right {
+        font-size: .8em;
+        position: relative;
+        top: 8em;
+        text-align: center;
+        left: 63em;
+
+
+    }
+
+    .inner-content {
+        flex: 1;
+        padding: 1em;
+
+
+        position: relative;
+        top: -5em;
+        right: 1em;
+
+    }
+
+    .inner-content-right {
+        flex: 1;
+        padding: 1em;
+        position: relative;
+        bottom: 5em;
+        right: 50em;
+
+
+    }
+
+    .btn {
+
+        font-size: 1em;
+        position: relative;
+        top: 3em;
+        right: 5em;
+    }
+
+    .btn-right {
+        font-size: 1em;
+
+        position: relative;
+        top: 4em;
+        text-align: center;
+        left: 44em;
+    }
+
+    .logo-footer {
+        position: relative;
+        left: 40%;
+    }
+}
+
+/* cel*/
+@media (max-width: 576px) {
+    .top-section {
+
+        width: 100%;
+        height: 80%;
+        background-size: cover;
+        padding-bottom: 1em;
+    }
+
+    .logo {
+        padding: 1em 0 0 1em;
+
+    }
+
+    .top-title {
+
+        position: relative;
+        left: 5.5em;
+        bottom: 0em;
+        font-size: 2.5em;
+    }
+
+    .top-p {
+        font-size: 1em;
+        position: relative;
+        bottom: 2.5em;
+        right: 1.2em;
+
+    }
+
+    .inner-grid {
+
+        position: relative;
+        bottom: 0em;
+
+        padding-bottom: 9em;
+
+    }
+
+
+    .card {
+
+        width: 100%;
+
+
+        margin: 0em;
+        margin-top: 1em;
+        padding: .5em;
+        position: relative;
+        right: 5em;
+    }
+
+
+
+
+
+    .image {
+
+        width: 95%;
+        height: 100%;
+        border-radius: 5px;
+        position: relative;
+        left: -.5em;
+        top: 0em;
+
+    }
+
+    .inner-col {
+        display: inherit;
+    }
+
+    .image-right {
+
+        width: 95%;
+        height: 100%;
+        border-radius: 5px;
+        position: relative;
+        left: .5em;
+        top: 1em;
+
+    }
+
+    .inner-title {
+        font-size: 1.5em;
+        position: relative;
+        text-align: center;
+        left: -2.5em;
+        top: 3em;
+
+    }
+
+    .inner-p {
+
+        font-size: .8em;
+        position: relative;
+        top: 5em;
+        text-align: center;
+        left: 1.5em;
+        color: #5e827f;
+
+    }
+
+    .inner-title-right {
+
+        font-size: 1.5em;
+        position: relative;
+        text-align: center;
+        left: 33.5em;
+        top: 4em;
+    }
+
+    .inner-p-right {
+        font-size: .8em;
+        position: relative;
+        top: 8em;
+        text-align: center;
+        left: 63em;
+
+
+    }
+
+    .inner-content {
+        flex: 1;
+        padding: 1em;
+
+
+        position: relative;
+        top: -5em;
+        right: 1em;
+
+    }
+
+    .inner-content-right {
+        flex: 1;
+        padding: 1em;
+        position: relative;
+        bottom: 5em;
+        right: 50em;
+
+
+    }
+
+    .btn {
+
+        font-size: 1em;
+        position: relative;
+        top: 3em;
+        right: 5em;
+    }
+
+    .btn-right {
+        font-size: 1em;
+
+        position: relative;
+        top: 4em;
+        text-align: center;
+        left: 44em;
+    }
+
+    .logo-footer {
+        position: relative;
+        left: 30%;
+    }
+}
+
+@media (max-width: 362px) {
+
+
+
+
+    .top-title {
+
+        position: relative;
+        left: 5.5em;
+        bottom: 0em;
+        font-size: 2.5em;
+    }
+
+    .top-p {
+        font-size: 1em;
+        position: relative;
+        bottom: 2.5em;
+        right: 1.2em;
+
+    }
+
+
+    .logo-footer {
+        position: relative;
+        left: 24%;
+    }
+
+    .card {
+
+        right: 5em;
+    }
 }
