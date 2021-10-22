@@ -1,0 +1,98 @@
+.html{
+    font-size: 100%;
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    display: grid;
+}
+
+.background-img{
+    width: 100%;
+    height: 100vh;
+    background: url(../imgs/login-imgs/log\ in\ fondo.png) no-repeat;
+    background-size: cover;
+    padding-bottom: 9em;
+}
+
+.inner-grid{
+    width: 90%;
+    margin: auto;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, .5);
+    width: 75%;
+    height: 85vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8em;
+}
+
+.title {
+    font-family: 'Book Antiqua', serif;
+    font-size: 4em;
+    position: relative;
+    top: .5em;
+    text-align: center;
+    color: #09312e;
+}
+
+.form-group {
+    width: 80%;
+    margin: auto;
+}
+
+.form-input {
+    width: 50%;
+    margin-left: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding: 1em;
+}
+
+.btn {
+    text-align: center;
+    background-color: #39303e;
+    border: none;
+    color: white;
+    font-family: 'Agency FB', arial;
+    font-size: 2em;
+    border-radius: .3em;
+    padding: .2em 1.5em .2em 1.5em;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+
+}
+
+.form-label {
+    font-family: 'Agency FB', arial;
+    color: #57465f;
+    font-size: 1.5em;
+    padding: 1em;
+    position: relative;
+}
+
+.centered-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+.btn:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
+}
+
+.mt-3{margin-top: 3em;}
+
+.dif{ display: inline-flex;}
+.dt{ display: table;}
