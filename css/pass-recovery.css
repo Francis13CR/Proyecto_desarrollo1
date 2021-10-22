@@ -79,3 +79,36 @@ body {
 .centered{display: grid;
     justify-content: center;}
 .txt-r{text-align: right;}
+
+@media (max-width: 767.98px){
+
+    .inner-grid{
+        width: 100%;
+        gap: 1em;
+        text-align: center;
+    }
+
+    .inner-col{
+        grid-auto-flow: row;
+    }
+
+    .form-square{
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .form-item{
+        margin-top: 4em;
+        width: 75%;
+    }
+
+    .email-text{
+        margin-top: 4em;
+    }
+
+    .background-img{
+        background: url(../imgs/fondo.png);
+        background-size: cover;
+    }
+}
