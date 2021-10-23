@@ -62,10 +62,11 @@ body {
     border-radius: .3em;
     padding: .2em 1em .2em 1em;
     text-decoration: none;
+    margin-right: .4em;
 }
 
 .form-square{
-    margin-left: 8.7em;
+    margin-left: 11em;
     margin-right: 8.7em;
     margin-top: 5em;
     background: rgba(255, 255, 255, 0.57);
@@ -93,7 +94,6 @@ body {
     }
 
     .form-square{
-
         margin-left: auto;
         margin-right: auto;
     }
