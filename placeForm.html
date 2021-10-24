@@ -21,7 +21,7 @@
                 <h1 class="title">Formulario de Envio</h1>
                 <FORM method="post">
                     <div class="form-group">
-                        <label class="form-label" for="">Datos de autor</label>
+                        <label class="form-label" for="autor">Datos de autor</label>
                         <input class="form-input" type="text" id="autor" name="autor" placeholder="Ingrese los datos del autor" required>
                     </div>
                     <div class="form-group">
@@ -32,14 +32,23 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label" for="">Descripcion</label>
+                        <label class="form-label" for="descripcion">Descripcion</label>
                         <input class="form-input"  type="text" id="description"
                             placeholder="Ingrese la descripcion para la imagen"
                             name="description" required>
                     </div>
+                     <div class="form-group">
+                         <label class="form-label" for="categoria">Categoria</label>
+                         <select class="form-input" id="categorias" name="categoria" required>
+                           
+                            <option value="paisajes">Paisaje</option>
+                            <option value="animales">Animales </option>
+                            <option value="playa">playa</option>
+                         </select>
+                     </div>
                     <div class="form-group">
                         <label class="form-label"  for="Images">Imagenes</label>
-                        <input class="form-input"  type="file" id="Images" name="Images" accept="image/*" multiple>
+                        <input class="form-input"  type="file" id="Images" name="Images" accept="image/*" multiple required>
                     </div>
                     <button type="submit" class="btn cursor"> Enviar</button>
 
@@ -54,7 +63,7 @@
 
     </section>
 
-
+  <script src="./js/App.js"></script>
 </body>
 
 </html>
