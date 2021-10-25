@@ -14,11 +14,12 @@
         <header class="logo">
             <img src="/imgs/logo.png" alt="FotoTop">
         </header>
-        <div class="">
+        <div >
 
 
             <section class="form-container">
                 <h1 class="title">Formulario de Envio</h1>
+                <p id="alerta" class="alert"></p>
                 <FORM method="post">
                     <div class="form-group">
                         <label class="form-label" for="autor">Datos de autor</label>
@@ -48,7 +49,7 @@
                      </div>
                     <div class="form-group">
                         <label class="form-label"  for="Images">Imagenes</label>
-                        <input class="form-input"  type="file" id="Images" name="Images" accept="image/*" multiple required>
+                        <input class="form-input"  type="file" id="Images" name="Images" accept="image/*" multiple required >
                     </div>
                     <button type="submit" class="btn cursor"> Enviar</button>
 
@@ -64,6 +65,8 @@
     </section>
 
   <script src="./js/App.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
 </body>
 
 </html>

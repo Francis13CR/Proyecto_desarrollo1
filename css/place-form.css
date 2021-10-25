@@ -65,7 +65,7 @@ body {
     border-radius: .3em;
     padding: .2em 1.5em .2em 1.5em;
     text-decoration: none;
-    margin: 1em 0em 0em 7.5em;
+    margin: 1em 0em 1em 7.5em;
 
 }
 
@@ -89,12 +89,30 @@ body {
 .logo {
     text-align: center;
     padding-top: 1em;
+    
 }
 .cursor {
     cursor: pointer;
 }
 .btn:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
+}
+
+.alert{
+    width: 30%;
+    
+    border: .1em solid #39303e;
+    color: white;
+     font-size: 1.2em;
+     text-align: justify;
+    border-radius: .5em;
+    padding:.5em 5em .5em .5em;
+    background-color:green;
+    position: absolute;
+    right: 26em;
+    top: 38.5em;
+    z-index: 1;
+    
 }
 @media (max-width: 767.98px) {
 
