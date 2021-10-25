@@ -1,8 +1,8 @@
-.html{
+html{
     font-size: 100%;
 }
 
-.body{
+body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -96,3 +96,20 @@
 
 .dif{ display: inline-flex;}
 .dt{ display: table;}
+
+.alert {
+    width: 30%;
+
+    border: .1em solid white;
+    color: white;
+    font-size: 1.2em;
+    text-align: justify;
+    border-radius: .5em;
+    padding: .5em 5em .5em .5em;
+    background-color: #39303e;
+    position: absolute;
+    right: 26em;
+    top: -11em;
+    z-index: 1;
+
+}

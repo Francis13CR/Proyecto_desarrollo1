@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -22,22 +22,21 @@
         <!--FORMULARIO-->
         <section class="form-container">
             <h1 class="title">Formulario de Registro</h1>
-            <FORM method="post">
+            <p id="alerta-singup" class="alert">lorem</p>
+
+            <form id="singUp" method="post">
                 <div class="form-group dif">
                     <label class="form-label" for="">Nombre completo</label>
-                    <input class="form-input" type="text" id="full-name" name="full-name"
-                        required>
+                    <input class="form-input" type="text" id="full-name" name="full-name" required>
                 </div>
                 <div class="form-group dif">
                     <label class="form-label" for="email">Correo electronico</label>
-                    <input class="form-input" type="email" id="email"
-                        name="email" required>
+                    <input class="form-input" type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-group dif">
-                    <label class="form-label" for="usser">Usuario</label>
-                    <input class="form-input" type="text" id="usser"
-                        name="Usuario" required>
+                    <label class="form-label" for="user">Usuario</label>
+                    <input class="form-input" type="text" id="user" name="Usuario" required>
                 </div>
                 <div class="form-group dif">
                     <label class="form-label" for="password">Contraseña</label>
@@ -45,17 +44,23 @@
                 </div>
                 <div class="form-group dif">
                     <label class="form-label" for="password-validation">Repita la contraseña</label>
-                    <input class="form-input" type="password-validation" id="password" name="password-validation" required>
+                    <input class="form-input" type="password" id="passwordValidation" name="password-validation"
+                        required>
                 </div>
-                <button type="submit" class="btn cursor centered-flex">Registrarse</button>
+                <button type="submit" onclick="singUp();" class="btn cursor centered-flex">Registrarse</button>
 
-                <a href="login.html" class="btn cursor dt">Iniciar sesión</a>
+
+            </form>
+            <a href="login.html" class="btn cursor dt">Iniciar sesión</a>
         </section>
         <!--FORMULARIO-->
 
         <a href="index.html" class="btn cursor centered-flex">Volver
         </a>
     </section>
+    <script src="./js/App.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
 </body>
 
 </html>
