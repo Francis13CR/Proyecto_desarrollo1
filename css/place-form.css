@@ -110,7 +110,7 @@ body {
     background-color:green;
     position: absolute;
     right: 26em;
-    top: 38.5em;
+    top: -11em;
     z-index: 1;
     
 }
@@ -151,6 +151,17 @@ body {
         padding: .2em 1.5em .2em 1.5em;
         text-decoration: none;
         margin: 1em 0em 0em 5em;
+    }
+    .alert {
+        width: 50%;
+
+        
+        font-size: 1em;
+       
+        right: 3.5em;
+        top: -22em;
+        z-index: 1;
+
     }
    
 

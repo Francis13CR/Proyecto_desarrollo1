@@ -14,7 +14,7 @@ function temporizador(){
 //formulario de envio de lugar 
 
 const alerta = document.getElementById("alerta");
-alerta.style.visibility = 'hidden';
+alerta.style.visibility = 'visible';
 //console.log(alerta);
 
 const formulario = document.querySelector('form');
@@ -31,9 +31,18 @@ formulario.addEventListener('submit', event => {
     
     //console.log(autor + titulo + seleccionado + description);
     document.querySelector('form').reset();
-    setInterval(function() {
-         alerta.innerHTML=`Su formulario ha sido enviado con los siguientes datos <br>  -autor: ${autor}, <br> -titulo: ${titulo}, <br> -descripcion: ${description}, <br> -categoria ${seleccionado} <br> <br> Redireccionando a la pagina principal en ${segundos}s `;
+    alerta.innerHTML=`Su formulario ha sido enviado con los siguientes datos <br>  -autor: ${autor}, <br> -titulo: ${titulo}, <br> -descripcion: ${description}, <br> -categoria ${seleccionado} <br> <br> Redireccionando a la pagina principal en ${segundos}s `;
     alerta.style.visibility = 'visible';
+    
+     gsap.to("#alerta", {
+        duration: .8,
+        y: 950,
+        ease: 'bounce'
+    });
+    setInterval(function() {
+    alerta.innerHTML=`Su formulario ha sido enviado con los siguientes datos <br>  -autor: ${autor}, <br> -titulo: ${titulo}, <br> -descripcion: ${description}, <br> -categoria ${seleccionado} <br> <br> Redireccionando a la pagina principal en ${segundos}s `;
+  
+    
     temporizador();
    
     }, 1000)
@@ -46,10 +55,4 @@ formulario.addEventListener('submit', event => {
 
 })
 
-document.addEventListener('DOMContentLoaded', (event) => {
-    gsap.to(".logo", {
-        duration: 1,
-        left: 210,
-        delay: 5
-    });
-});
+   
