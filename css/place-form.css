@@ -99,7 +99,7 @@ body {
 @media (max-width: 767.98px) {
 
     .container {
-        background: url(../imgs/sendForm.jpg) no-repeat;
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
         width: 100%;
         height: 100vh;
         background-size: cover;
@@ -119,25 +119,20 @@ body {
 
         width: 50%;
         margin-left: 9em;
-
         padding: .8em;
-
-
     }
-    .form-label {
-        
+
+    .form-label {   
         font-size: 1.3em;
         padding: .2em;
-        
     }
-    .btn {
-       
+
+    .btn {   
         font-size: 1.5em;
         border-radius: .3em;
         padding: .2em 1.5em .2em 1.5em;
         text-decoration: none;
         margin: 1em 0em 0em 5em;
-       
     }
    
 

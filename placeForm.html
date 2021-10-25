@@ -12,7 +12,9 @@
 <body>
     <section class="container  ">
         <header class="logo">
-            <img src="/imgs/logo.png" alt="FotoTop">
+            <a href="index.html">
+                <img src="/imgs/logo.png" alt="FotoTop">
+            </a>
         </header>
         <div class="">
 
@@ -22,24 +24,23 @@
                 <FORM method="post">
                     <div class="form-group">
                         <label class="form-label" for="">Datos de autor</label>
-                        <input class="form-input" type="text" id="autor" name="autor" placeholder="Ingrese los datos del autor" required>
+                        <input class="form-input" type="text" id="autor" name="autor"
+                            placeholder="Ingrese los datos del autor" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label"  for="titulo">Titulo</label>
+                        <label class="form-label" for="titulo">Titulo</label>
                         <input class="form-input" type="text" placeholder="Ingrese el titulo para la imagen" id="titulo"
-                            name="titulo"
-                            required>
+                            name="titulo" required>
                     </div>
 
                     <div class="form-group">
                         <label class="form-label" for="">Descripcion</label>
-                        <input class="form-input"  type="text" id="description"
-                            placeholder="Ingrese la descripcion para la imagen"
-                            name="description" required>
+                        <input class="form-input" type="text" id="description"
+                            placeholder="Ingrese la descripcion para la imagen" name="description" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label"  for="Images">Imagenes</label>
-                        <input class="form-input"  type="file" id="Images" name="Images" accept="image/*" multiple>
+                        <label class="form-label" for="Images">Imagenes</label>
+                        <input class="form-input" type="file" id="Images" name="Images" accept="image/*" multiple>
                     </div>
                     <button type="submit" class="btn cursor"> Enviar</button>
 
