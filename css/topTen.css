@@ -66,20 +66,22 @@ body {
     width: 50%;
     display: block;
     margin: auto;
+    border-radius: 5%;
 }
 
 .img {
     width: 100%;
     display: block;
     margin: auto;
+    border-radius: 5%;
 }
 
-.btn-rigth{
+.btn-left{
     position: relative;
     right: 3em;
 }
 
-.btn-left{
+.btn-rigth{
     position: relative;
     left: 4em;
 }
@@ -95,9 +97,39 @@ body {
     justify-content: center;}
 
 
+
 /*MEDIA QUERIES*/
-/*Small devices*/
-@media (max-width: 600px) {
+/*laptop*/
+@media (max-width: 1280px) {
+
+    .btn-rigth{
+        left: 2.5em;
+    }
+
+}
+
+/*MEDIA QUERIES*/
+/*tablet*/
+@media (max-width: 1024px) {
+
+    .btn-rigth{
+        left: 2.6em;
+    }
+
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 768px) {
+
+    .btn-rigth{
+        left: 2.5em;
+    }
+   
+}
+
+
+/*MEDIA QUERIES*/
+@media(max-width: 400px){
 
     .inner-grid {
         width: 90%;
@@ -130,10 +162,56 @@ body {
     }
 
     .btn-rigth{
-        right: 1em;
+        right: 3em;
+        left: 1em;
     }
 
     .btn-left{
+        right: 1em;
+    }
+
+}
+
+/*MEDIA QUERIES*/
+@media(max-width: 375px){
+
+    .inner-grid {
+        width: 90%;
+        gap: 1em;
+        text-align: center;
+    }
+
+    .inner-col{
+        grid-auto-flow: row;  
+    }
+
+    .logo{
+        margin-left: auto;
+    }
+
+    .img-first{
+        width: 90%;
+    }
+    
+    .img{
+        width: 90%;
+    }
+
+    .title{
+        font-size: 3em;
+    }
+
+    .subtitle{
+        font-size: 1.5em;
+    }
+
+    .btn-rigth{
+        right: 2em;
         left: 1em;
     }
+
+    .btn-left{
+        right: 1em;
+    }
+
 }

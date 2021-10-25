@@ -343,15 +343,9 @@ body {
         position: relative;
         bottom: 5em;
         right: 50em;
-
-
     }
-
-
-
-
-
 }
+
 
 @media (max-width: 1440px) {
     .top-section {

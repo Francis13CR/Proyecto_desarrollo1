@@ -61,12 +61,12 @@ body {
 .btn-rigth {
     position: relative;
     right: 3em;
+    bottom: 1.1em;
 }
 
 .btn-left {
     position: relative;
     left: 4em;
-    bottom: 1.2em;
 }
 
 .img {
@@ -82,58 +82,173 @@ body {
 .mb-2 {margin-bottom: 2em;}
 .ml-4 {margin-left: .4em;}
 
+
+
 /*MEDIA QUERIES*/
-/*Small devices*/
-@media (max-width: 600px) {
+/*laptop*/
+@media (max-width: 1300px) {
+
+    .button{
+        font-size: 2.5em;
+        margin-left: 2em;
+        margin-right: 6em;
+    }
+
+    .btn-left{
+        left: 10em;
+        bottom: 1em;
+        top: .5em;
+    }
+
+    .btn-rigth{
+        left: 9em;
+        bottom: 1em;
+        top: .5em;
+    }
+
+    .bottom-section{
+        margin-top: 6em;
+    }
+
+}
+
+/*MEDIA QUERIES*/
+/*tablet*/
+@media (max-width: 1040px) {
+
+    .img{
+        width: 95%;
+        margin-left: 2em;
+    }
+
+    .title{
+        font-size: 5em;
+    }
+
+    .subtitle{
+        font-size: 3em;
+    }
+
+    .votes{
+        font-size: 3em;
+    }
+
+    .button{
+        font-size: 2.5em;
+        margin-left: 2em;
+        margin-right: 6em;
+    }
+
+    .btn-rigth{
+        left: 4em;
+    }
+
+    .btn-left{
+        bottom: 1em;
+        right: 2em;
+    }
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 780px) {
 
     .inner-grid {
         width: 90%;
         gap: 1em;
         text-align: center;
+        margin-left: 2em;
     }
 
     .inner-col{
         grid-auto-flow: row;  
     }
 
-    .logo{
-        margin-left: 6em;
+    .title{
+        font-size: 4em;
+        margin-left: .5em;
+    }
+
+    .subtitle{
+        margin-left: .7em;
     }
 
     .img{
         width: 90%;
-        margin-left: 2.5em;
-    }
-
-    .title{
-        font-size: 2em;
-        text-align: center;
-        margin-left: 1em;
-    }
-
-    .votes{
-        font-size: 2em;
-        text-align: center;
-        margin-left: 1em;
-    }
-
-    .subtitle{
-        font-size: 1.5em;
-        text-align: center;
-        margin-left: 1em;
     }
 
     .button{
-        font-size: 1em;
-        margin-left: 5.5em;
-        margin-right: 4em;
+        font-size: 2em;
+        margin-right: 6em;
+    }
+
+    .btn-rigth{
+        bottom: 1em;
+        right: 4em;
+        left: 1em;
+    }
+
+    .btn-left{
+        bottom: 1em;
+        right: 15em;
+        left: 3em;
+    }
+    
+    .bottom-section{
+        margin-top: 1em;
     }
 
 }
 
 /*MEDIA QUERIES*/
-/*medium devices*/
-@media (min-width: 768px) {
+@media(max-width: 375px){
 
+    .inner-grid{
+        margin: .5em;
+    }
+
+    .logo{
+        margin-left: 5.5em;
+    }
+
+    .img{
+        width: 96%;
+        margin-right: 4em;
+        margin-left: 1.4em;
+    }
+
+    .title{
+        font-size: 2em;
+        margin-left: 1em;
+    }
+
+    .votes{
+        font-size: 2em;
+        margin-left: 1em;
+    }
+
+    .subtitle{
+        font-size: 1.5em;
+        margin-left: 1em;
+    }
+
+    .button{
+        font-size: 1.3em;
+        margin-left: 2em;
+    }
+
+    .btn-rigth{
+        right: 5em;
+        left: .1em;
+    }
+
+    .btn-left{
+        right: 2em;
+        top: .1em;
+        left: 5em;
+    }
 
 }
+
+
+
+
