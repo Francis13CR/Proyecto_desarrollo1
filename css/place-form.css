@@ -101,13 +101,13 @@ body {
 .alert{
     width: 30%;
     
-    border: .1em solid #39303e;
+    border: .1em solid white;
     color: white;
      font-size: 1.2em;
      text-align: justify;
     border-radius: .5em;
     padding:.5em 5em .5em .5em;
-    background-color:green;
+    background-color:#39303e;
     position: absolute;
     right: 26em;
     top: -11em;
