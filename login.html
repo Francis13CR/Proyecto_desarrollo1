@@ -20,25 +20,24 @@
 
 
             <section class="form-container">
-                <h1 class="title">Formulario de Envio</h1>
-                <FORM method="post">
+                <h1 class="title">Inicio de sesión</h1>
+                <p id="alerta-login" class="alert">lorem</p>
+                <FORM id="login" method="post">
                     <div class="form-group">
-                        <label class="form-label" for="usser-name"></label>
-                        <input class="form-input" type="text" id="usser-name" name="usser-name"
+                        <label class="form-label" for="user-name"></label>
+                        <input class="form-input" type="text" id="user-name-login" name="usser-name"
                             placeholder="Ingrese el nombre de usuario" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="password"></label>
-                        <input class="form-input" type="password" placeholder="Ingrese la contraseña" id="password"
+                        <input class="form-input" type="password" placeholder="Ingrese la contraseña" id="password-login"
                             name="titulo" required>
                     </div>
+                      <button type="submit" onclick="singIn();" class="btn cursor">Iniciar sesión</button>
                 </FORM>
                 <section class="btn-section">
                     <div class="btn-div">
-                        <a href="#">
-                            <button class="btn cursor">Iniciar sesión</button>
-                        </a>
-
+                       
                         <a href="./singup.html">
                             <button class="btn cursor">Registrarse</button>
                         </a>
@@ -53,7 +52,9 @@
 
     </section>
 
-
+ <script src="./js/App.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
 </body>
 
 </html>
