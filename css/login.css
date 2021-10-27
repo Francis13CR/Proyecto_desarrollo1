@@ -100,6 +100,23 @@ body {
     margin-right: auto;
 }
 
+.alert {
+    width: 30%;
+
+    border: .1em solid white;
+    color: white;
+    font-size: 1.2em;
+    text-align: justify;
+    border-radius: .5em;
+    padding: .5em 5em .5em .5em;
+    background-color: #39303e;
+    position: absolute;
+    right: 26em;
+    top: -11em;
+    z-index: 1;
+
+}
+
 /*MEDIA QUERIES*/
 /*laptop*/
 @media (max-width: 1300px) {

@@ -14,7 +14,7 @@
     <title>FotoTop</title>
 </head>
 
-<body>
+<body onload="validateLogin();">
     <section class="container">
         <!--HEADER-->
         <header class="background-img">
@@ -55,8 +55,8 @@
 
                 <h1 class="slogan"> Comparte tus aventuras<br>con el mundo</h1>
 
-                <a class="log-btn mt-9" href="login.html">Iniciar sesión</a>
-                <a class="log-btn mt-1" href="singup.html">Registrarse</a>
+                <a id="log" class="log-btn mt-9" href="login.html">Iniciar sesión</a>
+                <a id="regis" class="log-btn mt-1" href="singup.html">Registrarse</a>
             </section>
         </header>
         <!--HEADER-->
@@ -83,10 +83,9 @@
             <section class="inner-col mt-3">
                 <div class="center-left">
                     <h3 class="inner-title">Formulario</h3>
-                    <p class="inner-content">Aquí podras subir<br>tus lugares favoritos<br>a nuestra pagina</p>
-                <a class="inner-btn" href="placeForm.html">
-                    Ver mas
-                </a>
+                    <p id="forms" class="inner-content">Aquí podras subir<br>tus lugares favoritos<br>a nuestra pagina</p>
+                    <button class="inner-btn" onclick="validateFormPlace();">Enviar formulario</button>
+                    
                 </div>
                 <div>
                     <img class="inner-img fr inner-img-left" src="./imgs/index-imgs/quiet bird.jpg" alt="quiet bird">
@@ -119,7 +118,7 @@
         </footer>
         <!--FOOTER-->
     </section>
-    
+    <script src="./js/App.js"></script>
 </body>
 
 </html>
