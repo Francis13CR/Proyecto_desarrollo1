@@ -15,7 +15,7 @@ body{
 .background-img{
     width: 100%;
     height: 100vh;
-    background: url(../imgs/login-imgs/log\ in\ fondo.png) no-repeat;
+    background: url(../imgs/branches.jpg) no-repeat;
     background-size: cover;
     padding-bottom: 9em;
 }
@@ -27,7 +27,7 @@ body{
 
 .form-container {
     background-color: rgba(255, 255, 255, .5);
-    width: 75%;
+    width: 60%;
     height: 85vh;
     margin-left: auto;
     margin-right: auto;
@@ -75,9 +75,10 @@ body{
 .form-label {
     font-family: 'Agency FB', arial;
     color: #57465f;
-    font-size: 1.5em;
+    font-size: 1.8em;
     padding: 1em;
     position: relative;
+    margin-left: 1.3em;
 }
 
 .centered-flex{
@@ -93,9 +94,11 @@ body{
 }
 
 .mt-3{margin-top: 3em;}
+.mb-1{margin-bottom: 1em;}
 
 .dif{ display: inline-flex;}
 .dt{ display: table;}
+.df{ display: flex;}
 
 .alert {
     width: 30%;
