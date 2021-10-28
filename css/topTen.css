@@ -97,6 +97,15 @@ body {
     justify-content: center;}
 
 
+/*MEDIA QUERIES*/
+/*laptop*/
+@media (max-width: 1500px) {
+
+    .btn-rigth{
+        left: 2.5em;
+    }
+
+}
 
 /*MEDIA QUERIES*/
 /*laptop*/
