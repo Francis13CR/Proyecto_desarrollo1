@@ -22,6 +22,10 @@ body{
     gap: 3em;
 }
 
+.data{
+    margin: auto;
+}
+
 .top-section{
     width: 100%;
     background: url(../imgs/FondoProfile.png) no-repeat;
@@ -44,7 +48,7 @@ body{
     font-style: italic;
     font-weight: 700;
     font-size: 3em;
-    text-align: left;
+    text-align: center;
     color: #09312e;
     margin-left: 1.8em;
 }
@@ -66,6 +70,7 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 2%;
 }
 
 .vertical-img{
@@ -74,18 +79,111 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 2%;
 }
 
 .footer-logo{
     background-color: #09312e;
-    padding: 1em-;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 45%;
+    padding-right: 41%;
     display: block;
 }
 
 .ml-5{margin-left: 5em;}
 .ml-6-25{margin-left: 6.25em;}
 
+.mb-2{margin-bottom: 2em;}
+
 .mt-3{margin-top: 3em;}
 .mt-6-25{margin-top: 6.25em;}
+
+/*MEDIA QUERIES*/
+@media (max-width: 1300px) {
+
+    .top-section{
+        background-size: cover;
+        width: 100%;
+        padding-right: .5em;
+    }
+
+    .footer-logo{
+        padding-right: 41%;
+        padding-left: 43%;
+        padding-bottom: 1%;
+        padding-top: .2%;
+    }
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 1040px) {
+
+    .top-section{
+        background-size: cover;
+        width: 100%;
+        padding-right: 3em;
+    }
+
+    .footer-logo{
+        padding-right: 42%;
+        padding-left: 42%;
+        padding-bottom: .5%;
+        padding-top: .2%;
+    }
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 780px) {
+    
+    .inner-grid{
+        margin-left: 1em;
+  
+    }
+
+    .footer-logo{
+        padding-right: 40%;
+        padding-left: 39%;
+        padding-bottom: .5%;
+        padding-top: .2%;
+    }
+
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 400px) {
+    
+    .top-section{
+        background-size: cover;
+        width: 100%;
+        padding-right: 5.6em;
+    }
+
+    .footer-logo{
+        padding-left:  35%;
+        padding-right: 35.5%;
+    }
+
+    .profile-name{
+        text-align: center;
+        margin-left: 2em;
+    }
+
+    .inner-title{
+        text-align: center;
+        margin-left: 2em;
+    }
+
+    .vertical-img{
+        width: 100%;
+    }
+
+    .horizontal-img{
+        width: 130%;
+    }
+
+    .inner-text{
+        font-size: 1.5em;
+    }
+
+}

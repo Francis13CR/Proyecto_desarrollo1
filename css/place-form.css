@@ -14,22 +14,8 @@ body {
     background: url(../imgs/sanCarlos.jpg) no-repeat;
     background-size: cover;
     padding-bottom: 6em;
-    /*display:grid;*/
-
-
 }
 
-/*
-.container-white{
-      width: 100%;
-      height: 100vh;
-    background-color:rgba(255, 255, 255, .1);
-    
-      background-size: cover;
-      
-     
-}
-*/
 .form-container {
     background-color: rgba(255, 255, 255, .5);
     width: 40%;
@@ -45,14 +31,12 @@ body {
 }
 
 .form-input {
-
     width: 50%;
     margin-left: 13em;
     margin-top: 0.5em;
     margin-bottom: 2em;
     padding: 1em;
     text-align: justify;
-
 }
 
 .btn {
@@ -66,7 +50,6 @@ body {
     padding: .2em 1.5em .2em 1.5em;
     text-decoration: none;
     margin: 1em 0em 1em 7.5em;
-
 }
 
 .form-label {
@@ -89,44 +72,95 @@ body {
 .logo {
     text-align: center;
     padding-top: 1em;
-    
+
 }
+
 .cursor {
     cursor: pointer;
 }
+
 .btn:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
 }
 
-.alert{
+.alert {
     width: 30%;
-    
     border: .1em solid white;
     color: white;
-     font-size: 1.2em;
-     text-align: justify;
+    font-size: 1.2em;
+    text-align: justify;
     border-radius: .5em;
-    padding:.5em 5em .5em .5em;
-    background-color:#39303e;
+    padding: .5em 5em .5em .5em;
+    background-color: #39303e;
     position: absolute;
     right: 26em;
     top: -11em;
     z-index: 1;
-    
+
 }
-@media (max-width: 767.98px) {
+
+/*MEDIA QUERIES*/
+@media(max-width: 1300px) {
 
     .container {
         background: url(../imgs/sanCarlos.jpg) no-repeat;
         width: 100%;
         height: 100vh;
         background-size: cover;
-        padding-bottom: 0em;
+    }
+
+}
+
+/*MEDIA QUERIES*/
+@media(max-width: 1040px) {
+
+    .container {
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+    }
+
+    .form-container{
+        margin: 1em 2em 1em 2em;
+        width: auto;
+        padding-bottom: 10em;
+    }
+
+}
+
+@media (max-width: 780px) {
+
+    .container {
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+    }
+
+    .form-container{
+        margin-left: 5em;
+        margin-right: 5em;
+        width: auto;
+    }
+
+}
+
+/*MEDIA QUERIES*/
+@media(max-width: 400px) {
+
+    .container {
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        padding-bottom: 7em;
     }
 
     .form-container {
         width: 90%;
-        height: 80vh;
+        margin-left: 1em;
+        margin-right: 1em;
     }
 
     .form-group {
@@ -134,36 +168,34 @@ body {
     }
 
     .form-input {
-
         width: 50%;
         margin-left: 9em;
         padding: .8em;
     }
 
-    .form-label {   
-        font-size: 1.3em;
+    .form-label {
+        font-size: 1.2em;
         padding: .2em;
     }
 
-    .btn {   
-        font-size: 1.5em;
+    .btn {
+        font-size: 1em;
         border-radius: .3em;
         padding: .2em 1.5em .2em 1.5em;
         text-decoration: none;
-        margin: 1em 0em 0em 5em;
+        margin: .5em 0em 1em 8em;
     }
+
     .alert {
         width: 50%;
-
-        
         font-size: 1em;
-       
         right: 3.5em;
         top: -22em;
         z-index: 1;
-
     }
-   
 
+    .title {
+        font-size: 1.5em;
+    }
 
 }
