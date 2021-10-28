@@ -173,7 +173,7 @@ body {
 }
 
 /*MEDIA QUERIES*/
-@media (max-width: 375px) {
+@media (max-width: 380px) {
 
     .container {
         background: url(../imgs/header.jpg) no-repeat;

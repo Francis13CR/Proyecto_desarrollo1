@@ -149,7 +149,7 @@ body {
 }
 
 /*MEDIA QUERIES*/
-@media(max-width: 375px){
+@media(max-width: 380px){
 
     .background-img{
         background: url(../imgs/fondo.png);

@@ -200,7 +200,7 @@ body {
 }
 
 /*MEDIA QUERIES*/
-@media(max-width: 375px){
+@media(max-width: 380px){
 
     .inner-grid{
         margin: .5em;
