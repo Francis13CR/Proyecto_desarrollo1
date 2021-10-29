@@ -23,7 +23,7 @@ function singUp() {
         event.preventDefault();
 
         const alerta = document.getElementById("alerta-singup");
-        alerta.style.visibility = 'visible';
+        alerta.style.visibility = 'hidden';
 
 
         var name = document.getElementById("full-name").value;
@@ -120,16 +120,27 @@ function singIn() {
 
 
         const alerta = document.getElementById("alerta-login");
-        alerta.style.visibility = 'visible';
+        alerta.style.visibility = 'hidden';
 
         var user = document.getElementById("user-name-login").value;
         var password = document.getElementById("password-login").value;
 
         var users = JSON.parse(window.sessionStorage.getItem('users'));
         var passwords = JSON.parse(window.sessionStorage.getItem('passwords'));
-        var admins = JSON.parse(window.sessionStorage.getItem('userA'));
-        var passwordsA = JSON.parse(window.sessionStorage.getItem('passwordA'));
-    
+         var admins = JSON.parse(window.sessionStorage.getItem('usersA'));
+         var passwordsA = JSON.parse(window.sessionStorage.getItem('passwordsA'));
+
+        if(users==null && passwords==null){
+            users="no hay";
+            passwords="no hay";
+            alerta.innerHTML = "No hay usuarios registrados";
+            alerta.style.visibility = 'visible';
+            gsap.to("#alerta-login", {
+                duration: .8,
+                y: 950,
+                ease: 'bounce'
+            });
+        }
         if (users.includes(user) && passwords.includes(password) || admins.includes(user) && passwordsA.includes(password)) {
             alerta.innerHTML = `Bienvenido ${user} <br> Redireccionando a la pagina principal en ${segundos}s `;
 
@@ -138,13 +149,16 @@ function singIn() {
 
             gsap.to("#alerta-login", {
                 duration: .8,
-                y: 950,
+                y: 850,
                 ease: 'bounce'
             });
             setInterval(function () {
                 alerta.innerHTML = `Bienvenido ${user} <br> Redireccionando a la pagina principal en ${segundos}s `;
                 temporizador();
-                if (segundos == 0) {
+                if (admins.includes(user) && passwordsA.includes(password)  && segundos == 0) {
+                    window.location.href = "admin-home.html";
+                    window.sessionStorage.setItem('admin-login',true);
+                }else if (segundos == 0) {
                     window.location.href = "index.html";
                 }
 
@@ -154,7 +168,7 @@ function singIn() {
             alerta.style.visibility = 'visible';
             gsap.to("#alerta-login", {
                 duration: .8,
-                y: 950,
+                y: 850,
                 ease: 'bounce'
             });
         }
@@ -178,10 +192,33 @@ function validateFormPlace() {
 //verificar si el usuario ya esta logeado
 function validateLogin() {
     var login = window.sessionStorage.getItem('login');
-    if (login == true) {
+    var loginAdmin = window.sessionStorage.getItem('admin-login');
+    if (login == "true" || loginAdmin == "true") {
         var log = document.getElementById("log");
         var regis = document.getElementById("regis");
         log.style.display = "none";
         regis.style.display = "none";
     }
+}
+
+//ocultar foto si admin elimina
+function hidePhoto(id) {
+    var photo = document.getElementById(id);
+    photo.style.display = "none";
+}
+//aceptar foto admins
+function acceptPhoto(id) {
+     const alerta = document.getElementById("alerta-control");
+     alerta.style.visibility = 'hidden';
+
+    var photo = document.getElementById(id);
+    photo.style.display = "none";
+
+     alerta.innerHTML = "foto aceptada";
+     alerta.style.visibility = 'visible';
+     gsap.to("#alerta-control", {
+         duration: .8,
+         y: 800,
+         ease: 'bounce'
+     });
 }
