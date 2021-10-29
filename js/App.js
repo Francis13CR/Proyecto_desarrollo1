@@ -218,11 +218,5 @@ function acceptPhoto(id) {
     var photo = document.getElementById(id);
     photo.style.display = "none";
 
-     alerta.innerHTML = "foto aceptada";
-     alerta.style.visibility = 'visible';
-     gsap.to("#alerta-control", {
-         duration: .8,
-         y: 800,
-         ease: 'bounce'
-     });
+     
 }
