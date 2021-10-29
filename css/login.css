@@ -152,6 +152,11 @@ body {
         margin-top: 1em;
         margin-bottom: 1em;
     }
+    .alert{
+        right: 10em;
+        top: -5em;
+    }	
+    
 
 }
 
@@ -200,5 +205,10 @@ body {
         margin-top: 1em;
         margin-bottom: 1em;
     }
+     .alert {
+         font-size: .8em;
+         right: 7em;
+         top: -28em;
+     }
 
 }

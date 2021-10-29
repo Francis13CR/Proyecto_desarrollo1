@@ -119,6 +119,12 @@ body{
 /*MEDIA QUERIES*/
 @media(max-width: 1300px){
 
+     .alert {
+         font-size: 1em;
+         right: 25em;
+         top: -14em;
+     }
+
 .background-img{
     background-size: cover;
     padding-top: 3em;
@@ -147,6 +153,11 @@ body{
 }
 
 @media(max-width: 1040px){
+     .alert {
+         font-size: 1em;
+         right: 20em;
+         top: -15em;
+     }
 
     .background-img{
         background-size: cover;
@@ -181,6 +192,11 @@ body{
 }
 
 @media(max-width: 780px){
+     .alert {
+        font-size: 1em;
+        right: 13em;
+        top: -8em;
+    }
 
     .background-img{
         background-size: cover;
@@ -213,6 +229,55 @@ body{
 
 }
 
+@media(max-width: 420px) {
+
+    .background-img {
+        background-size: cover;
+        padding-top: 3em;
+        padding-bottom: 50%;
+    }
+
+    .btn {
+        font-size: .9em;
+        margin-top: .5em
+    }
+
+    .form-label {
+        font-size: 1em;
+        margin-left: .2em;
+    }
+
+    .form-input {
+        width: 50%;
+        margin-left: 0em;
+        padding: .8em;
+    }
+
+    .form-group {
+        margin-left: 0em;
+    }
+
+    .title {
+        font-size: 1.3em;
+        margin-top: .5em;
+        margin-bottom: 2em;
+    }
+
+    .form-container {
+        width: 70%;
+        margin-top: 2em;
+        padding-bottom: 0%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .alert {
+        font-size: .8em;
+        right: 7em;
+        top: -15em;
+    }
+
+}
 @media(max-width: 380px){
 
     .background-img{
@@ -222,18 +287,19 @@ body{
     }
         
     .btn{
-        font-size: .6em;
-        margin-top: 2.5em
+        font-size: .9em;
+        margin-top: .5em
     }
     
     .form-label{
-        font-size: 1.2em;
+        font-size: 1em;
         margin-left: .2em;
     }
     
     .form-input{
-        margin-left: 1em;
-        padding: 1em 4em;
+       width: 50%;
+       margin-left: 0em;
+       padding: .8em;
     }
 
     .form-group{
@@ -247,10 +313,16 @@ body{
     }
 
     .form-container{
+        width: 70%;
         margin-top: 2em;
-        padding-bottom: 20%;
+        padding-bottom: 0%;
         padding-left: 10%;
         padding-right: 10%;
+    }
+    .alert {
+        font-size: .8em;
+        right: 7em;
+        top: -15em;
     }
 
 }

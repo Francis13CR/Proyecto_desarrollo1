@@ -1,6 +1,7 @@
 //temporizador
 let segundos = 10;
 
+
 function temporizador() {
 
     segundos--;
@@ -35,6 +36,7 @@ function singUp() {
 
         if (password != passwordValidation) {
             alerta.innerHTML = "Las contraseñas no coinciden";
+           alerta.style.visibility = 'visible';
             gsap.to("#alerta-singup", {
                 duration: .8,
                 y: 950,
@@ -140,7 +142,7 @@ function singIn() {
             alerta.innerHTML = `Bienvenido ${user} <br> Redireccionando a la pagina principal en ${segundos}s `;
 
             alerta.style.visibility = 'visible';
-            window.sessionStorage.setItem('login', true);
+            
 
             gsap.to("#alerta-login", {
                 duration: .8,
@@ -155,6 +157,7 @@ function singIn() {
                     window.sessionStorage.setItem('admin-login',true);
                 }else if (segundos == 0) {
                     window.location.href = "index.html";
+                    window.sessionStorage.setItem('login', true);
                 }
 
             }, 1000)
@@ -200,7 +203,8 @@ function validateLogin() {
     if (login == "true" || loginAdmin == "true") {
         var log = document.getElementById("log");
         var regis = document.getElementById("regis");
-        log.style.display = "none";
+        log.innerHTML = "ver mi perfil de lugares"
+        log.href = "profile.html";
         regis.style.display = "none";
     }
 }
