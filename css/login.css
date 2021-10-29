@@ -102,7 +102,6 @@ body {
 
 .alert {
     width: 30%;
-
     border: .1em solid white;
     color: white;
     font-size: 1.2em;
@@ -115,6 +114,12 @@ body {
     top: -11em;
     z-index: 1;
 
+}
+
+.centered{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*MEDIA QUERIES*/
