@@ -25,6 +25,9 @@ body{
     z-index: 1;
 
 }
+.hidden {
+    display: none;
+}
 .inner-grid{
     width: 90%;
     margin :auto;
