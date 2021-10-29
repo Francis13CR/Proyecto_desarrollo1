@@ -11,6 +11,7 @@ function temporizador() {
 //areglos para los usuarios de prueba
 var userstest = ['admin'];
 var passwordstest = ['admin'];
+
 window.sessionStorage.setItem('usersA', JSON.stringify(userstest));
 window.sessionStorage.setItem('passwordsA', JSON.stringify(passwordstest));
 
@@ -131,15 +132,9 @@ function singIn() {
          var passwordsA = JSON.parse(window.sessionStorage.getItem('passwordsA'));
 
         if(users==null && passwords==null){
-            users="no hay";
-            passwords="no hay";
-            alerta.innerHTML = "No hay usuarios registrados";
-            alerta.style.visibility = 'visible';
-            gsap.to("#alerta-login", {
-                duration: .8,
-                y: 950,
-                ease: 'bounce'
-            });
+            users="n";
+            passwords="n";
+           
         }
         if (users.includes(user) && passwords.includes(password) || admins.includes(user) && passwordsA.includes(password)) {
             alerta.innerHTML = `Bienvenido ${user} <br> Redireccionando a la pagina principal en ${segundos}s `;
@@ -163,6 +158,15 @@ function singIn() {
                 }
 
             }, 1000)
+        }else if(users=="n" && passwords=="n"){
+             alerta.innerHTML = "No hay usuarios registrados";
+             alerta.style.visibility = 'visible';
+             gsap.to("#alerta-login", {
+                 duration: .8,
+                 y: 850,
+                 ease: 'bounce'
+             });
+
         } else {
             alerta.innerHTML = "Usuario o contraseña incorrecta (para terminos de prueba de admin, inserte admin tanto en user como password)";
             alerta.style.visibility = 'visible';
