@@ -178,23 +178,23 @@ body {
 
     .button{
         font-size: 2em;
-        margin-right: 6em;
+        margin-right: 4em;
     }
 
     .btn-rigth{
-        bottom: 1em;
-        right: 4em;
-        left: 1em;
+        bottom: 3em;
+        right: 2em;
+        left: 1.5em;
     }
 
     .btn-left{
-        bottom: 1em;
+        bottom: 10em;
         right: 15em;
-        left: 3em;
+        left: 6em;
     }
     
     .bottom-section{
-        margin-top: 1em;
+        margin-top: 4em;
     }
 
 }
