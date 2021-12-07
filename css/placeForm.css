@@ -32,7 +32,7 @@ body {
 
 .form-input {
     width: 50%;
-    margin-left: 13em;
+    margin-left: 10em;
     margin-top: 0.5em;
     margin-bottom: 2em;
     padding: 1em;
@@ -49,7 +49,7 @@ body {
     border-radius: .3em;
     padding: .2em 1.5em .2em 1.5em;
     text-decoration: none;
-    margin: 1em 0em 1em 7.5em;
+    margin: 1em 0em 1em 6.8em;
 }
 
 .form-label {
@@ -59,6 +59,7 @@ body {
     padding: 1em;
     position: relative;
     top: 2em;
+    right: 1.5em;
 }
 
 .title {
@@ -109,7 +110,7 @@ body {
         padding-bottom: 10%;
     }
 
-    .btn{
+    .btn {
         margin-left: 5.5em;
     }
 
@@ -125,16 +126,65 @@ body {
         padding-bottom: 5%;
     }
 
-    .form-container{
+    .form-container {
         margin: 1em 2em 1em 2em;
         width: auto;
         padding-bottom: 5%;
     }
 
-    .btn{
-    margin-left: 42%;
-    margin-top: 10%;
+    .btn {
+        margin-left: 42%;
+        margin-top: 10%;
     }
+
+}
+
+@media(max-width: 1026px) {
+
+    .container {
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
+        width: 100%;
+        background-size: cover;
+        padding-bottom: 36%;
+    }
+
+    .form-container {
+        margin: 5em 2em 1em 2em;
+        width: auto;
+        padding-bottom: 20%;
+    }
+
+    .btn {
+        margin-left: 42%;
+        margin-top: 1%;
+    }
+
+}
+
+@media (max-width: 830px) {
+
+    .container {
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
+        width: 100%;
+        background-size: cover;
+        padding-bottom: 20%;
+    }
+
+    .form-container {
+        margin-left: 5em;
+        margin-right: 5em;
+        width: auto;
+    }
+
+    .form-label {
+        right: 3em;
+    }
+
+    .btn {
+        margin: 1em 0em 1em 5.5em;
+        font-size: 1.5em;
+    }
+
 
 }
 
@@ -147,10 +197,144 @@ body {
         padding-bottom: 20%;
     }
 
-    .form-container{
+    .form-container {
         margin-left: 5em;
         margin-right: 5em;
         width: auto;
+    }
+
+    .btn {
+        margin: 1em 0em 1em 5.5em;
+        font-size: 1.5em;
+    }
+
+}
+
+@media (max-width: 770px) {
+
+    .container {
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
+        width: 100%;
+        background-size: cover;
+        padding-bottom: 15%;
+    }
+
+    .form-container {
+        width: 90%;
+        padding-bottom: 10%;
+        margin-left: 1.6em;
+    }
+
+    .form-group {
+        width: 100%;
+        margin: 2em;
+    }
+
+    .form-input {
+        width: 40%;
+        margin-left: 7em;
+        margin-top: 5em;
+    }
+
+    .form-label {
+        font-size: 2em;
+        top: 1em;
+        left: 0.5em;
+        padding: .2em;
+    }
+
+    .btn {
+        font-size: 2em;
+        border-radius: .3em;
+        padding: .2em 1.5em .2em 1.5em;
+        text-decoration: none;
+        margin: 1em 0em 1em 8em;
+    }
+
+
+}
+
+
+
+/*MEDIA QUERIES*/
+@media(max-width: 740px) {
+
+
+    .container {
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
+        width: 100%;
+        background-size: cover;
+        padding-bottom: 20%;
+    }
+
+    .form-container {
+        width: 90%;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .form-label {
+        right: 3em;
+        left: 1em;
+    }
+
+
+}
+
+
+/*MEDIA QUERIES*/
+@media(max-width: 650px) {
+
+    .container {
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
+        width: 100%;
+        background-size: cover;
+        padding-bottom: 10%;
+    }
+
+    .form-label {
+        right: 1em;
+        left: 0.2em;
+    }
+
+}
+
+/*MEDIA QUERIES*/
+@media(max-width: 420px) {
+
+    .container {
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
+        width: 100%;
+        background-size: cover;
+        padding-bottom: 10%;
+    }
+
+    .form-container {
+        width: 87%;
+        margin-left: 1.6em;
+    }
+
+    .form-group {
+        width: 90%;
+    }
+
+    .form-input {
+        width: 49%;
+        margin-left: 9em;
+        padding: .8em;
+    }
+
+    .form-label {
+        font-size: 1.2em;
+        padding: .2em;
+    }
+
+    .btn {
+        font-size: 1.3em;
+        border-radius: .3em;
+        padding: .2em 1.5em .2em 1.5em;
+        text-decoration: none;
+        margin: .5em 0em 1em 6.3em;
     }
 
 }
@@ -176,7 +360,7 @@ body {
     }
 
     .form-input {
-        width: 50%;
+        width: 44%;
         margin-left: 9em;
         padding: .8em;
     }
@@ -187,11 +371,11 @@ body {
     }
 
     .btn {
-        font-size: 1em;
+        font-size: 1.3em;
         border-radius: .3em;
         padding: .2em 1.5em .2em 1.5em;
         text-decoration: none;
-        margin: .5em 0em 1em 8em;
+        margin: .5em 0em 1em 6em;
     }
 
     .alert {
@@ -204,6 +388,89 @@ body {
 
     .title {
         font-size: 1.5em;
+    }
+
+    /*MEDIA QUERIES*/
+    @media(max-width: 360px) {
+        .container {
+            background: url(../imgs/sanCarlos.jpg) no-repeat;
+            width: 100%;
+            background-size: cover;
+            padding-bottom: 10%;
+        }
+
+        .form-container {
+            width: 86%;
+            margin-left: 1em;
+            margin-right: 1em;
+        }
+
+        .form-group {
+            width: 90%;
+        }
+
+        .form-input {
+            width: 50%;
+            margin-left: 9em;
+            padding: .8em;
+        }
+
+        .form-label {
+            font-size: 1.2em;
+            padding: .2em;
+        }
+
+        .btn {
+            font-size: 1.3em;
+            border-radius: .3em;
+            padding: .2em 1.5em .2em 1.5em;
+            text-decoration: none;
+            margin: .5em 0em 1em 5.3em;
+        }
+
+
+    }
+
+    /*MEDIA QUERIES*/
+    @media(max-width: 330px) {
+
+        .container {
+            background: url(../imgs/sanCarlos.jpg) no-repeat;
+            width: 100%;
+            background-size: cover;
+            padding-bottom: 10%;
+        }
+
+        .form-container {
+            width: 90%;
+            margin-left: 1em;
+        }
+
+        .form-group {
+            width: 90%;
+        }
+
+        .form-input {
+            width: 40%;
+            margin-left: 9em;
+            margin-top: 0.6em;
+            padding: .8em;
+        }
+
+        .form-label {
+            font-size: 1.3em;
+            padding: .2em;
+        }
+
+        .btn {
+            font-size: 1.3em;
+            border-radius: .3em;
+            padding: .2em 1.5em .2em 1.5em;
+            text-decoration: none;
+            margin: .5em 0em 1em 4.7em;
+        }
+
+
     }
 
 }
