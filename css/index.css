@@ -53,7 +53,7 @@ body{
 
 .admin-background-img{
     width: 100%;
-    background: url(../imgs/index-imgs/night\ sky.jpeg) no-repeat;
+    background: url(../imgs/index-imgs/night_sky.jpeg) no-repeat;
     background-size: cover;
     padding-bottom: 3em;
 }
