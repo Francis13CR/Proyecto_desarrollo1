@@ -1,8 +1,8 @@
-html{
+html {
     font-size: 100%;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -12,7 +12,7 @@ body{
     display: grid;
 }
 
-.background-img{
+.background-img {
     width: 100%;
     height: 100vh;
     background: url(../imgs/branches.jpg) no-repeat;
@@ -20,7 +20,7 @@ body{
     padding-bottom: 9em;
 }
 
-.inner-grid{
+.inner-grid {
     width: 90%;
     margin: auto;
 }
@@ -31,7 +31,7 @@ body{
     height: 85vh;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 8em;
+    padding-bottom: 10em;
 }
 
 .title {
@@ -45,7 +45,7 @@ body{
 
 .form-group {
     width: 80%;
-    margin: auto;
+    margin: 0em 0em 0em 3.5em;
 }
 
 .form-input {
@@ -72,16 +72,29 @@ body{
 
 }
 
+.btn-left {
+    position: relative;
+    right: 5.5em;
+    bottom: 1em;
+}
+
+.btn-right {
+    position: relative;
+    left: 5em;
+    bottom: 4.6em;
+    padding: 0.23em 2.3em;
+}
+
 .form-label {
     font-family: 'Agency FB', arial;
-    color: #57465f;
-    font-size: 1.8em;
+    color: #09312e;
+    font-size: 2em;
     padding: 1em;
     position: relative;
     margin-left: 1.3em;
 }
 
-.centered-flex{
+.centered-flex {
     display: flex;
     justify-content: center;
 }
@@ -89,16 +102,30 @@ body{
 .cursor {
     cursor: pointer;
 }
+
 .btn:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.9);
 }
 
-.mt-3{margin-top: 3em;}
-.mb-1{margin-bottom: 1em;}
+.mt-3 {
+    margin-top: 3em;
+}
 
-.dif{ display: inline-flex;}
-.dt{ display: table;}
-.df{ display: flex;}
+.mb-1 {
+    margin-bottom: 1em;
+}
+
+.dif {
+    display: inline-flex;
+}
+
+.dt {
+    display: table;
+}
+
+.df {
+    display: flex;
+}
 
 .alert {
     width: 30%;
@@ -117,113 +144,113 @@ body{
 }
 
 /*MEDIA QUERIES*/
-@media(max-width: 1300px){
+@media(max-width: 1300px) {
 
-     .alert {
-         font-size: 1em;
-         right: 25em;
-         top: -14em;
-     }
+    .alert {
+        font-size: 1em;
+        right: 25em;
+        top: -14em;
+    }
 
-.background-img{
-    background-size: cover;
-    padding-top: 3em;
-    padding-bottom: 20%;
+    .background-img {
+        background-size: cover;
+        padding-top: 3em;
+        padding-bottom: 20%;
+    }
+
+    .btn {
+        font-size: 1.5em;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    .form-label {
+        font-size: 1.6em;
+    }
+
+    .form-group {
+        margin-left: 3em;
+    }
+
+    .title {
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
 }
-    
-.btn{
-    font-size: 1.5em;
-    margin-top: 2em;
-    margin-bottom: 1em;
-}
 
-.form-label{
-    font-size: 1.6em;
-}
+@media(max-width: 1040px) {
+    .alert {
+        font-size: 1em;
+        right: 20em;
+        top: -15em;
+    }
 
-.form-group{
-    margin-left: 3em;
-}
-
-.title{
-    margin-top: .5em;
-    margin-bottom: .5em;
-}
-
-}
-
-@media(max-width: 1040px){
-     .alert {
-         font-size: 1em;
-         right: 20em;
-         top: -15em;
-     }
-
-    .background-img{
+    .background-img {
         background-size: cover;
         padding-top: 3em;
         padding-bottom: 30%;
     }
-        
-    .btn{
+
+    .btn {
         font-size: 1.5em;
         margin-top: 2.5em;
         margin-bottom: 1em;
     }
-    
-    .form-label{
+
+    .form-label {
         font-size: 1.5em;
     }
-    
-    .form-group{
+
+    .form-group {
         margin-left: 3em;
     }
-    
-    .title{
+
+    .title {
         font-size: 2.5em;
         margin-top: .5em;
         margin-bottom: .5em;
     }
 
-    .form-container{
+    .form-container {
         padding-bottom: 20%;
     }
 
 }
 
-@media(max-width: 780px){
-     .alert {
+@media(max-width: 780px) {
+    .alert {
         font-size: 1em;
         right: 13em;
         top: -8em;
     }
 
-    .background-img{
+    .background-img {
         background-size: cover;
         padding-top: 3em;
         padding-bottom: 30%;
     }
-        
-    .btn{
+
+    .btn {
         font-size: 1.5em;
         margin-top: 2.5em;
     }
-    
-    .form-label{
+
+    .form-label {
         font-size: 1.7em;
     }
-    
-    .form-group{
+
+    .form-group {
         margin-left: 1em;
     }
-    
-    .title{
+
+    .title {
         font-size: 2.5em;
         margin-top: .5em;
         margin-bottom: 2em;
     }
 
-    .form-container{
+    .form-container {
         padding-bottom: 20%;
     }
 
@@ -234,23 +261,186 @@ body{
     .background-img {
         background-size: cover;
         padding-top: 3em;
-        padding-bottom: 50%;
+        padding-bottom: 25%;
     }
 
     .btn {
         font-size: .9em;
-        margin-top: .5em
+        margin-top: 2em
+    }
+
+    .btn-left {
+        top: 0.2em;
     }
 
     .form-label {
-        font-size: 1em;
+        font-size: 1.6em;
         margin-left: .2em;
     }
 
     .form-input {
         width: 50%;
         margin-left: 0em;
-        padding: .8em;
+        padding: 0.1em 2em;
+    }
+
+    .form-group {
+        margin-left: 0em;
+    }
+
+    .title {
+        font-size: 1.7em;
+        margin-top: .5em;
+        margin-bottom: 2em;
+    }
+
+    .form-container {
+        width: 70%;
+        margin-top: 2em;
+        padding-bottom: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .alert {
+        font-size: .8em;
+        right: 7em;
+        top: -15em;
+    }
+
+}
+
+@media(max-width: 420px) {
+
+    .background-img {
+        background-size: cover;
+        padding-top: 3em;
+        padding-bottom: 30%;
+    }
+
+    .btn {
+        font-size: 1em;
+        margin-top: 1.5em
+    }
+
+    .form-label {
+        font-size: 1.5em;
+        margin-left: .2em;
+    }
+
+    .form-input {
+        width: 50%;
+        margin-left: 2em;
+        padding: 1em;
+    }
+
+    .form-group {
+        margin-left: 0em;
+    }
+
+    .title {
+        font-size: 1.7em;
+        margin-top: .5em;
+        margin-bottom: 2em;
+    }
+
+    .form-container {
+        width: 70%;
+        margin-top: 2em;
+        padding-bottom: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .alert {
+        font-size: .8em;
+        right: 7em;
+        top: -15em;
+    }
+
+}
+
+@media(max-width: 380px) {
+
+    .background-img {
+        background-size: cover;
+        padding-top: 3em;
+        padding-bottom: 45%;
+    }
+
+    .btn {
+        font-size: .9em;
+        margin-top: 2em
+    }
+
+    .btn-left {
+        top: 0.1em;
+    }
+
+    .form-label {
+        font-size: 1.5em;
+        margin-left: .1em;
+        margin-right: 1em;
+    }
+
+    .form-input {
+        width: 30%;
+        padding: .4em 4em;
+    }
+
+    .form-group {
+        margin-left: 0em;
+    }
+
+    .title {
+        font-size: 1.6em;
+        margin-top: .5em;
+        margin-bottom: 2em;
+    }
+
+    .form-container {
+        width: 70%;
+        margin-top: 2em;
+        padding-bottom: 35%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .alert {
+        font-size: .8em;
+        right: 7em;
+        top: -15em;
+    }
+
+}
+
+@media(max-width: 360px) {
+
+    .background-img {
+        background-size: cover;
+        padding-top: 3em;
+        padding-bottom: 20%;
+    }
+
+    .btn {
+        font-size: .9em;
+        margin-top: 2em
+    }
+
+    .btn-left {
+        top: 0.1em;
+    }
+
+    .form-label {
+        font-size: 1.7em;
+        margin-left: 0em;
+        margin-right: 1em;
+    }
+
+    .form-input {
+        width: 50%;
+        margin-right: 1em;
+        padding: .4em 4em;
     }
 
     .form-group {
@@ -266,7 +456,7 @@ body{
     .form-container {
         width: 70%;
         margin-top: 2em;
-        padding-bottom: 0%;
+        padding-bottom: 5%;
         padding-left: 10%;
         padding-right: 10%;
     }
@@ -278,47 +468,106 @@ body{
     }
 
 }
-@media(max-width: 380px){
 
-    .background-img{
+@media(max-width: 360px) {
+
+    .background-img {
         background-size: cover;
         padding-top: 3em;
-        padding-bottom: 50%;
-    }
-        
-    .btn{
-        font-size: .9em;
-        margin-top: .5em
-    }
-    
-    .form-label{
-        font-size: 1em;
-        margin-left: .2em;
-    }
-    
-    .form-input{
-       width: 50%;
-       margin-left: 0em;
-       padding: .8em;
+        padding-bottom: 30%;
     }
 
-    .form-group{
+    .btn {
+        font-size: .9em;
+        margin-top: 2em
+    }
+
+    .btn-left {
+        top: 0.1em;
+    }
+
+    .form-label {
+        font-size: 1.2em;
+        margin-left: .2em;
+        margin-right: 1em;
+    }
+
+    .form-input {
+        width: 50%;
+        padding: .4em 4em;
+    }
+
+    .form-group {
         margin-left: 0em;
     }
-    
-    .title{
+
+    .title {
         font-size: 1.3em;
         margin-top: .5em;
         margin-bottom: 2em;
     }
 
-    .form-container{
+    .form-container {
         width: 70%;
         margin-top: 2em;
-        padding-bottom: 0%;
+        padding-bottom: 10%;
         padding-left: 10%;
         padding-right: 10%;
     }
+
+    .alert {
+        font-size: .8em;
+        right: 7em;
+        top: -15em;
+    }
+
+}
+
+@media(max-width: 330px) {
+
+    .background-img {
+        background-size: cover;
+        padding-top: 3%;
+        padding-bottom: 45%;
+    }
+
+    .btn {
+        font-size: .9em;
+        margin-top: 2em
+    }
+
+    .btn-left {
+        top: 0.1em;
+    }
+
+    .form-label {
+        font-size: 1.2em;
+        margin-right: 2em;
+    }
+
+    .form-input {
+        width: 50%;
+        padding: .4em 4em;
+    }
+
+    .form-group {
+        margin-left: 0em;
+    }
+
+    .title {
+        font-size: 1.3em;
+        margin-top: .5em;
+        margin-bottom: 2em;
+    }
+
+    .form-container {
+        width: 70%;
+        margin-top: 2em;
+        padding-bottom: 28%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
     .alert {
         font-size: .8em;
         right: 7em;
