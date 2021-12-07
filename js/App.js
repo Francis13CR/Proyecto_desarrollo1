@@ -17,60 +17,60 @@ window.sessionStorage.setItem('usersA', JSON.stringify(userstest));
 window.sessionStorage.setItem('passwordsA', JSON.stringify(passwordstest));
 
 
-//formulario sing up
+// //formulario sing up
 
-function singUp() {
-    var singUps = document.getElementById('singUp');
-    singUps.addEventListener('submit', event => {
-        event.preventDefault();
+// function singUp() {
+//     var singUps = document.getElementById('singUp');
+//     singUps.addEventListener('submit', event => {
+//         event.preventDefault();
 
-        const alerta = document.getElementById("alerta-singup");
-        alerta.style.visibility = 'hidden';
-
-
-        var name = document.getElementById("full-name").value;
-        var email = document.getElementById("email").value;
-        var username = document.getElementById("user").value;
-        var password = document.getElementById("password").value;
-        var passwordValidation = document.getElementById("passwordValidation").value;
-
-        if (password != passwordValidation) {
-            alerta.innerHTML = "Las contraseñas no coinciden";
-           alerta.style.visibility = 'visible';
-            gsap.to("#alerta-singup", {
-                duration: .8,
-                y: 950,
-                ease: 'bounce'
-            });
-        } else {
-
-            //console.log(name);
-            alerta.innerHTML = `Usuario registrado correctamente <br>  -name: ${name}, <br> -email: ${email}, <br> -username: ${username} <br> <br> Redireccionando al login en ${segundos}s `;
-
-            alerta.style.visibility = 'visible';
-            gsap.to("#alerta-singup", {
-                duration: .8,
-                y: 950,
-                ease: 'bounce'
-            });
-            setInterval(function () {
-                alerta.innerHTML = `Usuario registrado correctamente <br>  -name: ${name}, <br> -email: ${email}, <br> -username: ${username} <br> <br> Redireccionando al login en ${segundos}s `;
-                temporizador();
-                if (segundos == 0) {
-                    window.location.href = "login.html";
-                }
-
-            }, 1000);
-            userstest.push(username);
-            passwordstest.push(password);
-
-            window.sessionStorage.setItem('users', JSON.stringify(userstest));
-            window.sessionStorage.setItem('passwords', JSON.stringify(passwordstest));
+//         const alerta = document.getElementById("alerta-singup");
+//         alerta.style.visibility = 'hidden';
 
 
-        }
-    })
-}
+//         var name = document.getElementById("full-name").value;
+//         var email = document.getElementById("email").value;
+//         var username = document.getElementById("user").value;
+//         var password = document.getElementById("password").value;
+//         var passwordValidation = document.getElementById("passwordValidation").value;
+
+//         if (password != passwordValidation) {
+//             alerta.innerHTML = "Las contraseñas no coinciden";
+//            alerta.style.visibility = 'visible';
+//             gsap.to("#alerta-singup", {
+//                 duration: .8,
+//                 y: 950,
+//                 ease: 'bounce'
+//             });
+//         } else {
+
+//             //console.log(name);
+//             alerta.innerHTML = `Usuario registrado correctamente <br>  -name: ${name}, <br> -email: ${email}, <br> -username: ${username} <br> <br> Redireccionando al login en ${segundos}s `;
+
+//             alerta.style.visibility = 'visible';
+//             gsap.to("#alerta-singup", {
+//                 duration: .8,
+//                 y: 950,
+//                 ease: 'bounce'
+//             });
+//             setInterval(function () {
+//                 alerta.innerHTML = `Usuario registrado correctamente <br>  -name: ${name}, <br> -email: ${email}, <br> -username: ${username} <br> <br> Redireccionando al login en ${segundos}s `;
+//                 temporizador();
+//                 if (segundos == 0) {
+//                     window.location.href = "login.html";
+//                 }
+
+//             }, 1000);
+//             userstest.push(username);
+//             passwordstest.push(password);
+
+//             window.sessionStorage.setItem('users', JSON.stringify(userstest));
+//             window.sessionStorage.setItem('passwords', JSON.stringify(passwordstest));
+
+
+//         }
+//     })
+// }
 
 
 //formulario de envio de lugar 
