@@ -46,10 +46,6 @@ $database = new Medoo([
             <form action="singup.php" method="post">
 
                 <div class="form-group dif">
-
-
-
-
                     <label class="form-label" for="">Nombre completo</label>
                     <input class="form-input" type="text" id="full_name" name="full_name" required>
                 </div>
