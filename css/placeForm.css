@@ -101,6 +101,59 @@ body {
 }
 
 /*MEDIA QUERIES*/
+@media(max-width: 2560px){
+    .container {
+        background: url(../imgs/sanCarlos.jpg) no-repeat;
+        width: 100%;
+        background-size: cover;
+        padding-bottom: 10em;
+    }
+
+    .form-container {
+        width: 95%;
+        padding-bottom: 1em;
+        margin-left: 4em; 
+    }
+
+    .form-group {
+        width: 100%;
+        margin: auto;
+        padding-left: 1em;
+    }
+
+    .form-input {
+        width: 30%;
+        margin-left: 7em;
+        margin-top: 4em;
+        text-align: center;
+    }
+
+    .ml-titulo{
+        margin-left: 17.5em;
+    }
+    .ml-des{margin-left: 10.1em;}
+    .ml-cat{margin-left: 12.5em;}
+    .ml-img{margin-left: 12.5em;}
+    .form-label {
+        font-size: 3em;
+        top: 0em;
+        left: 0.5em;
+        padding: .2em;
+        margin-right: 1em;
+        padding-left: 8em;
+    }
+    .btn {
+    margin-left: 29.5em;
+    }
+   
+    
+}
+
+
+
+
+
+
 @media(max-width: 1300px) {
 
     .container {
@@ -148,11 +201,42 @@ body {
         padding-bottom: 36%;
     }
 
-    .form-container {
-        margin: 5em 2em 1em 2em;
-        width: auto;
-        padding-bottom: 20%;
+     .form-container {
+        width: 90%;
+        padding-bottom: 1em;
+        margin-left: 1.6em;
     }
+
+    .form-group {
+        width: 100%;
+        margin: auto;
+        padding-left: 1em;
+    }
+
+    .form-input {
+        width: 40%;
+        margin-left: 7em;
+        margin-top: 4em;
+        text-align:center;
+    }
+    .ml-5 {
+        margin-left: 5em;
+    }
+    .ml-12{
+        margin-left: 12em;
+    }
+    .ml-8{
+        margin-left: 8.5em;
+    }
+
+    .form-label {
+        font-size: 2em;
+        top: 0em;
+        left: 0.5em;
+        padding: .2em;
+        margin-right: 1em;
+    }
+
 
     .btn {
         margin-left: 42%;
@@ -221,26 +305,38 @@ body {
 
     .form-container {
         width: 90%;
-        padding-bottom: 10%;
+        padding-bottom: 1em;
         margin-left: 1.6em;
     }
 
     .form-group {
         width: 100%;
-        margin: 2em;
+        margin: auto;
+        padding-left: 1em;
     }
 
     .form-input {
         width: 40%;
         margin-left: 7em;
-        margin-top: 5em;
+        margin-top: 4em;
+        text-align:center;
+    }
+    .ml-5 {
+        margin-left: 5em;
+    }
+    .ml-12{
+        margin-left: 12em;
+    }
+    .ml-8{
+        margin-left: 8.5em;
     }
 
     .form-label {
         font-size: 2em;
-        top: 1em;
+        top: 0em;
         left: 0.5em;
         padding: .2em;
+        margin-right: 1em;
     }
 
     .btn {
@@ -292,10 +388,45 @@ body {
         padding-bottom: 10%;
     }
 
-    .form-label {
-        right: 1em;
-        left: 0.2em;
+    .form-container {
+        width: 100%;
+        padding-bottom: 1em;
+        margin-left: 0em;
     }
+
+    .form-group {
+        width: 100%;
+        margin: auto;
+        padding-left: 1em;
+    }
+
+    .form-input {
+        width: 40%;
+        margin-left: 7em;
+        margin-top: 4em;
+        text-align: center;
+    }
+
+    .ml-5 {
+        margin-left: 5em;
+    }
+
+    .ml-titulo {
+        margin-left: 10.5em;
+    }
+
+    .ml-8 {
+        margin-left: 8.5em;
+    }
+
+    .form-label {
+        font-size: 1.5em;
+        top: 0em;
+        left: 0.5em;
+        padding: .2em;
+        margin-right: 1em;
+    }
+
 
 }
 
@@ -442,24 +573,38 @@ body {
         }
 
         .form-container {
-            width: 90%;
-            margin-left: 1em;
+            width: 95%;
+            padding-bottom: .5em;
+            margin-left: .5em;
         }
 
         .form-group {
-            width: 90%;
+            width: 100%;
+            margin: auto;
+            padding-left: 0em;
+            margin-top: .5em;
         }
 
         .form-input {
-            width: 40%;
-            margin-left: 9em;
-            margin-top: 0.6em;
-            padding: .8em;
+            width: 80%;
+            margin-left: 1em;
+            margin-top: 1em;
+            text-align: center;
+        }
+
+       
+
+        .ml-titulo {
+            margin-left: 1em;
         }
 
         .form-label {
-            font-size: 1.3em;
+            font-size: 1.5em;
+            top: .5em;
+            left: 0.5em;
             padding: .2em;
+            margin-right: 1em;
+        
         }
 
         .btn {
