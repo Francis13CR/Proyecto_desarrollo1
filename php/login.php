@@ -20,7 +20,15 @@ if($_POST){
             "username"=>$username]);
 
             if($userExist){
-                $user=$database->get()
+                $user=$database->get('usuarios','*',["username"=>$username]);
+                $userPassword=$user["password"];
+                $passwordValid= password_verify($password,$userPassword);
+                if($passwordValid){
+                    session_start();
+                    $_SESSION["id"]=$user["iduser"];
+                    $_SESSION["username"]=$user["username"];
+                    header("Location: ./profile.html");
+                }
             }
 
     }
