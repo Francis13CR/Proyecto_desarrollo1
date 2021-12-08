@@ -100,7 +100,9 @@ body {
 
 }
 
-/*MEDIA QUERIES*/
+/* media query */
+
+
 @media(max-width: 2560px){
     .container {
         background: url(../imgs/sanCarlos.jpg) no-repeat;
