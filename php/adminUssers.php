@@ -77,7 +77,7 @@ $database = new Medoo([
                 <table class="inner-check-content mt-3 mr-3 mb-3 ml-3">
                     <tr>    
                         <th>ID</th>
-                        <th>Nombre</th>
+                        <th>Nombre Completo</th>
                         <th>Usuario</th>
                         <th>Correo</th>
                         <th>Fecha de creacion </th>
@@ -95,13 +95,16 @@ $database = new Medoo([
                 //mostrar el numero de usuario en cada usuario
 
 
-                echo "<tr>";
+                echo "<tr class='mb-3'>";
                 echo "<td>".$data[$i]["ID"]."</td>";
                     echo "<td>".$data[$i]["Full_name"]."</td>";
+                    
                     echo "<td>".$data[$i]["username"]."</td>";
                     echo "<td>".$data[$i]["email"]."</td>";
+                    
                     echo "<td>".$data[$i]["Date_created"]."</td>";
                     echo "<td>".$data[$i]["last_login"]."</td>";
+                    
                     // //imprimir numero de usuarios
                     // echo "<td>".$num_users."</td>";
                  echo "</tr>";
