@@ -208,6 +208,21 @@ body{
     margin-right: auto;
     width: 5em;
 }
+.search-btn {
+    font-family: 'Agency FB', arial;
+    font-size: .6em;
+    color: #ffffff;
+    background: #42104d;
+    border-radius: .3em;
+    padding: .2em 1em .2em 1em;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5em;
+}
+
 
 .admin-btn-flex{
     display: flex;

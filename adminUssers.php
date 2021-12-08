@@ -20,7 +20,6 @@ $database = new Medoo([
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +27,17 @@ $database = new Medoo([
     <link href="https://allfont.es/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
     <link href="https://allfont.es/allfont.css?fonts=book-antiqua" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> <!-- SweetAlert2 -->
+    <script>
+    function error() {
+        Swal.fire({
+            icon: 'error',
+            title: 'El usuario no existe en el registro  o ha introducido mal el nombre de usuario...',
+            text: 'Por favor, verifique los datos introducidos. También puede ver la lista de todos los usuarios al presionar el botón buscar sin introducir ningun nombre.',
+
+        })
+    }
+    </script>
     <title>FotoTop</title>
 </head>
 
@@ -58,24 +68,21 @@ $database = new Medoo([
         </header>
         <!--HEADER-->
 
-        <!-- <section class="inner-grid inner-bg mt-3">
+        <section class="inner-grid inner-bg mt-3">
             <section class="inner-col">
-                <div>
-                    <img class="inner-img" src="./imgs/usser.JPG" alt="usser">
-                </div>
-                <div >
-                    <p class="inner-check-content mt-3 mr-3">Nombre: Andres Alpizar<br><br>Usuario: Alpzar<br><br>Correo: correo@ejemplo.es<br><br>Contraseña:1234
-                    </p>
-                </div>
+
+                <form class="inner-check-content" action="adminUssers.php" method="POST">
+                    <input type="text" id="buscar" name="buscar" placeholder="Buscar nombre Usuario">
+                    <input class="search-btn" type="submit" value="Buscar">
             </section>
-        </section> -->
+        </section>
 
         <section class="inner-grid inner-bg mt-3">
             <section class="inner-col">
-              
+
 
                 <table class="inner-check-content mt-3 mr-3 mb-3 ml-3">
-                    <tr>    
+                    <tr>
                         <th>ID</th>
                         <th>Nombre Completo</th>
                         <th>Usuario</th>
@@ -85,35 +92,61 @@ $database = new Medoo([
                     </tr>
                     <?php
 
-            $data = $database->select("users", "*");
-           
+                    //buscar usuarios
+                        $buscar = $_POST['buscar'];
+                        if ($_POST && $buscar != "") {
+                            $user = $database->select('users', '*', [
+                            'username' => $buscar,
 
-            for($i=0; $i<count($data); $i++){
+                            ]);     
+                            if ($user) {
+                                foreach ($user as $user) {
+                                    echo "<tr>";
+                                    echo "<td>" . $user['ID'] . "</td>";
+                                    echo "<td>" . $user['Full_name'] . "</td>";
+                                    echo "<td>" . $user['username'] . "</td>";
+                                    echo "<td>" . $user['email'] . "</td>";
+                                    echo "<td>" . $user['Date_created'] . "</td>";
+                                    echo "<td>" . $user['last_login'] . "</td>";
+                                    echo "</tr>";
+                                }
 
-                //contar numero de USUARIOS
-                $num_users = $database->count("users");
-                //mostrar el numero de usuario en cada usuario
+                            } else {
+                                echo '<script type="text/javascript">
+                            error();
+                            </script>';
+                            }
+                        } else if (!$_POST || $buscar == '') {
 
+                            $data = $database->select("users", "*");
 
-                echo "<tr class='mb-3'>";
-                echo "<td>".$data[$i]["ID"]."</td>";
-                    echo "<td>".$data[$i]["Full_name"]."</td>";
-                    
-                    echo "<td>".$data[$i]["username"]."</td>";
-                    echo "<td>".$data[$i]["email"]."</td>";
-                    
-                    echo "<td>".$data[$i]["Date_created"]."</td>";
-                    echo "<td>".$data[$i]["last_login"]."</td>";
-                    
-                    // //imprimir numero de usuarios
-                    // echo "<td>".$num_users."</td>";
-                 echo "</tr>";
-                
-            }
+                            for ($i = 0; $i < count($data); $i++) {
 
-        ?>
+                                //contar numero de USUARIOS
+                                $num_users = $database->count("users");
+                                //mostrar el numero de usuario en cada usuario
+
+                                echo "<tr class='mb-3'>";
+                                echo "<td>" . $data[$i]["ID"] . "</td>";
+                                echo "<td>" . $data[$i]["Full_name"] . "</td>";
+
+                                echo "<td>" . $data[$i]["username"] . "</td>";
+                                echo "<td>" . $data[$i]["email"] . "</td>";
+
+                                echo "<td>" . $data[$i]["Date_created"] . "</td>";
+                                echo "<td>" . $data[$i]["last_login"] . "</td>";
+
+                                // //imprimir numero de usuarios
+                                // echo "<td>".$num_users."</td>";
+                                echo "</tr>";
+
+                            }
+                        }
+
+                    ?>
                 </table>
-              
+                
+
 
             </section>
         </section>
@@ -124,6 +157,8 @@ $database = new Medoo([
         </footer>
         <!--FOOTER-->
     </section>
+
+
 
 </body>
 

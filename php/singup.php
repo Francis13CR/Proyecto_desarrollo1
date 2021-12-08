@@ -100,8 +100,7 @@ $database = new Medoo([
         Swal.fire({
             icon: 'error',
             title: 'Este correo electrónico ya se encuentra registrado...',
-            text: 'Intente con otro correo electrónico',
-            footer: '<a href="">Why do I have this issue?</a>'
+            text: 'Intente con otro correo electrónico'
         })
     }
 
