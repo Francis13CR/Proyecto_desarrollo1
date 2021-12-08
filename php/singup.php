@@ -32,7 +32,7 @@ $database = new Medoo([
         <header>
             <section class="inner-grid centered-flex">
                 <a href="./index.html">
-                    <img src="./imgs/social/logo.png" alt="Logo">
+                    <img src="../imgs/social/logo.png" alt="Logo">
                 </a>
             </section>
         </header>
@@ -129,7 +129,7 @@ $database = new Medoo([
         }).then((result) => {
            
             if (result.dismiss === Swal.DismissReason.timer) {
-                window.location.href = "login.html";
+                window.location.href = "login.php";
             }
         })
 

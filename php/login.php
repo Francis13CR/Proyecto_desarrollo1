@@ -17,7 +17,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => '1609'    
+    'password' => ''    
 ]);
 
 if($_POST){
@@ -33,7 +33,6 @@ if($_POST){
         ]);
 
             if($userExist){
-                
                 if(password_verify($password, $userExist['Password'])){
                     session_start();
                     $_SESSION["id"]=$user["ID"];
