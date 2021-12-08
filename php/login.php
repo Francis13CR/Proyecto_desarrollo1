@@ -17,7 +17,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => ''    
+    'password' => '1609'    
 ]);
 
 if($_POST){
@@ -25,25 +25,28 @@ if($_POST){
         $username=$_POST['username'];
         $password=$_POST['password'];
 
-        //verificar si el usuario pertenece aun administrador
-        $userAdmin=$database->get('user_admin','*', [
+
+         //verificar si el usuario pertenece aun administrador
+         $userAdmin=$database->get('user_admin','*', [
             "user_admin"=>$username
         ]);
+
         //verificar si el usuario se escuentra en la base de datos
         $userExist=$database->get('users', '*',[
             "username"=>$username
         ]);
 
+
         if($userAdmin){
-            session_start();
             if(password_verify($password, $userAdmin['password'])){
                 session_start();
                 $_SESSION["id"]=$user["ID"];
                 $_SESSION["user_admin"]=$user["username"];
-                header("Location: .\adminUssers.php");
+                header("Location: ./adminUssers.php");
         }else{
+
             if($userExist){
-                if(password_verify($password, $userExist['Password'])){
+                if(password_verify($password, $userExist['password'])){
                     session_start();
                     $_SESSION["id"]=$user["ID"];
                     $_SESSION["username"]=$user["username"];
