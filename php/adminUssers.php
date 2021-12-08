@@ -2,7 +2,7 @@
 
 namespace Medoo;
 
-require './php/Medoo.php';
+require 'Medoo.php';
 
 $database = new Medoo([
     'type' => 'mysql',
@@ -26,7 +26,7 @@ $database = new Medoo([
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://allfont.es/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
     <link href="https://allfont.es/allfont.css?fonts=book-antiqua" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script> <!-- SweetAlert2 -->
     <script>
     function error() {
@@ -93,8 +93,10 @@ $database = new Medoo([
                     <?php
 
                     //buscar usuarios
-                        $buscar = $_POST['buscar'];
-                        if ($_POST && $buscar != "") {
+                        
+                        
+                        if ($_POST && $_POST['buscar'] != "") {
+                            $buscar = $_POST['buscar'];
                             $user = $database->select('users', '*', [
                             'username' => $buscar,
 
@@ -116,7 +118,7 @@ $database = new Medoo([
                             error();
                             </script>';
                             }
-                        } else if (!$_POST || $buscar == '') {
+                        } else if (!$_POST || $_POST['buscar'] == "" ) {
 
                             $data = $database->select("users", "*");
 
