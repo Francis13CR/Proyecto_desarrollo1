@@ -2,7 +2,7 @@
 
 namespace Medoo;
 
-require './php/Medoo.php';
+require 'Medoo.php';
 
 $database = new Medoo([
     'type' => 'mysql',
@@ -22,7 +22,7 @@ $database = new Medoo([
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/singup.css">
+    <link rel="stylesheet" href="../css/singup.css">
     <title>Sing up</title>
 </head>
 
