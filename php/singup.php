@@ -9,7 +9,7 @@ $database = new Medoo([
     'host' => 'localhost',
     'database' => 'fototop',
     'username' => 'root',
-    'password' => '1609',
+    'password' => 'Carlexis2609',
 ]);
 
 ?>

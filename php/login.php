@@ -17,7 +17,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => '1609'    
+    'password' => 'Carlexis2609'    
 ]);
 
 if($_POST){
@@ -105,7 +105,7 @@ if($_POST){
                     
                             <a href="singup.php" class="btn cursor">Registrarse</a>
 
-                            <button href="./PassRecovery.html" class="side-margin-auto btn cursor ">Restablecer la contraseña</button>
+                            <a href="PassRecovery.php" class="side-margin-auto btn cursor ">Restablecer la contraseña</a>
                     </div>
                     
                 </section>
