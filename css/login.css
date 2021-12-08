@@ -34,8 +34,8 @@ body {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3.5em;
-    margin-bottom: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     padding: 1em;
     text-align: center;
     font-size: 1.2em;
@@ -66,7 +66,7 @@ body {
 
 .title {
     font-family: 'Book Antiqua', serif;
-    font-size: 2em;
+    font-size: 3em;
     color: #09312e;
     position: relative;
     top: 1em;
@@ -120,6 +120,14 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.mt-1{
+    margin-top: 1em;
+}
+
+.mt-3{
+    margin-top: 3em;
 }
 
 /*MEDIA QUERIES*/

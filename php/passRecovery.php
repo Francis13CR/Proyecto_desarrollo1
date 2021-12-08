@@ -10,7 +10,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => 'Carlexis2609'    
+    'password' => ''    
 ]);
 
 $data=$database->select("users","*");

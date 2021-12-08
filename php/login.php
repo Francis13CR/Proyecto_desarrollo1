@@ -17,7 +17,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => 'Carlexis2609'    
+    'password' => ''    
 ]);
 
 if($_POST){
@@ -95,10 +95,10 @@ if($_POST){
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="password"></label>
-                        <input class="form-input" id="password" type="password" placeholder="Ingrese la contraseña" id="password"
+                        <input class="form-input mt-1" id="password" type="password" placeholder="Ingrese la contraseña" id="password"
                             name="password" required>
                     </div>
-                      <button type="submit" class="btn cursor centered">Iniciar sesión</button>
+                      <button type="submit" class="btn cursor centered mt-3">Iniciar sesión</button>
                 </FORM>
                 <section class="btn-section">
                     <div class="btn-div">
