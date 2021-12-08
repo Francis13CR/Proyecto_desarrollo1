@@ -2,8 +2,16 @@
 
 namespace Medoo;
 
-require './php/Medoo.php';
+require 'Medoo.php';
 
+// base de datos francis
+// $database = new Medoo([
+//     'database_type' => 'mysql',
+//     'database_name' => 'fototop',
+//     'server' => 'localhost',
+//     'username' => 'root',
+//     'password' => ''    
+// ]);
 $database = new Medoo([
     'database_type' => 'mysql',
     'database_name' => 'fototop',
@@ -13,21 +21,24 @@ $database = new Medoo([
 ]);
 
 if($_POST){
-    if(isset($_POST['username']) and isset($_POST['password'])){
+    if(isset($_POST['username'])  && isset($_POST['password'])){
         $username=$_POST['username'];
         $password=$_POST['password'];
-        $userExist=$database->has('usuarios',[
-            "username"=>$username]);
+
+
+
+
+        $userExist=$database->get('users', '*',[
+            "username"=>$username
+        ]);
 
             if($userExist){
-                $user=$database->get('usuarios','*',["username"=>$username]);
-                $userPassword=$user["password"];
-                $passwordValid= password_verify($password,$userPassword);
-                if($passwordValid){
+                
+                if(password_verify($password, $userExist['Password'])){
                     session_start();
-                    $_SESSION["id"]=$user["iduser"];
+                    $_SESSION["id"]=$user["ID"];
                     $_SESSION["username"]=$user["username"];
-                    header("Location: ./profile.html");
+                    header("Location: \index.html");
                 }
             }
 
@@ -62,10 +73,10 @@ if($_POST){
     <!--FORM-->
         <div class="">
             <section class="form-container">
-                <h1 class="title">Inicio de sesión</h1>
+                <h1 class="title">Inicio de sesión   </h1>
                 <p id="alerta-login" class="alert">lorem</p>
 
-                <FORM id="login.php" method="post">
+                <FORM action="login.php" method="post">
 
                     <div class="form-group">
                         <label class="form-label" for="username"></label>
@@ -74,15 +85,15 @@ if($_POST){
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="password"></label>
-                        <input class="form-input" type="password" placeholder="Ingrese la contraseña" id="password-login"
-                            name="titulo" required>
+                        <input class="form-input" id="password" type="password" placeholder="Ingrese la contraseña" id="password"
+                            name="password" required>
                     </div>
-                      <button type="submit" onclick="singIn();" class="btn cursor centered">Iniciar sesión</button>
+                      <button type="submit" class="btn cursor centered">Iniciar sesión</button>
                 </FORM>
                 <section class="btn-section">
                     <div class="btn-div">
                     
-                            <button href="./singup.html" class="btn cursor">Registrarse</button>
+                            <a href="singup.php" class="btn cursor">Registrarse</a>
 
                             <button href="./PassRecovery.html" class="side-margin-auto btn cursor ">Restablecer la contraseña</button>
                     </div>
@@ -94,7 +105,7 @@ if($_POST){
     <!--FORM-->
     </section>
 
- <script src="./js/App.js"></script>
+ 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
     
