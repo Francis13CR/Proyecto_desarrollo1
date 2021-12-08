@@ -13,7 +13,6 @@ body {
     height: 100vh;
     background: url(../imgs/header.jpg) no-repeat;
     background-size: cover;
-    padding-bottom: 6em;
 }
 
 .form-container {
@@ -49,7 +48,7 @@ body {
     border: none;
     color: white;
     font-family: 'Agency FB', arial;
-    font-size: 2em;
+    font-size: 1.8em;
     border-radius: .3em;
     padding: .2em 1.5em .2em 1.5em;
     text-decoration: none;
@@ -68,6 +67,7 @@ body {
 .title {
     font-family: 'Book Antiqua', serif;
     font-size: 2em;
+    color: #09312e;
     position: relative;
     top: 1em;
     text-align: center;
