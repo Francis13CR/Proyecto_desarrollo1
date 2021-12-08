@@ -1,5 +1,22 @@
 <?php
 
+namespace Medoo;
+
+require 'Medoo.php';
+
+$database = new Medoo([
+    'type' => 'mysql',
+    'host' => 'localhost',
+    'database' => 'fototop',
+    'username' => 'root',
+    'password' => '1609',
+]);
+
+$categories = $database->select("places_category", "*");
+//var_dump($categories);
+
+
+
 ?>
 
 
@@ -47,11 +64,13 @@
                      <div class="form-group">
                          <label class="form-label" for="categoria">Categoria</label>
                          <select class="form-input ml-8 ml-cat" id="categorias" name="categoria" required>
-                           
-                            <option value="paisajes">Montaña</option>
-                            <option value="animales">Animales</option>
-                            <option value="ciudad">Ciudad</option>
-                            <option value="playa">playa</option>
+                           <?php
+                           for($index=0; $index<count($categories); $index++){
+                            echo "<option value='".$categories[$index]
+                            ["id_category"]."'>".$categories[$index]
+                            ["name_category"]."</option>";
+                           }
+                           ?>
                          </select>
                      </div>
                     <div class="form-group">
