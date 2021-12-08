@@ -75,15 +75,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </h1>
             <form action="PassRecovery.php" method="post">
                 <div class="inner-grid ">
-                    <label for="username" class="email-text">Ingrese su nombre de usuario</label>
+                    <label for="username" class="label-text">Ingrese su nombre de usuario</label>
                     <input class="form-item" type="text" id=username name="username">
                 </div>
                 <div class="inner-grid ">
-                    <label for="password" class="email-text">Ingrese su nueva contraseña</label>
+                    <label for="password" class="label-text">Ingrese su nueva contraseña</label>
                     <input class="form-item" type="password" id=password name="password">
                 </div>
                 <div class="inner-grid ">
-                    <span><?php echo $err?></span>
+                    <span class="error-text"><?php echo $err?></span>
                 </div>
                 <div class="centered ">
                     <input class="recovery-button mt-9-3" type="submit" value="Recuperar contraseña">
