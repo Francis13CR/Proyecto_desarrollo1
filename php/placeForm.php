@@ -97,5 +97,52 @@ $categories = $database->select("places_category", "*");
 
 <?php
 
+function generateRandomString($len=15){
+return substr(str_shuffle(str_repeat
+($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
+ceil($len/strlen($x)))),1,$len);
+}
+
+//echo "random string =" .generateRandomString();
+
+if(isset($_FILES["images"])){
+    $error = array();
+    $file_name = $_FILES['images']["name"];
+    $file_size = $_FILES['images']["size"];
+    $file_tmp = $_FILES['images']["tmp_name"];
+    $file_type = $_FILES['images']["type"];
+    $file_ext_arr = explode(".", $_FILES["images"]["name"]);
+
+    $file_ext = end ($file_ext_arr);
+    $img_ext = array("jpeg","jpg","png");
+
+    if(in_array($file_ext, $img_ext) == false){
+        $errors[] = "Solamente JPEG, JPG o PNG como formato para las imágenes";
+
+        //alerta de que no se acepta ese tipo de archivo
+        echo"<h3>".$errors[0]."</h3>";
+    }
+
+}
+
+
+        //variable con la fecha y hora actual
+        date_default_timezone_set("America/Costa_Rica");
+        $date = date('Y-m-d H:i:s');
+
+if($_POST){
+
+    $database->insert('images',[
+        'autor'=>$_POST['autor'],
+        'title'=>$_POST['titulo'],
+        'description'=>$_POST['descripcion'],
+        'id_category'=>$_POST['categorias'],
+        'main_image'=>$_FILES['images'],
+        'pub_date'=>$date
+    ]);
+
+    header("Location: ./index.html");
+
+}
 
 ?>
