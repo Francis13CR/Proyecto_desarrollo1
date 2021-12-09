@@ -13,9 +13,6 @@ $database = new Medoo([
 ]);
 
 $categories = $database->select("places_category", "*");
-//var_dump($categories);
-
-
 
 ?>
 
@@ -44,7 +41,9 @@ $categories = $database->select("places_category", "*");
             <section class="form-container">
                 <h1 class="title">Formulario de Envio</h1>
                 <p id="alerta-place" class="alert">lorem</p>
-                <FORM id="placeForm" method="post">
+
+                <FORM id="placeForm.php" method="post" enctype="multipart/form-data">
+
                     <div class="form-group">
                         <label class="form-label" for="autor">Datos de autor</label>
                         <input class="form-input ml-5" type="text" id="autor" name="autor" placeholder="Ingrese los datos del autor" required>
@@ -57,13 +56,13 @@ $categories = $database->select("places_category", "*");
 
                     <div class="form-group">
                         <label class="form-label" for="descripcion">Descripcion</label>
-                        <input class="form-input ml-des"  type="text" id="description"
+                        <input class="form-input ml-des"  type="text" id="descripcion"
                             placeholder="Ingrese la descripcion para la imagen"
-                            name="description" required>
+                            name="descripcion" required>
                     </div>
                      <div class="form-group">
                          <label class="form-label" for="categoria">Categoria</label>
-                         <select class="form-input ml-8 ml-cat" id="categorias" name="categoria" required>
+                         <select class="form-input ml-8 ml-cat" id="categorias" name="categorias" required>
                            <?php
                            for($index=0; $index<count($categories); $index++){
                             echo "<option value='".$categories[$index]
@@ -75,7 +74,7 @@ $categories = $database->select("places_category", "*");
                      </div>
                     <div class="form-group">
                         <label class="form-label" for="Images">Imagenes</label>
-                        <input class="form-input ml-img" type="file" id="Images" name="Images" accept="image/*" multiple required>
+                        <input class="form-input ml-img" type="file" id="images" name="images" accept="image/*" multiple required>
                     </div>
                     <button type="submit" onclick="formplace();" class="btn cursor"> Enviar</button>
 
@@ -95,3 +94,8 @@ $categories = $database->select("places_category", "*");
 </body>
 
 </html>
+
+<?php
+
+
+?>
