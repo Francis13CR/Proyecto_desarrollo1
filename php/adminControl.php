@@ -107,7 +107,10 @@ function button1() {
     ]);
 }
 function button2() {
-    
+    $database->update("images",[
+        'status' => 2],[
+        'id' => $img_idholder
+        ]);
 }
 if(array_key_exists('Aceptar', $_POST)) {
     button1();
@@ -133,7 +136,7 @@ for($i = 0; $i < count($data_imgs); $i++){
         echo $revision = '<section id="1" class="inner-grid inner-bg mt-3">
         <section class="inner-col">
             <div>
-                <img class="inner-img"  src= '.$img_holder.' alt='.$title_holder.'>
+                <img class="inner-img"  src= "../imgs/uploads/'.$img_holder.'" alt='.$title_holder.'>
             </div>
             <div class="center-right">
                 <h3 class="inner-check-title">Titulo: '.$title_holder.' </h3>
