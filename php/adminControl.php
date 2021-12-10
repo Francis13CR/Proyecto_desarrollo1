@@ -100,24 +100,13 @@ $revision = "";
            <p id="alerta-control" class="alert"></p>
 <?php 
 
-function button1() {
-   $database->update("images",[
-    'status' => 1],[
-    'id' => $img_idholder
-    ]);
+/*function button1() {
+   
 }
 function button2() {
-    $database->update("images",[
-        'status' => 2],[
-        'id' => $img_idholder
-        ]);
-}
-if(array_key_exists('Aceptar', $_POST)) {
-    button1();
-}
-else if(array_key_exists('Rechazar', $_POST)) {
-    button2();
-}
+    
+}*/
+
 
 
 for($i = 0; $i < count($data_imgs); $i++){
@@ -133,6 +122,7 @@ for($i = 0; $i < count($data_imgs); $i++){
                 $category_holder = $data_categories[$j]["name_category"];
             }
         }
+        
         echo $revision = '<section id="1" class="inner-grid inner-bg mt-3">
         <section class="inner-col">
             <div>
@@ -145,11 +135,11 @@ for($i = 0; $i < count($data_imgs); $i++){
                 <div class="admin-btn-flex">
                     <form method="post">
                     <div class="admin-btn-flex">
-                        <input type="submit" name="Aceptar"
-                        class="admin-inner-btn" value="Aceptar" />
+                        <BUTTON type="submit" name="Aceptar"
+                        class="admin-inner-btn" value='.$img_idholder.'>Aceptar </BUTTON>
                     
-                        <input type="submit" name="Rechazar"
-                        class="admin-inner-btn" value="Rechazar" />
+                        <BUTTON type="submit" name="Rechazar"
+                        class="admin-inner-btn" value='.$img_idholder.'>"Rechazar" </BUTTON>
                     </div>
                     </form>
                 ' . /*<button class="admin-inner-btn" onclick= '.$state = 2 .'>
@@ -166,10 +156,25 @@ for($i = 0; $i < count($data_imgs); $i++){
     }/*elseif(!$data_imgs[$i]["status"] == 0){
         echo $revision = "ya no quedan imagenes por revisar";
     }*/
-    if($_POST){
-
+    if(array_key_exists('Aceptar', $_POST)) {
+        $id = $_POST['Aceptar'];
+        $database->update("images",[
+            'status' => 1],[
+                'id' => $id
+            ]);
+            header("Location: adminControl.php");
+    }
+    else if(array_key_exists('Rechazar', $_POST)) {
+        $id = $_POST['Rechazar'];
+        $database->update("images",[
+            'status' => 2],[
+                'id' => $id
+            ]);
+            header("Location: adminControl.php");
     }
 }
+
+
 
 ?>
         
