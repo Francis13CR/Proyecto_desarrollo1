@@ -6,23 +6,31 @@ require 'Medoo.php';
 
 
 //base de audry
-$database = new Medoo([
-    'type' => 'mysql',
-    'host' => 'localhost',
-    'database' => 'fototop',
-    'username' => 'root',
-    'password' => '1609',
-]);
+// $database = new Medoo([
+//     'type' => 'mysql',
+//     'host' => 'localhost',
+//     'database' => 'fototop',
+//     'username' => 'root',
+//     'password' => '1609',
+// ]);
 
 //base de francis
-// $database = new Medoo([
-//     'database_type' => 'mysql',
-//     'database_name' => 'fototop',
-//     'server' => 'localhost',
-//     'username' => 'root',
-//     'password' => ''    
-// ]);
+$database = new Medoo([
+    'database_type' => 'mysql',
+    'database_name' => 'fototop',
+    'server' => 'localhost',
+    'username' => 'root',
+    'password' => ''    
+]);
+$categories= '';
 $categories = $database->select("places_category", "*");
+//pasar elementos de categories a utf8
+foreach ($categories as $key => $value) {
+    foreach ($value as $key2 => $value2) {
+        $categories[$key][$key2] = utf8_encode($value2);
+    }
+}
+
 
 ?>
 

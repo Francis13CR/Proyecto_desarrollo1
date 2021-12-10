@@ -21,52 +21,6 @@ $database = new Medoo([
 //     'password' => '1609'    
 // ]);
 
-if($_POST){
-    
-        $username=$_POST['username'];
-        $password=$_POST['password'];
-
-
-         //verificar si el usuario pertenece aun administrador
-         $userAdmin=$database->get('user_admin','*', [
-            "user_admin"=>$username
-        ]);
-
-        //verificar si el usuario se escuentra en la base de datos
-        $userExist=$database->get('users', '*',[
-            "username"=>$username
-        ]);
-
-        var_dump($password);
-
-
-    if($userAdmin){
-            if($password == $userAdmin['password']){
-                session_start();
-                $_SESSION["id"]=$user["id"];
-                $_SESSION["user_admin"]=$user["username"];
-                header("Location: adminUssers.php");
-        }elseif(password_verify($password, $userAdmin['password']) ){
-                session_start();
-                $_SESSION["id"]=$user["id"];
-                $_SESSION["user_admin"]=$user["username"];
-                header("Location: adminUssers.php");
-           
-            
-        }
-    
-    }else if($userExist){
-        if(password_verify($password, $userExist['password'])){
-            session_start();
-            $_SESSION["id"]=$user["id"];
-            $_SESSION["user"]=$user["username"];
-            header("Location: ../index.html");
-        }else{
-            echo "contraseña incorrecta";
-        }
-    }
-}         
-
 
 
 ?>
@@ -128,9 +82,89 @@ if($_POST){
     </section>
 
  
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+    function alert(id){
+        if(id == 1){
+            Swal.fire({
+                title: 'Error',
+                text: 'Usuario  incorrecto o no se encuentra registrado',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            })
+        }else if(id == 2){
+            Swal.fire({
+                title: 'Acceso denegado',
+                text: 'Contraseña incorrecta',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            })
+        }
+
+
+    }
+    </script>
+
+
     
 </body>
 
 </html>
+
+
+
+
+<?php
+
+if($_POST){
+    
+        $username=$_POST['username'];
+        $password=$_POST['password'];
+
+
+         //verificar si el usuario pertenece aun administrador
+         $userAdmin=$database->get('user_admin','*', [
+            "user_admin"=>$username
+        ]);
+
+        //verificar si el usuario se escuentra en la base de datos
+        $userExist=$database->get('users', '*',[
+            "username"=>$username
+        ]);
+
+        var_dump($password);
+
+
+    if($userAdmin){
+            if($password == $userAdmin['password']){
+                session_start();
+                $_SESSION["id"]=$user["id"];
+                $_SESSION["user_admin"]=$user["username"];
+                header("Location: adminUssers.php");
+        }elseif(password_verify($password, $userAdmin['password']) ){
+                session_start();
+                $_SESSION["id"]=$user["id"];
+                $_SESSION["user_admin"]=$user["username"];
+                header("Location: adminUssers.php");
+           
+            
+        }else{
+            echo '<script>alert(2)</script>';
+        }
+    
+    }else if($userExist){
+        if(password_verify($password, $userExist['password'])){
+            session_start();
+            $_SESSION["id"]=$user["id"];
+            $_SESSION["user"]=$user["username"];
+            header("Location: ../index.html");
+        }else{
+            echo '<script>alert(2)</script>';
+        }
+    }else{
+        echo '<script>alert(1)</script>';
+    }
+}         
+?>

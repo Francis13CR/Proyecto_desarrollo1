@@ -4,6 +4,27 @@ namespace Medoo;
 
 require 'Medoo.php';
 
+//base de francis
+
+// $database = new Medoo([
+//     'database_type' => 'mysql',
+//     'database_name' => 'fototop',
+//     'server' => 'localhost',
+//     'username' => 'root',
+//     'password' => ''
+// ]);
+
+//base de audry
+
+// $database = new Medoo([
+//     'type' => 'mysql',
+//     'host' => 'localhost',
+//     'database' => 'fototop',
+//     'username' => 'root',
+//     'password' => '1609',
+// ]);
+
+
 //Base de datos Carlos
 $database = new Medoo([
     'database_type' => 'mysql',
@@ -12,8 +33,13 @@ $database = new Medoo([
     'username' => 'root',
     'password' => 'Carlexis2609'    
 ]);
+//seleccionar las images donde el estado sea 0
 
-$data_imgs = $database->select("images","*");
+$data_imgs = $database->select("images", "*", [
+    "status" => 0
+]);
+
+
 $data_categories = $database->select("places_category", "*");
 $amount_imgs = count($data_imgs);
 $state = 0;
@@ -97,59 +123,48 @@ $revision = "";
             </section>
         </header>
         <!--HEADER-->
-           <p id="alerta-control" class="alert"></p>
-<?php 
-
-function button1() {
-   $database->update("images",[
-    'status' => 1],[
-    'id' => $img_idholder
-    ]);
-}
-function button2() {
-    $database->update("images",[
-        'status' => 2],[
-        'id' => $img_idholder
-        ]);
-}
-if(array_key_exists('Aceptar', $_POST)) {
-    button1();
-}
-else if(array_key_exists('Rechazar', $_POST)) {
-    button2();
-}
+        <p id="alerta-control" class="alert"></p>
+        <?php
 
 
-for($i = 0; $i < count($data_imgs); $i++){
-    if($data_imgs[$i]["status"] == 0){
-        $img_holder = $data_imgs[$i]["main_image"];
-        $img_idholder = $data_imgs[$i]["id"];
-        $title_holder = $data_imgs[$i]["title"];
-        $user_holder = $data_imgs[$i]["autor"];
-        $description_holder = $data_imgs[$i]["description"];
-        $category_idholder =  $data_imgs[$i]["id_category"];
-        for($j = 0; $j < count($data_categories); $j++){
-            if($data_categories[$j]["id_category"] == $category_idholder){
-                $category_holder = $data_categories[$j]["name_category"];
-            }
+        function button2()
+        {
         }
-        echo $revision = '<section id="1" class="inner-grid inner-bg mt-3">
+
+
+        //recorre todas las imagenes y cambia de estado para que se muestren en la galeria
+
+
+        for ($i = 0; $i < count($data_imgs); $i++) {
+
+            $img_holder = $data_imgs[$i]["main_image"];
+            $img_idholder = $data_imgs[$i]["id"];
+            $title_holder = $data_imgs[$i]["title"];
+            $user_holder = $data_imgs[$i]["autor"];
+            $description_holder = $data_imgs[$i]["description"];
+            $category_idholder =  $data_imgs[$i]["id_category"];
+            for ($j = 0; $j < count($data_categories); $j++) {
+                if ($data_categories[$j]["id_category"] == $category_idholder) {
+                    $category_holder = $data_categories[$j]["name_category"];
+                }
+            }
+            echo $revision = '<section id="1" class="inner-grid inner-bg mt-3">
         <section class="inner-col">
             <div>
-                <img class="inner-img"  src= "../imgs/uploads/'.$img_holder.'" alt='.$title_holder.'>
+                <img class="inner-img"  src= "../imgs/uploads/' . $img_holder . '" alt=' . $title_holder . '>
             </div>
             <div class="center-right">
-                <h3 class="inner-check-title">Titulo: '.$title_holder.' </h3>
-                <p class="inner-check-content">Autor:  '.$user_holder.' <br><br>Categoria: '.$category_holder.' <br><br>Descripción: '.$description_holder.'
+                <h3 class="inner-check-title">Titulo: ' . $title_holder . ' </h3>
+                <p class="inner-check-content">Autor:  ' . $user_holder . ' <br><br>Categoria: ' . $category_holder . ' <br><br>Descripción: ' . $description_holder . '
                 </p>
                 <div class="admin-btn-flex">
                     <form method="post">
                     <div class="admin-btn-flex">
-                        <input type="submit" name="Aceptar"
-                        class="admin-inner-btn" value="Aceptar" />
+                        <BUTTON type="submit" name="Aceptar"
+                        class="admin-inner-btn" value=' .  $img_idholder . '> Aceptar</BUTTON>
                     
-                        <input type="submit" name="Rechazar"
-                        class="admin-inner-btn" value="Rechazar" />
+                        <BUTTON type="submit" name="Rechazar"
+                        class="admin-inner-btn" value=' .  $img_idholder . '> Rechazar</BUTTON>
                     </div>
                     </form>
                 ' . /*<button class="admin-inner-btn" onclick= '.$state = 2 .'>
@@ -162,17 +177,34 @@ for($i = 0; $i < count($data_imgs); $i++){
             </div>
         </section>
     </section>';
-    
-    }/*elseif(!$data_imgs[$i]["status"] == 0){
+
+            /*elseif(!$data_imgs[$i]["status"] == 0){
         echo $revision = "ya no quedan imagenes por revisar";
     }*/
-    if($_POST){
+            if ($_POST) {
+            }
+        }
 
-    }
-}
 
-?>
-        
+
+        if (array_key_exists('Aceptar', $_POST)) {
+
+            $id = $_POST['Aceptar'];
+            $database->update("images", [
+                'status' => 1
+            ], [
+                'id' => $id
+            ]);
+        } else if (array_key_exists('Rechazar', $_POST)) {
+            $id = $_POST['Aceptar'];
+            $database->update("images", [
+                'status' => 2
+            ], [
+                'id' => $id
+            ]);
+        }
+        ?>
+
 
         <!--FOOTER-->
         <footer class="admin-footer mt-3">
@@ -180,9 +212,9 @@ for($i = 0; $i < count($data_imgs); $i++){
         </footer>
         <!--FOOTER-->
     </section>
- <script src="../js/App.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
+    <script src="../js/App.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
 </body>
 
 </html>
