@@ -125,30 +125,27 @@ if(isset($_FILES["images"])){
 
     if(empty($errors)){
         $img="places-img-".generateRandomString().".".$file_ext;
-        move_uploaded_file($file_tmp,"../uploads/".$img);
+        move_uploaded_file($file_tmp,"uploads/".$img);
+
+         //variable con la fecha y hora actual
+         date_default_timezone_set("America/Costa_Rica");
+         $date = date('Y-m-d H:i:s');
+ 
+
+        $database->insert('images',[
+            'autor'=>$_POST['autor'],
+            'title'=>$_POST['titulo'],
+            'description'=>$_POST['descripcion'],
+            'id_category'=>$_POST['categorias'],
+            'main_image'=>$img,
+            'pub_date'=>$date
+        ]);
+    
+        header("Location: ./index.html");
          
     }
 
 }
 
-
-        //variable con la fecha y hora actual
-        date_default_timezone_set("America/Costa_Rica");
-        $date = date('Y-m-d H:i:s');
-
-if($_POST){
-
-    $database->insert('images',[
-        'autor'=>$_POST['autor'],
-        'title'=>$_POST['titulo'],
-        'description'=>$_POST['descripcion'],
-        'id_category'=>$_POST['categorias'],
-        'main_image'=>$_FILES['images'],
-        'pub_date'=>$date
-    ]);
-
-    header("Location: ./index.html");
-
-}
 
 ?>
