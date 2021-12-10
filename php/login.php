@@ -5,23 +5,24 @@ namespace Medoo;
 require 'Medoo.php';
 
 // base de datos francis
-// $database = new Medoo([
-//     'database_type' => 'mysql',
-//     'database_name' => 'fototop',
-//     'server' => 'localhost',
-//     'username' => 'root',
-//     'password' => ''    
-// ]);
+
 $database = new Medoo([
     'database_type' => 'mysql',
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => '1609'    
+    'password' => ''    
 ]);
+// $database = new Medoo([
+//     'database_type' => 'mysql',
+//     'database_name' => 'fototop',
+//     'server' => 'localhost',
+//     'username' => 'root',
+//     'password' => '1609'    
+// ]);
 
 if($_POST){
-    if(isset($_POST['username'])  && isset($_POST['password'])){
+    
         $username=$_POST['username'];
         $password=$_POST['password'];
 
@@ -36,27 +37,35 @@ if($_POST){
             "username"=>$username
         ]);
 
+        var_dump($password);
 
-        if($userAdmin){
-            if(password_verify($password, $userAdmin['password'])){
+
+    if($userAdmin){
+            if($password == $userAdmin['password']){
                 session_start();
-                $_SESSION["id"]=$user["ID"];
+                $_SESSION["id"]=$user["id"];
                 $_SESSION["user_admin"]=$user["username"];
-                header("Location: ./adminUssers.php");
+                header("Location: adminUssers.php");
+        }elseif(password_verify($password, $userAdmin['password']) ){
+                session_start();
+                $_SESSION["id"]=$user["id"];
+                $_SESSION["user_admin"]=$user["username"];
+                header("Location: adminUssers.php");
+           
+            
+        }
+    
+    }else if($userExist){
+        if(password_verify($password, $userExist['password'])){
+            session_start();
+            $_SESSION["id"]=$user["id"];
+            $_SESSION["user"]=$user["username"];
+            header("Location: ../index.html");
         }else{
-
-            if($userExist){
-                if(password_verify($password, $userExist['password'])){
-                    session_start();
-                    $_SESSION["id"]=$user["ID"];
-                    $_SESSION["username"]=$user["username"];
-                    header("Location: ./index.html");
-                    }
-                }
-            }
+            echo "contraseña incorrecta";
         }
     }
-}
+}         
 
 
 

@@ -3,15 +3,23 @@
 namespace Medoo;
 
 require 'Medoo.php';
+//base de audry
+// $database = new Medoo([
+//     'type' => 'mysql',
+//     'host' => 'localhost',
+//     'database' => 'fototop',
+//     'username' => 'root',
+//     'password' => '1609',
+// ]);
 
+//base de francis
 $database = new Medoo([
-    'type' => 'mysql',
-    'host' => 'localhost',
-    'database' => 'fototop',
+    'database_type' => 'mysql',
+    'database_name' => 'fototop',
+    'server' => 'localhost',
     'username' => 'root',
-    'password' => '1609',
+    'password' => ''    
 ]);
-
 ?>
 
 
@@ -50,10 +58,10 @@ $database = new Medoo([
                     <!--Menu de navegacion-->
                     <input id="menu" type="checkbox">
                     <label class="bars" for="menu">
-                        <img src="./imgs/index-imgs/svg/bars.svg" alt="menu bar">
+                        <img src="../imgs/index-imgs/svg/bars.svg" alt="menu bar">
                     </label>
                     <a href="index.html">
-                        <img src="./imgs/logo.png" alt="FotoTop" class="logo">
+                        <img src="../imgs/social/logo.png" alt="FotoTop" class="logo">
                     </a>
                     <!--<label>
 
@@ -97,18 +105,24 @@ $database = new Medoo([
                         
                         if ($_POST && $_POST['buscar'] != "") {
                             $buscar = $_POST['buscar'];
+
+                            //seleccionar los usuarios like buscar
+
+
+
+
                             $user = $database->select('users', '*', [
-                            'username' => $buscar,
+                            'username[~]' => $buscar,
 
                             ]);     
                             if ($user) {
                                 foreach ($user as $user) {
                                     echo "<tr>";
-                                    echo "<td>" . $user['ID'] . "</td>";
-                                    echo "<td>" . $user['Full_name'] . "</td>";
+                                    echo "<td>" . $user['id'] . "</td>";
+                                    echo "<td>" . $user['full_name'] . "</td>";
                                     echo "<td>" . $user['username'] . "</td>";
                                     echo "<td>" . $user['email'] . "</td>";
-                                    echo "<td>" . $user['Date_created'] . "</td>";
+                                    echo "<td>" . $user['date_created'] . "</td>";
                                     echo "<td>" . $user['last_login'] . "</td>";
                                     echo "</tr>";
                                 }
@@ -129,13 +143,13 @@ $database = new Medoo([
                                 //mostrar el numero de usuario en cada usuario
 
                                 echo "<tr class='mb-3'>";
-                                echo "<td>" . $data[$i]["ID"] . "</td>";
-                                echo "<td>" . $data[$i]["Full_name"] . "</td>";
+                                echo "<td>" . $data[$i]["id"] . "</td>";
+                                echo "<td>" . $data[$i]["full_name"] . "</td>";
 
                                 echo "<td>" . $data[$i]["username"] . "</td>";
                                 echo "<td>" . $data[$i]["email"] . "</td>";
 
-                                echo "<td>" . $data[$i]["Date_created"] . "</td>";
+                                echo "<td>" . $data[$i]["date_created"] . "</td>";
                                 echo "<td>" . $data[$i]["last_login"] . "</td>";
 
                                 // //imprimir numero de usuarios
