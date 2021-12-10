@@ -120,7 +120,13 @@ if(isset($_FILES["images"])){
         $errors[] = "Solamente JPEG, JPG o PNG como formato para las imágenes";
 
         //alerta de que no se acepta ese tipo de archivo
-        echo"<h3>".$errors[0]."</h3>";
+        //echo"<h3>".$errors[0]."</h3>";
+    }
+
+    if(empty($errors)){
+        $img="places-img-".generateRandomString().".".$file_ext;
+        move_uploaded_file($file_tmp,"../uploads/".$img);
+         
     }
 
 }
