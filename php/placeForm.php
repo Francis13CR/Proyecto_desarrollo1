@@ -4,6 +4,8 @@ namespace Medoo;
 
 require 'Medoo.php';
 
+
+//base de audry
 $database = new Medoo([
     'type' => 'mysql',
     'host' => 'localhost',
@@ -12,6 +14,14 @@ $database = new Medoo([
     'password' => '1609',
 ]);
 
+//base de francis
+// $database = new Medoo([
+//     'database_type' => 'mysql',
+//     'database_name' => 'fototop',
+//     'server' => 'localhost',
+//     'username' => 'root',
+//     'password' => ''    
+// ]);
 $categories = $database->select("places_category", "*");
 
 ?>
@@ -124,8 +134,12 @@ if(isset($_FILES["images"])){
     }
 
     if(empty($errors)){
+
         $img="places-img-".generateRandomString().".".$file_ext;
-        move_uploaded_file($file_tmp,"uploads/".$img);
+
+        //guardar la imagen en la carpeta imgs/uploads
+        move_uploaded_file($file_tmp, "../imgs/uploads/".$img);
+
 
          //variable con la fecha y hora actual
          date_default_timezone_set("America/Costa_Rica");
@@ -141,7 +155,7 @@ if(isset($_FILES["images"])){
             'pub_date'=>$date
         ]);
     
-        header("Location: ./index.html");
+        header("Location: ../index.html");
          
     }
 

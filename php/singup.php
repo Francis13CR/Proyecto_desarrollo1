@@ -4,13 +4,26 @@ namespace Medoo;
 
 require 'Medoo.php';
 
+
+//base de francis
+
 $database = new Medoo([
-    'type' => 'mysql',
-    'host' => 'localhost',
-    'database' => 'fototop',
+    'database_type' => 'mysql',
+    'database_name' => 'fototop',
+    'server' => 'localhost',
     'username' => 'root',
-    'password' => '1609',
+    'password' => ''    
 ]);
+
+//base de audry
+
+// $database = new Medoo([
+//     'type' => 'mysql',
+//     'host' => 'localhost',
+//     'database' => 'fototop',
+//     'username' => 'root',
+//     'password' => '1609',
+// ]);
 
 ?>
 
@@ -114,7 +127,7 @@ $database = new Medoo([
         Swal.fire({
             title: 'Registro exitoso!',
             html: 'Redireccionando al inicio de sesion...',
-            imageUrl: './imgs/Top10-imgs/tercerLugar.jpg',
+            imageUrl: '../imgs/Top10-imgs/tercerLugar.jpg',
             imageWidth: 400,
             imageHeight: 200,
             timer: 4000,
@@ -194,7 +207,7 @@ if ($_POST) {
             'username' => $_POST['username'],
             'password' => $password,
             "email" => $_POST["email"],
-            "Full_name" => $_POST["full_name"],
+            "full_name" => $_POST["full_name"],
             "Date_created" => $date,
 
         ]);
@@ -208,7 +221,7 @@ if ($_POST) {
         icon: "error",
         title: "Las contraseñas no coinciden",
         text: "Intente de nuevo",
-        footer: "<a href>Why do I have this issue?</a>"
+       
     })
     </script>';
 }
