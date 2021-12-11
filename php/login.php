@@ -117,9 +117,11 @@ $database = new Medoo([
 
 
 <?php
+  session_start();
+$_SESSION['login'] = false;
 
 if($_POST){
-    
+      
         $username=$_POST['username'];
         $password=$_POST['password'];
 
@@ -139,14 +141,23 @@ if($_POST){
 
     if($userAdmin){
             if($password == $userAdmin['password']){
-                session_start();
-                $_SESSION["id"]=$user["id"];
-                $_SESSION["user_admin"]=$user["username"];
+                
+                $_SESSION["id"]=$userAdmin["id"];
+                $_SESSION["user_admin"]=$username;
+                $_SESSION["login"]=true;
+                 //actualizar el ultimo de login
+            $database->update('user_admin',[
+                "last_login"=>date("Y-m-d H:i:s")
+            ],[
+                "user_admin"=>$username
+            ]);
                 header("Location: adminUssers.php");
+
         }elseif(password_verify($password, $userAdmin['password']) ){
-                session_start();
-                $_SESSION["id"]=$user["id"];
-                $_SESSION["user_admin"]=$user["username"];
+                
+                $_SESSION["id"]=$userExist["id"];
+                $_SESSION["user_admin"]=$username;
+                $_SESSION["login"]=true;
                 header("Location: adminUssers.php");
            
             
@@ -156,10 +167,21 @@ if($_POST){
     
     }else if($userExist){
         if(password_verify($password, $userExist['password'])){
-            session_start();
+            
             $_SESSION["id"]=$user["id"];
-            $_SESSION["user"]=$user["username"];
-            header("Location: ../index.html");
+            $_SESSION["user"]=$username;
+            $_SESSION["login"]=true;
+
+            //actualizar el ultimo de login
+            $database->update('users',[
+                "last_login"=>date("Y-m-d H:i:s")
+            ],[
+                "username"=>$username
+            ]);
+
+
+
+            header("Location: index.php");
         }else{
             echo '<script>alert(2)</script>';
         }

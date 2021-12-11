@@ -31,6 +31,15 @@ foreach ($categories as $key => $value) {
     }
 }
 
+session_start();
+$autor='';
+
+
+if(isset($_SESSION['login'])){
+    if($_SESSION['login']==true){
+        $autor = $_SESSION['user'];
+    }
+}
 
 ?>
 
@@ -49,7 +58,7 @@ foreach ($categories as $key => $value) {
 <body>
     <section class="container  ">
         <header class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="/imgs/social/logo.png" alt="FotoTop">
             </a>
         </header>
@@ -64,7 +73,7 @@ foreach ($categories as $key => $value) {
 
                     <div class="form-group">
                         <label class="form-label" for="autor">Datos de autor</label>
-                        <input class="form-input ml-5" type="text" id="autor" name="autor" placeholder="Ingrese los datos del autor" required>
+                        <input class="form-input ml-5" type="text" id="autor" name="autor" value="<?php echo $autor ?>"placeholder="Ingrese los datos del autor" disabled>
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="titulo">Titulo</label>
@@ -92,9 +101,9 @@ foreach ($categories as $key => $value) {
                      </div>
                     <div class="form-group">
                         <label class="form-label" for="Images">Imagenes</label>
-                        <input class="form-input ml-img" type="file" id="images" name="images" accept="image/*" multiple required>
+                        <input class="form-input ml-img" type="file" id="images" name="images" accept="image/*"  required>
                     </div>
-                    <button type="submit" onclick="formplace();" class="btn cursor"> Enviar</button>
+                    <button type="submit"  class="btn cursor"> Enviar</button>
 
 
                 </FORM>
@@ -106,20 +115,51 @@ foreach ($categories as $key => $value) {
 
     </section>
 
-  <script src="./js/App.js"></script>
+  <!-- <script src="./js/App.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/MotionPathPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+    function alert(id){
+        if(id == 1){
+            Swal.fire({
+                title: 'Error',
+                text: 'Por favor registrese para poder enviar un lugar',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            })
+        }else if(id == 2){
+            Swal.fire({
+                title: 'Acceso denegado',
+                text: 'Contraseña incorrecta',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            })
+        }
+
+
+    }
+    </script>
+
 </body>
 
 </html>
 
 <?php
 
+
+
+
 function generateRandomString($len=15){
 return substr(str_shuffle(str_repeat
 ($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
 ceil($len/strlen($x)))),1,$len);
 }
+
+
+
+
+
 
 //echo "random string =" .generateRandomString();
 
@@ -152,10 +192,12 @@ if(isset($_FILES["images"])){
          //variable con la fecha y hora actual
          date_default_timezone_set("America/Costa_Rica");
          $date = date('Y-m-d H:i:s');
- 
+        
+
+        if($autor != ''){ 
 
         $database->insert('images',[
-            'autor'=>$_POST['autor'],
+            'autor'=>$autor,
             'title'=>$_POST['titulo'],
             'description'=>$_POST['descripcion'],
             'id_category'=>$_POST['categorias'],
@@ -163,9 +205,11 @@ if(isset($_FILES["images"])){
             'pub_date'=>$date
         ]);
     
-        header("Location: ../index.html");
-         
+        header("Location: index.php");
+    }else{
+        echo "<script>alert(1)</script>";
     }
+}
 
 }
 
