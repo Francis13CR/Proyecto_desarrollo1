@@ -9,7 +9,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => ''    
+    'password' => 'Carlexis2609'    
 ]);
 
 $login = false;
@@ -91,7 +91,7 @@ if(isset($_SESSION['login'])){
                 <a id="log" class="log-btn mt-9" href="login.php">Iniciar sesión</a>
                 <a id="regis" class="log-btn mt-1" href="singup.php">Registrarse</a>
                 <?php }else{?>
-                <p class="log-btn mt-9" > Bienvenido <?php echo $usuario?></p>    
+                <p class="log-btn mt-9" > Bienvenido <a href = ./profile.php> <?php echo $usuario?> </a> </p>    
                 <a id="log" class="log-btn mt-1" href="logout.php">Cerrar sesión</a>
                 <?php }?>
             </section>

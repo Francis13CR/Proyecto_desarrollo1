@@ -20,7 +20,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => ''    
+    'password' => 'Carlexis2609'    
 ]);
 $categories= '';
 $categories = $database->select("places_category", "*");
