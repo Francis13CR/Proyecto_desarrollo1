@@ -70,7 +70,7 @@ body {
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     width: 100%;
 
@@ -80,7 +80,7 @@ body {
 }
 
 .card:hover {
-    box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 8px 16px 16px 8px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -88,7 +88,7 @@ body {
 .image {
 
     width: 60%;
-    height: 90%;
+    height: 80%;
     border-radius: 5px;
 
 
@@ -186,7 +186,21 @@ body {
     border-radius: .3em;
     padding: .2em 1.5em .2em 1.5em;
     text-decoration: none;
-    margin: 4em 0em 0em 7em;
+    margin: 4em 0em 0em 4em;
+    cursor: pointer;
+
+}
+.btn-vote {
+    text-align: center;
+    background-color: #39303e;
+    border: none;
+    color: white;
+    font-family: 'Agency FB', arial;
+    font-size: 1.8em;
+    border-radius: .3em;
+    padding: .2em 1.5em .2em 1.5em;
+    text-decoration: none;
+    margin: 1em 0em 0em 4em;
     cursor: pointer;
 }
 
