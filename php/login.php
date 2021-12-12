@@ -168,7 +168,7 @@ if($_POST){
     }else if($userExist){
         if(password_verify($password, $userExist['password'])){
             
-            $_SESSION["id"]=$user["id"];
+            $_SESSION["id"]=$userExist["id"];
             $_SESSION["user"]=$username;
             $_SESSION["login"]=true;
 

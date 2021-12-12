@@ -42,6 +42,9 @@ if ($_POST) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
     <link rel="stylesheet" href="../css/gallery.css">
     <title>Galeria</title>
 </head>
@@ -134,9 +137,24 @@ if ($_POST) {
 
 
                 <?php
+                session_start();
                     foreach ($images as $image) {
                         $date = date_create($image['pub_date']);
                         $date = date_format($date, 'd-m-Y');
+                        //comprobar si el usuario ha votado la imagen
+                        $id_user='';
+                        if (isset($_SESSION['user'])) {
+                               $id_user = $_SESSION['id'];
+                        }
+                    
+                       $voted= $database->select("images_likes", "*", ["id_place" => $image['id'], "id_user" => $id_user]);
+                        //si el usuario ha votado la imagen, mostrar el icono de votado
+                        if ($voted) {
+                            $icon = '<i class="material-icons">thumb_up</i>';
+                        } else {
+                            $icon = '<i class="material-icons">thumb_up_off_alt</i>';
+                        }
+                       
 
                         echo '<section data-aos="fade-up" class="inner-col card">
                                                     <div class="media">
@@ -151,10 +169,10 @@ if ($_POST) {
                                                                 <button type="submit" name="ver"
                                                                 class="btn" value=' . $image['id'] . '>Ver mas </button>
                                                             </form>
-                                                            <form action="votar.php" method="post">
-                                                                <button type="submit" name="votar"
-                                                                class="btn-vote " value=' . $image['id'] . '>Votar </button>
-                                                            </form>
+                                                            
+                                                                <button id="vote'.$image['id'].'" type="submit" name="votar"
+                                                                class="btn-vote  " onclick="vote('.$image['id'].')"   value=' . $image['id'] . '>'.$icon.'</button>
+                                                         
 
 
                                                     </div>
@@ -170,8 +188,61 @@ if ($_POST) {
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
     AOS.init();
+     //funcion para los votos de las imagenes
+        function vote(id) {
+
+       
+        
+        fetch("votar.php", {
+                method: "POST",
+                mode: "same-origin",
+                credentials: "same-origin",
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(id)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data === 401) {
+                    swal.fire({
+                        title: 'Debes iniciar sesion para poder votar',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Iniciar sesion'
+                    }).then((result) => {
+                        if (result.value) {
+                            window.location.href = "login.php";
+                        }
+                    })
+                }
+                if (data === 200) {
+                    
+                   //si ya vota entonces el icono cambia a votado
+                
+                    btn = document.getElementById("vote"+id);
+                    //cambiar el icono a votado a la imagen
+                    if (btn.innerHTML === '<i class="material-icons">thumb_up_off_alt</i>') {
+                        btn.innerHTML = '<i class="material-icons">thumb_up</i>';
+                    } else {
+                        btn.innerHTML = '<i class="material-icons">thumb_up_off_alt</i>';
+                    }
+
+
+                
+                    
+                }
+            })
+
+
+    }
+
     </script>
 
 </body>
