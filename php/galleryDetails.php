@@ -82,17 +82,17 @@ if($_POST){
                                         Descripción: <br>
                                         <span class="text">'.$image['description'].'</span>
                                     </h3>
-                                     <h2 class="subtitle">
+                                     <h4 class="subtitle">
                                             Autor: <br><span>'.$image['autor'].'</span>
-                                        </h2>
-
-                                        <h2 class="subtitle">
-                                            Categoria: <br> <span>'.$category.'</span>
-                                        </h2>
-
-                                        <h4 class="subtitle mb-2">
-                                            Fecha de publicación: '.$date.'
                                         </h4>
+
+                                        <h5 class="subtitle">
+                                            Categoria: <br> <span>'.$category.'</span>
+                                        </h5>
+
+                                        <h6 class="subtitle mb-2">
+                                            Fecha de publicación: '.$date.'
+                                        </h6>
 
                                         <!--BUTTONS-->
                                         <div class= "mt-3">

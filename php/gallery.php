@@ -49,7 +49,7 @@ if ($_POST) {
 <body>
     <section class="container">
         <header class="top-section">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="../imgs/social/logo.png" class="logo" alt="logo">
             </a>
             <h1 class="top-title">Galeria</h1>
