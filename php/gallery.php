@@ -8,7 +8,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => '',
+    'password' => '1609',
 ]);
 
 if ($_POST) {

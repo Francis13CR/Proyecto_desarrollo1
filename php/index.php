@@ -1,6 +1,7 @@
 <?php
 
 namespace Medoo;
+
 require_once 'Medoo.php';
 
 //base de francis
@@ -9,7 +10,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => ''    
+    'password' => '1609'    
 ]);
 
 $login = false;

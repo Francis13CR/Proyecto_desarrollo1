@@ -148,6 +148,62 @@ body{
         padding-top: .2%;
     }
 
+    .profile-name{
+        text-align: center;
+        margin-left: 2em;
+    }
+
+    .inner-title{
+        text-align: center;
+        margin-left: 2em;
+    }
+
+    .vertical-img{
+        width: 100%;
+        margin-left: 3em;
+    }
+
+    .inner-text{
+        font-size: 2em;
+        margin-left: 4.5em;
+    }
+
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 420px) {
+
+    .top-section{
+        background-size: cover;
+        width: 100%;
+        padding-right: 5.6em;
+    }
+
+    .footer-logo{
+        padding-left:  35%;
+        padding-right: 35.5%;
+    }
+
+    .profile-name{
+        text-align: center;
+        margin-left: 2em;
+    }
+
+    .inner-title{
+        text-align: center;
+        margin-left: 2em;
+    }
+
+    .vertical-img{
+        width: 100%;
+        margin-left: 3em;
+    }
+
+    .inner-text{
+        font-size: 1.5em;
+        margin-left: 4.5em;
+    }
+
 }
 
 /*MEDIA QUERIES*/
@@ -178,12 +234,45 @@ body{
         width: 100%;
     }
 
-    .horizontal-img{
-        width: 130%;
+    .inner-text{
+        font-size: 1.5em;
+    }
+
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 360px) {
+
+    .top-section{
+        background-size: cover;
+        width: 100%;
+        padding-right: 5.6em;
+    }
+
+    .footer-logo{
+        padding-left:  35%;
+        padding-right: 35.5%;
+    }
+
+    .profile-name{
+        text-align: center;
+        margin-left: 2em;
+    }
+
+    .inner-title{
+        text-align: center;
+        margin-left: 2em;
+    }
+
+    .vertical-img{
+        width: 100%;
+        margin-left: 3em;
     }
 
     .inner-text{
         font-size: 1.5em;
+        margin-left: 4.5em;
     }
+
 
 }

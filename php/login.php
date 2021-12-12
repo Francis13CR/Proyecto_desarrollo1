@@ -11,17 +11,8 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => ''    
+    'password' => '1609'    
 ]);
-// $database = new Medoo([
-//     'database_type' => 'mysql',
-//     'database_name' => 'fototop',
-//     'server' => 'localhost',
-//     'username' => 'root',
-//     'password' => '1609'    
-// ]);
-
-
 
 ?>
 
@@ -40,7 +31,7 @@ $database = new Medoo([
 <section class="container  ">
     <!--HEADER-->
         <header class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="../imgs/social/logo.png" alt="FotoTop">
             </a>
         </header>
