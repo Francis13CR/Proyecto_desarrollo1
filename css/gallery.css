@@ -136,8 +136,6 @@ body {
     position: relative;
     top: 2em;
     text-align: center;
-
-
     text-align: center;
     right: 40%;
 }
@@ -146,9 +144,7 @@ body {
     font-family: 'Angecy FB',
         serif;
     font-size: 1.5em;
-
     text-align: center;
-
     color: #5e827f;
     position: relative;
     top: 20%;
@@ -158,8 +154,6 @@ body {
 .inner-content {
     flex: 1;
     padding: 1em;
-
-
     position: relative;
     top: -5em;
     right: 1em;
@@ -172,8 +166,23 @@ body {
     position: relative;
     bottom: 5em;
     right: 50em;
+}
 
+.form-item{
+    border-radius: .5em;
+    font-size: 1.7em;
+    font-family: 'Book Antiqua', serif;
+    margin-right: -3em;
+    
+}
 
+.form-title{
+    font-family: 'Book Antiqua', serif;
+    font-size: 1.7em;
+    color: #09312e;
+    position: relative;
+    text-align: left;
+    margin-bottom: -3em;
 }
 
 .btn {

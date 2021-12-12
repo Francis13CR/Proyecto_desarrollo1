@@ -8,7 +8,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => '1609',
+    'password' => 'Carlexis2609',
 ]);
 
 if ($_POST) {
@@ -119,17 +119,17 @@ if ($_POST) {
                             echo "<p class=' '>Total de imagenes en la categoria buscada: " . $total_categoria . "</p>";
                         } else {
                             $total = $database->count("images", ["status" => 1]);
-                            echo "<p class=' '>Total de imagenes en la galeria: " . $total . "</p>";
+                            echo "<p class='form-title'>Total de imagenes en la galeria: " . $total . "</p>";
                         }
 
                 ?>
 
                 <form action="gallery.php" method="post">
-                    <select class=" " name="categoria" id="categoria">
+                    <select class="form-item" name="categoria" id="categoria">
                         <option value="0">Todas</option>
                         <?php imagenes();?>
                     </select>
-                    <input class="" type="submit" value="Buscar">
+                    <input class="btn" type="submit" value="Buscar">
                 </form>
 
 
