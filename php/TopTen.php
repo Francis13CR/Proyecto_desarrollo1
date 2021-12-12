@@ -15,7 +15,7 @@
     <section class = "container">
         <!--HEADER-->
         <header class="top-square">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="../imgs/social/logo.png" alt="FotoTop" class="logo">
             </a>
         </header>
@@ -119,7 +119,7 @@
                 <!--BUTTONS-->
                 <div class="centered">
                     <a href="#" class="button btn-left">Volver</a>
-                    <a href="index.html" class="button btn-rigth">Inicio</a>
+                    <a href="index.php" class="button btn-rigth">Inicio</a>
                 </div>
 
             </section>
