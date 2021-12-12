@@ -86,7 +86,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <span class="error-text"><?php echo $err?></span>
                 </div>
                 <div class="centered ">
-                    <input class="recovery-button mt-9-3" type="submit" value="Recuperar contraseña">
+                    <input class="recovery-button" type="submit" value="Recuperar contraseña">
                 </div>
             </form>
 
