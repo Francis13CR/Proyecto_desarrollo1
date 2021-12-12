@@ -4,22 +4,13 @@ namespace Medoo;
 
 require 'Medoo.php';
 
-// //Base de datos Carlos
-// $database = new Medoo([
-//     'database_type' => 'mysql',
-//     'database_name' => 'fototop',
-//     'server' => 'localhost',
-//     'username' => 'root',
-//     'password' => 'Carlexis2609'    
-// ]);
-
 //base de francis
 $database = new Medoo([
     'database_type' => 'mysql',
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => ''    
+    'password' => '1609'    
 ]);
 
 

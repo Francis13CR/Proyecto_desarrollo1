@@ -1,14 +1,17 @@
 <?php
     namespace Medoo;
+
     require 'Medoo.php';
+
     //base de francis
   $database = new Medoo([
     'database_type' => 'mysql',
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => ''    
+    'password' => '1609'    
 ]);
+
 $data='';
 if($_POST){
    $id = $_POST['ver'];
