@@ -62,7 +62,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <section class="container ">
         <!--HEADER-->
         <header>
-            <a href="index.html">
+            <a href="index.php">
                 <img src="../imgs/social/logo.png" alt="FOTOTOP" class="ml-3-1 mt-1-8">
             </a>
         </header>
