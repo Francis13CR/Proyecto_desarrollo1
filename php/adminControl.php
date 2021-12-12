@@ -131,8 +131,10 @@ for($i = 0; $i < count($data_imgs); $i++){
         for($j = 0; $j < count($data_categories); $j++){
             if($data_categories[$j]["id_category"] == $category_idholder){
                 $category_holder = $data_categories[$j]["name_category"];
+                $category_holder = UTF8_ENCODE($category_holder);
             }
         }
+
         
         echo $revision = '<section id="1" class="inner-grid inner-bg mt-3">
         <section class="inner-col">

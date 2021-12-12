@@ -9,7 +9,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => 'Carlexis2609'    
+    'password' => ''    
 ]);
 
 $login = false;
@@ -20,6 +20,56 @@ if(isset($_SESSION['login'])){
         $usuario = $_SESSION['user'];
       
     }
+}
+//insertar las categorias en la tabla si aun no estan creadas
+$ciudad = $database->get("places_category", "*", ["name_category[~]" => 'Ciudad']);
+if(empty($ciudad)){
+    
+    $database->insert("places_category", [
+        "name_category" => 'Ciudad'
+    ]);
+}
+$playa = $database->get("places_category", "*", ["name_category[~]" => 'Playa']);
+if(empty($playa)){
+    
+    $database->insert("places_category", [
+        "name_category" => 'Playa'
+    ]);
+}
+$Animales = $database->get("places_category", "*", ["name_category[~]" => 'Animales']);
+if(empty($Animales)){
+    
+    $database->insert("places_category", [
+        "name_category" => 'Animales'
+    ]);
+}
+$Cultura = $database->get("places_category", "*", ["name_category[~]" => 'Cultura']);
+if(empty($Cultura)){
+    
+    $database->insert("places_category", [
+        "name_category" => 'Cultura'
+    ]);
+}
+$Deporte = $database->get("places_category", "*", ["name_category[~]" => 'Deporte']);
+if(empty($Deporte)){
+    
+    $database->insert("places_category", [
+        "name_category" => 'Deporte'
+    ]);
+}
+$naturaleza = $database->get("places_category", "*", ["name_category[~]" => 'Naturaleza']);
+if(empty($naturaleza)){
+    
+    $database->insert("places_category", [
+        "name_category" => 'Naturaleza'
+    ]);
+}
+$Otros = $database->get("places_category", "*", ["name_category[~]" => 'Otros']);
+if(empty($Otros)){
+    
+    $database->insert("places_category", [
+        "name_category" => 'Otros'
+    ]);
 }
 
 

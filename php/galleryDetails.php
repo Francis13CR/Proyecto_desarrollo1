@@ -9,6 +9,7 @@
     'username' => 'root',
     'password' => ''    
 ]);
+$data='';
 if($_POST){
    $id = $_POST['ver'];
     $data = $database->select("images", "*", ["id" => $id]);
@@ -40,7 +41,7 @@ if($_POST){
         <!--HEADER-->
         <header class="top-section">
             <section class = " inner-grid">
-                <a href="index.html">
+                <a href="index.php">
                     <img src="../imgs/social/logo.png" alt="FotoTop" class="logo">
                 </a>
             </section>
@@ -56,6 +57,19 @@ if($_POST){
 
                 //contar los votos que tiene la imagen
                 $votes = $database->count("images_likes", ["id_place" => $image['id']]);
+
+                //mostrar la categoria a la que pertenece la imagen
+                $category = $database->select("places_category", "*", ["id_category" => $image['id_category']]);
+               
+                //mostrar el nombre de la categoria
+                foreach ($category as $cat) {
+                    $category = $cat['name_category'];
+                    //pasar el nombre a utf8
+                    $category = utf8_encode($category);
+                }
+                
+              
+
 
 
 
@@ -73,7 +87,7 @@ if($_POST){
                                         </h2>
 
                                         <h2 class="subtitle">
-                                            Categoria: <br> <span>Montaña</span>
+                                            Categoria: <br> <span>'.$category.'</span>
                                         </h2>
 
                                         <h4 class="subtitle mb-2">
