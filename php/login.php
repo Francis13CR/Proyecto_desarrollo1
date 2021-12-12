@@ -31,7 +31,7 @@ $database = new Medoo([
 <section class="container  ">
     <!--HEADER-->
         <header class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img src="../imgs/social/logo.png" alt="FotoTop">
             </a>
         </header>
