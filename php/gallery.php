@@ -51,13 +51,17 @@
         <section class="inner-grid">
            <?php
                     foreach ($images as $image) {
+                        $date = date_create($image['pub_date']);
+                        $date = date_format($date, 'd-m-Y');
+
+
                         echo '<section data-aos="fade-up" class="inner-col card">
                                 <div class="media">
                                 <img src="../imgs/uploads/'.$image['main_image'].'" alt="'.$image['title'].'" class="image">
                                 </div>
                                 <div class="inner-content">
                                     <h2 class="inner-title">'.$image['title'].'</h2>
-                                    <p class="inner-p"> Fecha de publicacion '.$image['pub_date'].'</p>
+                                    <p class="inner-p"> Fecha de publicacion: '.$date.'</p>
                                      <p class="inner-p"> Autor: '.$image['autor'].' </p>
                                         <form action="galleryDetails.php" method="post">
                     
