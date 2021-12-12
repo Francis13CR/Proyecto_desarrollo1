@@ -127,7 +127,7 @@ $database = new Medoo([
         Swal.fire({
             title: 'Registro exitoso!',
             html: 'Redireccionando al inicio de sesion...',
-            imageUrl: '../imgs/Top10-imgs/tercerLugar.jpg',
+            imageUrl: '../imgs/index-imgs/cocodrile.jpg',
             imageWidth: 400,
             imageHeight: 200,
             timer: 4000,

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://allfont.es/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
     <link href="https://allfont.es/allfont.css?fonts=book-antiqua" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="./css/topTen.css">
+    <link rel="stylesheet" href="../css/topTen.css">
     <title>TopTen</title>
 </head>
 
@@ -16,7 +16,7 @@
         <!--HEADER-->
         <header class="top-square">
             <a href="index.html">
-                <img src="./imgs/social/logo.png" alt="FotoTop" class="logo">
+                <img src="../imgs/social/logo.png" alt="FotoTop" class="logo">
             </a>
         </header>
         <!--HEADER-->
@@ -31,7 +31,7 @@
 
                 <!--primer lugar-->
                 <div>
-                    <img src="./imgs/index-imgs/cocodrilito menorque3.jpg" alt="Una vista al cocodrilito" class="img-first">
+                    <img src="../imgs/index-imgs/cocodrile.jpg" alt="Una vista al cocodrilito" class="img-first">
                     <h2 class="subtitle font-2 mb-1">
                         1. Un cocodrilito
                     </h2>

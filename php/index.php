@@ -157,7 +157,7 @@ if(empty($Otros)){
                 <div class = "center-right">
                     <h3 class="inner-title">Galeria</h3>
                     <p class="inner-content">Aquí veras todos los<br>bellos lugares que<br>nos han compartido</p>
-                <a class="inner-btn" href="gallery.html">
+                <a class="inner-btn" href="gallery.php">
                     Ver mas
                 </a>
                 </div>
@@ -190,7 +190,7 @@ if(empty($Otros)){
                 <div class="center-right">
                     <h3 class="inner-title">Top 10</h3>
                     <p class="inner-content">Aquí podras mirar<br>los lugares mas votados<br>de nuestra pagina</p>
-                <a class="inner-btn" href="topTen.html">
+                <a class="inner-btn" href="topTen.php">
                     Ver mas
                 </a>
                 </div>

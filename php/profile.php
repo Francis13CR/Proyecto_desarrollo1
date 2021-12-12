@@ -5,20 +5,27 @@ namespace Medoo;
 require 'Medoo.php';
 
 //Base de datos Carlos
+// $database = new Medoo([
+//     'database_type' => 'mysql',
+//     'database_name' => 'fototop',
+//     'server' => 'localhost',
+//     'username' => 'root',
+//     'password' => 'Carlexis2609'    
+// ]);
+//base de francis
 $database = new Medoo([
     'database_type' => 'mysql',
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => 'Carlexis2609'    
+    'password' => ''    
 ]);
-
 $data_img = $database->select("images", "*");
 $img_holder = "";
 $title_holder = "";
 $description_holder = "";
 $date_holder = "";
-
+$user='';
 session_start();
 $user = $_SESSION['user'];
 
@@ -49,7 +56,7 @@ $profile_info = "";
                 <a href = ./index.php>
                     <img class="ml-6-25 mt-6-25" src="../imgs/logo.png" alt="logo">
                 </a>
-                <h1 class="profile-name"><?php echo $user ?></h1>
+                <h1 class="profile-name"> Bienvenido a tu perfil,  <?php echo $user ?> </h1>
             </section>
         </header>
         <!--HEADER-->
