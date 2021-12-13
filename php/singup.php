@@ -34,7 +34,7 @@ $database = new Medoo([
         <!--HEADER-->
         <header>
             <section class="inner-grid centered-flex">
-                <a href="./index.html">
+                <a href="./index.php">
                     <img src="../imgs/social/logo.png" alt="Logo">
                 </a>
             </section>

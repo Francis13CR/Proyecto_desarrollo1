@@ -178,6 +178,13 @@ body{
     border-radius: 2em;
 }
 
+.inner-img-admin{
+    width: 55%;
+    height: auto;
+    margin: 1em 5em 3em 2em;
+    border-radius: 2em;
+}
+
 .inner-btn{
     font-family: 'Agency FB', arial;
     font-size: 1.6em;
@@ -254,7 +261,7 @@ body{
 
 .logo-footer {
     position: relative;
-    left: 45%;
+    left: 43.5%;
 }
 
     .bars{display: none;}

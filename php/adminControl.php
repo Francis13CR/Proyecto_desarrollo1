@@ -83,7 +83,7 @@ $revision = "";
                     <label class="bars" for="menu">
                         <img src="../imgs/index-imgs/svg/bars.svg" alt="menu bar">
                     </label>
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="../imgs/logo.png" alt="FotoTop" class="logo">
                     </a>
                     <!--<label>
@@ -93,7 +93,7 @@ $revision = "";
                 </nav>
 
                 <h1 class="header-txt"> Administración</h1>
-                <a href="index.html" class="admin-inner-btn">Inicio</a>
+                <a href="index.php" class="admin-inner-btn">Inicio</a>
 
 
             </section>

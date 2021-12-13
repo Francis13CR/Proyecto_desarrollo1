@@ -65,12 +65,6 @@ if ($_POST) {
 
         <section class="inner-grid">
             <table class="">
-                <thead>
-                    <tr>
-                        <th>Categoria</th>
-                        <th>Imagenes</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <?php cat();?>
                 </tbody>
@@ -102,11 +96,6 @@ if ($_POST) {
                         foreach ($categorias as $categoria) {
                             $name = utf8_encode($categoria["name_category"]);
                             $total = $database->count("images", ["AND" => ["status" => 1, "id_category" => $categoria["id_category"]]]);
-                            //hacer una tabla de las categorias con el total de imagenes
-                            echo "<tr>";
-                            echo "<td>" . $name . "</td>";
-                            echo "<td>" . $total . "</td>";
-                            echo "</tr>";
 
                         }
                     }

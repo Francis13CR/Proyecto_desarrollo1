@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://allfont.es/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
     <link href="https://allfont.es/allfont.css?fonts=book-antiqua" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
     <title>FotoTop</title>
 </head>
 
@@ -20,10 +20,10 @@
                     <!--Menu de navegacion-->
                     <input id="menu" type="checkbox">
                     <label class="bars" for="menu">
-                        <img src="./imgs/index-imgs/svg/bars.svg" alt="menu bar">
+                        <img src="../imgs/index-imgs/svg/bars.svg" alt="menu bar">
                     </label>
-                    <a href="index.html">
-                        <img src="./imgs/logo.png" alt="FotoTop" class="logo">
+                    <a href="index.php">
+                        <img src="../imgs/logo.png" alt="FotoTop" class="logo">
                     </a>
             <!--<label>
 
@@ -42,13 +42,13 @@
         <section class="inner-grid inner-bg mt-3">
             <section class="inner-col">
                 <div>
-                    <img class="inner-img" src="./imgs/angryBird.jpg" alt="angryBird">
+                    <img class="inner-img ml-3" src="../imgs/angryBird.jpg" alt="angryBird">
                 </div>
                 <div class = "center-right">
                     <h3 class="admin-inner-title">Revisión</h3>
                     <p class="admin-inner-content">En este apartado se mostraran<br>los lugares que necesitan<br>revisión.
                     </p>
-                <a class="admin-inner-btn" href="admin-control.html">
+                <a class="admin-inner-btn" href="adminControl.php">
                     Ver mas
                 </a>
                 </div>
@@ -62,12 +62,12 @@
                 <div class="center-left">
                     <h3 class="admin-inner-title">Lista de registrados</h3>
                     <p class="admin-inner-content">En este apartado se veran a<br>las personas registradas.</p>
-                <a class="admin-inner-btn" href="admin-ussers.html">
+                <a class="admin-inner-btn" href="adminUssers.php">
                     Ver mas
                 </a>
                 </div>
                 <div>
-                    <img class="inner-img fr inner-img-left" src="./imgs/usser.JPG" alt="usser">
+                    <img class="inner-img-admin fr inner-img-left" src="../imgs/ussers.JPEG" alt="usser">
                 </div>
             </section>
         </section>
@@ -75,7 +75,7 @@
 
         <!--FOOTER-->
         <footer class="admin-footer mt-3">
-            <img src="./imgs/logo.png"  class="logo-footer" alt="logo">
+            <img src="../imgs/logo.png"  class="logo-footer" alt="logo">
         </footer>
         <!--FOOTER-->
     </section>

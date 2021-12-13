@@ -11,7 +11,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => ''    
+    'password' => '1609'    
 ]);
 
 ?>
@@ -142,7 +142,7 @@ if($_POST){
             ],[
                 "user_admin"=>$username
             ]);
-                header("Location: adminUssers.php");
+                header("Location: adminHome.php");
 
         }elseif(password_verify($password, $userAdmin['password']) ){
                 

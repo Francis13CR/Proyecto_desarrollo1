@@ -52,7 +52,7 @@ $database = new Medoo([
                     <label class="bars" for="menu">
                         <img src="../imgs/index-imgs/svg/bars.svg" alt="menu bar">
                     </label>
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="../imgs/social/logo.png" alt="FotoTop" class="logo">
                     </a>
                     <!--<label>
@@ -161,7 +161,7 @@ $database = new Medoo([
 
         <!--FOOTER-->
         <footer class="admin-footer mt-3">
-            <img src="./imgs/logo.png" class="logo-footer" alt="logo">
+            <img src="../imgs/logo.png" class="logo-footer" alt="logo">
         </footer>
         <!--FOOTER-->
     </section>
