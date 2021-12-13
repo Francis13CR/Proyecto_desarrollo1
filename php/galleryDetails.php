@@ -9,7 +9,7 @@
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => '1609'    
+    'password' => ''    
 ]);
 
 $data='';
@@ -35,6 +35,8 @@ if($_POST){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://allfont.es/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
     <link href="https://allfont.es/allfont.css?fonts=book-antiqua" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link rel="stylesheet" href="../css/galeryDetails.css">
     <title>Galery Details</title>
 </head>
@@ -53,6 +55,7 @@ if($_POST){
 
         <!--ABOUT-->
         <?php
+        session_start();
             foreach ($data as $image) {
                 //pasar la fecha de creacion a una fecha legible
                 $date = date_create($image['pub_date']);
@@ -63,6 +66,18 @@ if($_POST){
 
                 //mostrar la categoria a la que pertenece la imagen
                 $category = $database->select("places_category", "*", ["id_category" => $image['id_category']]);
+                 $id_user='';
+                        if (isset($_SESSION['user'])) {
+                               $id_user = $_SESSION['id'];
+                        }
+                    
+                       $voted= $database->select("images_likes", "*", ["id_place" => $image['id'], "id_user" => $id_user]);
+                        //si el usuario ha votado la imagen, mostrar el icono de votado
+                        if ($voted) {
+                            $icon = '<i class="material-icons">thumb_up</i>';
+                        } else {
+                            $icon = '<i class="material-icons">thumb_up_off_alt</i>';
+                        }
                
                 //mostrar el nombre de la categoria
                 foreach ($category as $cat) {
@@ -79,7 +94,11 @@ if($_POST){
 
                         echo ' <section class = "inner-grid">
                               <h1 class="title">'.$image['title'].'</h1>
-                                 <h2 class="votes">Votos: '.$votes.' </h2>
+                                 <h2 id ="votes" class="votes">Votos: '.$votes.' </h2>
+                                       <button id="vote'.$image['id'].'" type="submit" name="votar"
+                                     class="button btn-rigth " onclick="votacion('.$image['id'].')"   value=' . $image['id'] . '>'.$icon.'</button>
+                                                         
+                                                         
                                   <img src="../imgs/uploads/'.$image['main_image'].'" alt="'.$image['title'].'" class="img">
                                   <h3 class="subtitle mt-2 mb-1">
                                         Descripción: <br>
@@ -118,6 +137,69 @@ if($_POST){
         </footer>
         <!--FOOTER-->
     </section>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+    
+     //funcion para los votos de las imagenes
+        function votacion(id) {
+
+       
+        
+        fetch("votar.php", {
+                method: "POST",
+                mode: "same-origin",
+                credentials: "same-origin",
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(id)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data === 401) {
+                    swal.fire({
+                        title: 'Debes iniciar sesion para poder votar',
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Iniciar sesion'
+                    }).then((result) => {
+                        if (result.value) {
+                            window.location.href = "login.php";
+                        }
+                    })
+                }
+                if (data === 200) {
+                    
+                   //si ya vota entonces el icono cambia a votado
+                
+                    btn = document.getElementById("vote"+id);
+                    //cambiar el icono a votado a la imagen
+                    if (btn.innerHTML === '<i class="material-icons">thumb_up_off_alt</i>') {
+                        btn.innerHTML = '<i class="material-icons">thumb_up</i>';
+                        //sumar al contador de votos
+                        vote = document.getElementById("votes");
+                        vote.innerHTML = "Votos: " + (parseInt(vote.innerHTML.split(":")[1]) + 1);
+                        
+                    } else {
+                        btn.innerHTML = '<i class="material-icons">thumb_up_off_alt</i>';
+                        //restar al contador de votos
+                        vote = document.getElementById("votes");
+                        vote.innerHTML = "Votos: " + (parseInt(vote.innerHTML.split(":")[1]) - 1);
+                    }
+
+
+                
+                    
+                }
+            })
+
+
+    }
+
+    </script>
 </body>
 
 </html>

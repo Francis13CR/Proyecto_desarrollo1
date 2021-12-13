@@ -60,6 +60,7 @@ body {
     border-radius: .3em;
     padding: .2em 1em .2em 1em;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .img-first {
@@ -84,6 +85,10 @@ body {
 .btn-rigth{
     position: relative;
     left: 4em;
+}
+.btn-ver{
+    position: relative;
+    left: 46.3%;
 }
 
 .margin{margin: 2em}

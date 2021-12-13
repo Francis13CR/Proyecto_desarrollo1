@@ -1,3 +1,41 @@
+<?php
+    namespace Medoo;
+
+    require 'Medoo.php';
+
+    //base de francis
+  $database = new Medoo([
+    'database_type' => 'mysql',
+    'database_name' => 'fototop',
+    'server' => 'localhost',
+    'username' => 'root',
+    'password' => ''    
+]);
+
+//hacer
+
+//mostrar el top 10 de las fotos mas votadas mediante id_place repetido
+
+
+
+$top10= $database->select("images_likes", "*", [
+    "GROUP" => ["images_likes.id_place"],
+    //ordenar mediante la repeticion de id_place
+    "ORDER" => Medoo::raw("COUNT(images_likes.id_place) DESC"),
+    
+    "LIMIT" => 10
+]);
+
+
+
+
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +45,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://allfont.es/allfont.css?fonts=agency-fb" rel="stylesheet" type="text/css" />
     <link href="https://allfont.es/allfont.css?fonts=book-antiqua" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
     <link rel="stylesheet" href="../css/topTen.css">
     <title>TopTen</title>
 </head>
@@ -28,93 +69,36 @@
                 <h1 class="title">
                     Top 10 lugares mas votados
                 </h1>
-
-                <!--primer lugar-->
                 <div>
-                    <img src="../imgs/index-imgs/cocodrile.jpg" alt="Una vista al cocodrilito" class="img-first">
-                    <h2 class="subtitle font-2 mb-1">
-                        1. Un cocodrilito
-                    </h2>
-                </div>
+                <?php
+                //recorrer el array de top10
+                foreach ($top10 as $image) {
+                        //seleccionar la imagen
+                        $image_path = $database->select("images", "*", ["id" => $image["id_place"]]);
+                        //contar los votos que tiene la imagen
+                         $votes = $database->count("images_likes", ["id_place" => $image['id_place']]);
+                           $icon = '<i class="material-icons">thumb_up</i>';
+                       //mostrar la imagen
+                       foreach ($image_path as $image_path) {
+                               echo "<img src='../imgs/uploads/".$image_path['main_image']."' alt='".$image_path['title']."' class='img-first'>";
+                                //mostrar el titulo de la foto
+                                echo "<h2 class='subtitle font-2 mb-1'>".$image_path['title']."</h2>";
+                 
+                                //mostrar el numero de likes
+                                echo "<p class='subtitle font-2 mb-1'>".$votes.' '. $icon."</p>";
+                                echo  '<form action="galleryDetails.php" method="post"> <button type="submit" name="ver"
+                                                                class="centered button btn-ver" value=' . $image_path['id'] . '>Ver mas </button>
+                                                            </form>';
+                        }
+                
+                }
 
-                <div class="inner-col margin">
-                    <!--segundo lugar-->
-                    <div>
-                        <img src="imgs/Top10-imgs/segundoLugar.jpg" alt="Un lindo atardecer" class="img">
-                        <h3 class = "subtitle font-1">
-                            2. Un lindo atardecer
-                        </h3>
-                    </div>
 
-                    <!--tercerlugar-->
-                    <div>
-                        <img src="imgs/Top10-imgs/tercerLugar.jpg" alt="Lo lindo del cielo" class="img">
-                        <h3 class = "subtitle font-1">
-                            3. Lo lindo del cielo
-                        </h3>
-                    </div>
+                ?>
+                 </div>
+              
 
-                    <!--cuarto lugar-->
-                    <div>
-                        <img src="imgs/Top10-imgs/cuartoLugar.jpg" alt="Noche estrellada" class="img">
-                        <h3 class = "subtitle font-1">
-                            4. Noche estrellada
-                        </h3>
-                    </div>
-                </div>
-
-                <div class = "inner-col margin">
-                    <!--quinto lugar-->
-                    <div>
-                        <img src="imgs/Top10-imgs/quintoLugar.jpg" alt="Un pequeño pájaro" class="img">
-                        <h3 class = "subtitle font-1">
-                            5. Un pequeño pájaro
-                        </h3>
-                    </div>
-
-                    <!--sexto lugar-->
-                    <div>
-                        <img src="imgs/Top10-imgs/sextoLugar.jpg" alt="Amanecer en las montañas" class = "img">
-                        <h3 class = "subtitle font-1">
-                            6. Amanecer en las montañas
-                        </h3>
-                    </div>
-
-                    <!--setimo lugar-->
-                    <div>
-                        <img src="imgs/Top10-imgs/setimoLugar.jpg" alt="Convivencia" class = "img">
-                        <h3 class = "subtitle font-1">
-                            7. Convivencia
-                        </h3>
-                    </div>
-                </div>
-
-                <div class = "inner-col margin">
-                    <!--octavo lugar-->
-                    <div>
-                        <img src="imgs/Top10-imgs/octavoLugar.jpg" alt="Hora de comer" class = "img">
-                        <h3 class = "subtitle font-1">
-                            8. Hora de comer
-                        </h3>
-                    </div>
-
-                    <!--noveno lugar-->
-                    <div>
-                        <img src="imgs/Top10-imgs/novenoLugar.jpg" alt="La vida en el mar" class = "img">
-                        <h3 class = "subtitle font-1">
-                            9. La vida en el mar
-                        </h3>
-                    </div>
-
-                    <!--decimo lugar-->
-                    <div>
-                        <img src="imgs/Top10-imgs/decimoLugar.jpg" alt="En la montaña" class = "img">
-                        <h3 class = "subtitle font-1 mb-1">
-                            10. En la montaña
-                        </h3>
-                    </div>
-                </div>
-
+               
 
                 <!--BUTTONS-->
                 <div class="centered">
