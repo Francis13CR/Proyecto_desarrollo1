@@ -73,7 +73,7 @@ $database = new Medoo([
                 <div class="df">
                     <button type="submit" class="btn cursor centered-flex">Registrarse</button>
                 </div>
-                <button href="index.html" class="btn cursor centered-flex">Volver
+                <button href="index.html" class="btn cursor centered-flex mb-1">Volver
                 </button>
 
 
