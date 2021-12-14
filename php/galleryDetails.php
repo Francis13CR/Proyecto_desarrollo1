@@ -9,7 +9,7 @@
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => '1609'    
+    'password' => ''    
 ]);
 
 $data='';
@@ -118,7 +118,7 @@ if($_POST){
 
                                         <!--BUTTONS-->
                                         <div class= "mt-3">
-                                            <a href="gallery.php" class="button btn-left">Volver</a>
+                                            <a  href="'.$_SERVER["HTTP_REFERER"].'"class="button btn-left">Volver</a>
                                             <a href="index.php" class="button btn-rigth">Inicio</a>
                                         </div>
 
