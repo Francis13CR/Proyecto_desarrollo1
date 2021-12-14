@@ -20,7 +20,7 @@ if(isset($_SESSION['login'])){
     if(isset($_SESSION['user'])){
         $usuario = $_SESSION['user'];
       
-    }else{
+    }elseif(isset($_SESSION['user_admin'])){
         $usuarioAdmin=$_SESSION['user_admin'];
     }
 }
