@@ -69,7 +69,7 @@ $top10= $database->select("images_likes", "*", [
                 <h1 class="title">
                     Top 10 lugares mas votados
                 </h1>
-                <div>
+                <div class = "mb-1">
                 <?php
                 //recorrer el array de top10
                 foreach ($top10 as $image) {
@@ -87,7 +87,7 @@ $top10= $database->select("images_likes", "*", [
                                 //mostrar el numero de likes
                                 echo "<p class='subtitle font-2 mb-1'>".$votes.' '. $icon."</p>";
                                 echo  '<form action="galleryDetails.php" method="post"> <button type="submit" name="ver"
-                                                                class="centered button btn-ver" value=' . $image_path['id'] . '>Ver mas </button>
+                                                                class="centered button mb-3 btn-ver " value=' . $image_path['id'] . '>Ver mas </button>
                                                             </form>';
                         }
                 
@@ -101,8 +101,8 @@ $top10= $database->select("images_likes", "*", [
                
 
                 <!--BUTTONS-->
-                <div class="centered">
-                    <a href="#" class="button btn-left">Volver</a>
+                <div class="centered mt-6">
+                    <a href="index.php" class="button btn-left">Volver</a>
                     <a href="index.php" class="button btn-rigth">Inicio</a>
                 </div>
 
@@ -112,7 +112,7 @@ $top10= $database->select("images_likes", "*", [
 
         <!--FOOTER-->
         <footer class="bottom-square">
-            <img src="./imgs/social/logo.png" alt="FotoTop" class="logo">
+            <img src="../imgs/social/logo.png" alt="FotoTop" class="logo">
         </footer>
         <!--FOOTER-->
     </section>
