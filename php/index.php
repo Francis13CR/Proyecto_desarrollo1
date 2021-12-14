@@ -10,16 +10,18 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => '1609'    
+    'password' => ''    
 ]);
 
 $login = false;
 session_start();
 if(isset($_SESSION['login'])){
       $login = $_SESSION['login'];
-    if($_SESSION['login']==true){
+    if(isset($_SESSION['user'])){
         $usuario = $_SESSION['user'];
       
+    }else{
+        $usuarioAdmin=$_SESSION['user_admin'];
     }
 }
 //insertar las categorias en la tabla si aun no estan creadas
@@ -141,9 +143,13 @@ if(empty($Otros)){
                 <?php if(!$login){?> 
                 <a id="log" class="log-btn mt-9" href="login.php">Iniciar sesión</a>
                 <a id="regis" class="log-btn mt-1" href="singup.php">Registrarse</a>
-                <?php }else{?>
-                <p class="log-btn mt-9" > Bienvenido <a href = ./profile.php> <?php echo $usuario?> </a> </p>    
-                <a id="log" class="log-btn mt-1" href="logout.php">Cerrar sesión</a>
+                <?php }else{     
+                    if(isset($_SESSION['user'])){?>
+                        <p class="log-btn mt-9" > Bienvenido <a href = ./profile.php> <?php echo $usuario?> </a> </p>  
+                        <?php }else{?>
+                        <p class="log-btn mt-9" > Bienvenido Admin <?php echo $usuarioAdmin?> </p>
+                        <?php }?>  
+                        <a id="log" class="log-btn mt-1" href="logout.php">Cerrar sesión</a>
                 <?php }?>
             </section>
         </header>
@@ -165,7 +171,8 @@ if(empty($Otros)){
             </section>
         </section>
         <!--GALERIA-->
-
+        
+        <?php if(!isset($_SESSION['user_admin'])){?>
         <!--FORMULARIO-->
         <section class="inner-grid inner-bg mt-3">
             <section class="inner-col mt-3">
@@ -181,6 +188,22 @@ if(empty($Otros)){
             </section>
         </section>
         <!--FORMULARIO-->
+        <?php }else{?>
+               <section class="inner-grid inner-bg mt-3">
+            <section class="inner-col mt-3">
+                <div class="center-left">
+                    <h3 class="inner-title">Modulo administrativo</h3>
+                    <p id="forms" class="inner-content">Aquí podras revisar los<br>lugares enviados<br> y consultar los usuarios registrados.</p>
+                    <a class="inner-btn" href="adminHome.php">ir a administracion</a>
+                    
+                </div>
+                <div>
+                    <img class="inner-img fr inner-img-left" src="../imgs/ussers.JPEG" alt="admin users">
+                </div>
+            </section>
+        </section>
+        <?php }?>
+
 
         <!--TOP 10-->
         <section class="inner-grid inner-bg mt-3">
