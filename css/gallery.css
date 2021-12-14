@@ -56,9 +56,9 @@ body {
 .inner-grid {
     width: 90%;
     position: relative;
-    bottom: 30em;
+    bottom: 0em;
     left: 4.5em;
-    padding-bottom: 5em;
+    padding-bottom: 1em;
 
 }
 
@@ -249,6 +249,26 @@ body {
     left: 45%;
 }
 
+
+@media(max-width: 1540px) {
+.inner-grid{
+    padding-bottom: 1em;
+}
+.image {
+
+
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+
+
+}
+ 
+
+}
+
+
+
 @media (min-width: 1440px) {
     .top-section {
 
@@ -277,7 +297,7 @@ body {
         position: relative;
         bottom: 0em;
 
-        padding-bottom: 5em;
+        padding-bottom: 0em;
 
     }
 
@@ -370,6 +390,7 @@ body {
 }
 
 
+
 @media (max-width: 1440px) {
     .top-section {
         width: 100%;
@@ -392,7 +413,7 @@ body {
     .inner-grid {
         position: relative;
         bottom: 0em;
-        padding-bottom: 5em;
+        padding-bottom: 0em;
     }
 
     .card {
@@ -502,7 +523,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
     .top-section {
         width: 100%;
         height: 100%;
@@ -530,7 +551,7 @@ body {
     .inner-grid {
         position: relative;
         bottom: 0em;
-        padding-bottom: 9em;
+        padding-bottom: 0em;
     }
 
     .card {
@@ -628,6 +649,12 @@ body {
         text-align: center;
         left: 49em;
     }
+    .buscar{
+        position: relative;
+        top: -1em;
+        left: 8em;
+    }
+    
 
     .logo-footer {
         position: relative;
@@ -640,140 +667,162 @@ body {
 /* tablets*/
 @media (max-width: 1024px) {
 
-    .top-section {
-        width: 100%;
-        height: 80%;
-        background-size: cover;
-        padding-bottom: 10em;
-        background-size: 100% 60%;
-    }
+     .top-section {
+         width: 115%;
+         height: 90%;
+         background-size: cover;
+         padding-bottom: 1em;
+   
+     }
 
-    .logo {
-        padding: 1em 0 0 2em;
-    }
+     .form-title {
+         font-size: 1.5em;
+         padding-bottom: 1em;
+     }
 
-    .top-title {
-        position: relative;
-        left: 16em;
-        bottom: 1.5em;
-        font-size: 2.5em;
-    }
+     .form-item {
+         font-size: 1.5em;
+     }
 
-    .top-p {
-        font-size: 1em;
-        position: relative;
-        bottom: 6.5em;
-    }
+     .logo {
+         padding: 1em 0 0 1em;
+     }
 
-    .inner-grid {
-        position: relative;
-        bottom: 0em;
-        width: 100%;
-        padding-bottom: 10em;
-    }
+     .top-title {
+         top: 1em;
+       left: 5em;
+     }
+
+     .top-p {
+         font-size: 1.2em;
+         position: relative;
+         bottom: 0em;
+         right: 9em;
+     }
+
+     .inner-grid {
+         position: relative;
+         bottom: 0em;
+         padding-bottom: 0em;
+     }
+
+     .card {
+
+         margin: 0em;
+         margin-top: 1em;
+         padding: .5em;
+
+         width: 95%;
+
+         right: 4.5em;
+     }
+
+     .image {
+         width: 95%;
+         height: 100%;
+         border-radius: 5px;
+         position: relative;
+         left: 0em;
+         top: 0em;
+     }
+
+     .inner-col {
+         display: inherit;
+     }
+
+     
+     .inner-title {
+         font-size: 1.5em;
+         position: relative;
+         text-align: center;
+         left: -2.5em;
+         top: 3em;
+     }
+
+     .inner-p {
+         font-size: .8em;
+         position: relative;
+         top: 5em;
+         text-align: center;
+         left: 1.5em;
+         color: #5e827f;
+     }
+
+     .inner-title-right {
+         font-size: 1.5em;
+         position: relative;
+         text-align: center;
+         left: 33.5em;
+         top: 4em;
+     }
+
+     .inner-p-right {
+         font-size: .8em;
+         position: relative;
+         top: 8em;
+         text-align: center;
+         left: 63em;
+     }
+
+     .inner-content {
+         flex: 1;
+         padding: 1em;
+         position: relative;
+         top: -5em;
+         right: 1em;
+     }
+
+     .inner-content-right {
+         flex: 1;
+         padding: 1em;
+         position: relative;
+         bottom: 5em;
+         right: 50em;
+     }
 
 
-    .card {
-        width: 100%;
-        border-radius: 5px;
-        margin: 0em;
-        margin-top: 1em;
-        padding: 0em;
-        position: relative;
-        right: 4em;
-        top: 2em;
-    }
+     .btn {
+         font-size: 1em;
+         position: relative;
+         top: 1em;
+         left: 9em;
+         text-align: center;
+     }
 
-    .image {
-        width: 95%;
-        height: 100%;
-        border-radius: 5px;
-        position: relative;
-        left: 0em;
-        top: 0em;
-    }
-
-    .inner-col {
-        display: inherit;
-    }
-
-    .image-right {
-        width: 95%;
-        height: 100%;
-        border-radius: 5px;
-        position: relative;
-        left: 1em;
-        top: 1em;
-    }
-
-    .inner-title {
-        font-size: 1.5em;
-        position: relative;
+     .btn-vote {
+         margin: 1em 0em 0em 4.7em;
+         font-size: 1em;
         text-align: center;
-        left: -2.5em;
-        top: 3em;
-    }
-
-    .inner-p {
-        font-size: .8em;
         position: relative;
-        top: 5em;
-        text-align: center;
-        left: 1.5em;
-        color: #5e827f;
-    }
+        top: 1.5em;
+        left: 10em;
+     }
 
-    .inner-title-right {
-        font-size: 1.5em;
-        position: relative;
-        text-align: center;
-        left: 33.5em;
-        top: 4em;
-    }
+     .buscar {
+         left: 1em;
+         top: 0em;
+     }
 
-    .inner-p-right {
-        font-size: .8em;
-        position: relative;
-        top: 8em;
-        text-align: center;
-        left: 63em;
-    }
+     .btn-right {
+         font-size: 1em;
+         position: relative;
+         top: 4em;
+         text-align: center;
+         left: 44em;
+     }
 
-    .inner-content {
-        flex: 1;
-        padding: 1em;
-        position: relative;
-        top: -5em;
-        right: 1em;
-    }
+     .footer {
+         position: relative;
+         left: -5em;
+         bottom: 0em;
+         height: 3em;
+         width: 115%;
+     }
 
-    .inner-content-right {
-        flex: 1;
-        padding: 1em;
-        position: relative;
-        bottom: 5em;
-        right: 50em;
-    }
-
-    .btn {
-        font-size: 1em;
-        position: relative;
-        top: 3em;
-        right: 5em;
-    }
-
-    .btn-right {
-        font-size: 1em;
-        position: relative;
-        top: 4em;
-        text-align: center;
-        left: 44em;
-    }
-
-    .logo-footer {
-        position: relative;
-        left: 40%;
-    }
+     .logo-footer {
+         width: 20%;
+         right: 5em;
+     }
 }
 
 /* cel*/
@@ -783,6 +832,13 @@ body {
         height: 80%;
         background-size: cover;
         padding-bottom: 1em;
+    }
+    .form-title {
+        font-size: 1em;
+    }
+
+    .form-item {
+        font-size: 1em;
     }
 
     .logo {
@@ -800,22 +856,25 @@ body {
         font-size: 1em;
         position: relative;
         bottom: 2.5em;
-        right: 1.2em;
+        right: 2.5em;
     }
 
     .inner-grid {
         position: relative;
         bottom: 0em;
-        padding-bottom: 9em;
+        padding-bottom: 0em;
     }
 
     .card {
-        width: 100%;
+        
         margin: 0em;
         margin-top: 1em;
         padding: .5em;
-        position: relative;
-        right: 5em;
+        
+         width: 95%;
+         position: relative;
+
+         right: 4em;
     }
 
     .image {
@@ -888,13 +947,24 @@ body {
         bottom: 5em;
         right: 50em;
     }
+    
 
     .btn {
-        font-size: 1em;
-        position: relative;
-        top: 3em;
-        right: 5em;
+           font-size: 1em;
+           position: relative;
+           top: 1em;
+           left: 5em;
+           text-align: center;
     }
+    .btn-vote {
+        margin: 1em 0em 0em 4.7em;
+
+        text-align: center;
+    }
+     .buscar {
+         left: -1em;
+         top: 0em;
+     }
 
     .btn-right {
         font-size: 1em;
@@ -904,34 +974,116 @@ body {
         left: 44em;
     }
 
-    .logo-footer {
-        position: relative;
-        left: 30%;
-    }
+     .footer {
+         position: relative;
+         left: -6em;
+         bottom: 0em;
+         height: 3em;
+         width: 105%;
+     }
+
+     .logo-footer {
+         width: 40%;
+         right: 8em;
+     }
 }
 
-@media (max-width: 362px) {
-    .top-title {
+@media (max-width: 425px) {
+    .image {
+        width: 95%;
+        height: 100%;
+        border-radius: 5px;
         position: relative;
-        left: 5.5em;
-        bottom: 0em;
-        font-size: 2.5em;
+        left: 0em;
+        top: 0em;
     }
-
-    .top-p {
+    
+    .card{
+        width: 95%;
+        position: relative;
+        
+        right: 4em;
+    }
+    .top-title{
+        font-size: 2.4em;
+    }
+    .top-p{
         font-size: 1em;
         position: relative;
-        bottom: 2.5em;
-        right: 1.2em;
+        bottom: 0em;
+        right: 2.5em;
     }
-
-
-    .logo-footer {
+    .btn-vote{
+        font-size: 1em;
         position: relative;
-        left: 24%;
+        top: 1em;
+        left: 3.5em;
+    }
+.inner-title {
+    font-size: 1.4em;
+}
+
+    .form-title {
+      font-size: 1em;
+    }
+    .form-item {
+      font-size: 1em;
+    }
+    .btn {
+        font-size: 1em;
+        position: relative;
+        top: 1em;
+        left: 3.5em;
+        text-align: center;
+    }
+    .buscar{
+        left: 1em;
+        top: 0em;
+    }
+    .btn-vote{
+        margin: 1em 0em 0em 4.4em;
+       
+        text-align: center;
+    }
+    .footer{
+        position: relative;
+        left: -5.5em;
+        bottom: 0em;
+        height: 3em;
+        width: 120%;
+    }
+      .logo-footer {
+          width:40%;
+          right:8em;
+      }
+      .inner-grid {
+        
+        padding-bottom: 0em;
+      }
+}
+@media (max-width: 325px) {
+    .top-title{
+        font-size: 2em;
     }
 
     .card {
-        right: 5em;
+        width: 100%;
+
+        right: 3.5em;
     }
+    .inner-title{
+        font-size: 1.4em;
+    }
+
+   .top-section{
+       width: 115%;
+   }
+   .footer {
+       position: relative;
+       left: -3.5em;
+       bottom: 0em;
+       height: 3em;
+       width: 105%;
+   }
+   
 }
