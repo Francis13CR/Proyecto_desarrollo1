@@ -31,7 +31,7 @@ body {
     height: 86vh;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 10em;
+    padding-bottom: 20em;
 }
 
 .title {
@@ -242,66 +242,15 @@ body {
 
 }
 
-@media(max-width: 420px) {
 
-    .background-img {
-        background-size: cover;
-        padding-top: 3em;
-        padding-bottom: 25%;
-    }
-
-    .btn {
-        font-size: .9em;
-        margin-top: 2em
-    }
-
-    .btn-left {
-        top: 0.2em;
-    }
-
-    .form-label {
-        font-size: 1.6em;
-        margin-left: .2em;
-    }
-
-    .form-input {
-        width: 50%;
-        margin-left: 0em;
-        padding: 0.1em 2em;
-    }
-
-    .form-group {
-        margin-left: 0em;
-    }
-
-    .title {
-        font-size: 1.7em;
-        margin-top: .5em;
-        margin-bottom: 2em;
-    }
-
-    .form-container {
-        width: 70%;
-        margin-top: 2em;
-        padding-bottom: 20%;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    .alert {
-        font-size: .8em;
-        right: 7em;
-        top: -15em;
-    }
-
+@media(max-width: 428px) {
+.dif {
+    display: flow-root list-item;
 }
-
-@media(max-width: 420px) {
-
     .background-img {
         background-size: cover;
         padding-top: 3em;
-        padding-bottom: 30%;
+        padding-bottom: 62%;
     }
 
     .btn {
@@ -315,7 +264,7 @@ body {
     }
 
     .form-input {
-        width: 50%;
+        width: 80%;
         margin-left: 2em;
         padding: 1em;
     }
@@ -333,7 +282,7 @@ body {
     .form-container {
         width: 70%;
         margin-top: 2em;
-        padding-bottom: 20%;
+        padding-bottom: 62%;
         padding-left: 10%;
         padding-right: 10%;
     }
@@ -367,13 +316,18 @@ body {
         font-size: 1.5em;
         margin-left: .1em;
         margin-right: 1em;
+        right: 2em;
     }
 
-    .form-input {
-        width: 30%;
-        padding: .4em 4em;
-    }
-
+ .form-input {
+     width: 40%;
+     margin-left: auto;
+     margin-top: 2em;
+     margin-bottom: 2em;
+     padding: 1em;
+     position: relative;
+     right: 6em;
+ }
     .form-group {
         margin-left: 0em;
     }
@@ -397,15 +351,18 @@ body {
         right: 7em;
         top: -15em;
     }
-
+.dif {
+    display: block ruby;
+}
 }
 
 @media(max-width: 360px) {
 
+ 
     .background-img {
         background-size: cover;
         padding-top: 3em;
-        padding-bottom: 20%;
+        padding-bottom: 62%;
     }
 
     .btn {
