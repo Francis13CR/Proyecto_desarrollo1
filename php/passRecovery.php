@@ -13,35 +13,6 @@ $database = new Medoo([
     'password' => ''    
 ]);
 
-$data=$database->select("users","*");
-$password = "";
-$username = "";
-$user_exist = false;
-$err = "";
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    for($i = 0; $i < count($data); $i++){
-        if($data[$i]["username"] == $_POST['username']){
-            $user_exist = true;
-            $username = $_POST['username'];
-        }
-    }
-    if(isset($_POST['username']) && isset($_POST['password'])){
-        if($user_exist){
-            $password = $_POST ['password'];
-            $password = password_hash($password, PASSWORD_DEFAULT);
-            $database->update("users", 
-            ['password' => $password
-            ], ['username' => $_POST['username']
-            ]);
-        }else{
-            $err = "El usuario no existe";
-        }
-    }else{
-        $err = "Porfavor llene todos los espacios";
-    }
-}
-
 
 ?>
 
@@ -82,9 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     <label for="password" class="label-text">Ingrese su nueva contraseña</label>
                     <input class="form-item" type="password" id=password name="password">
                 </div>
-                <div class="inner-grid ">
-                    <span class="error-text"><?php echo $err?></span>
-                </div>
+            
                 <div class="centered ">
                     <input class="recovery-button" type="submit" value="Recuperar contraseña">
                 </div>
@@ -98,4 +67,87 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </section>
 </body>
 
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+     <script>
+         function alert(id){
+            if(id ==1){
+                let timerInterval
+        Swal.fire({
+            title: 'cambio de contraseña exitoso!',
+            html: 'Redireccionando al inicio de sesion...',
+            imageUrl: '../imgs/index-imgs/cocodrile.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: () => {
+                Swal.showLoading()
+            
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            }
+        }).then((result) => {
+           
+            if (result.dismiss === Swal.DismissReason.timer) {
+                window.location.href = "login.php";
+            }
+        })
+
+            }else if(id == 2){
+                Swal.fire({
+                title: 'Error',
+                text: 'No se pudo cambiar la contraseña, el usuario digitado no se encuentra registrado en el sistema',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            })
+            }else if(id == 3){
+                Swal.fire({
+                title: 'Error',
+                text: 'Por favor llene todos los campos',
+                icon: 'error',
+                confirmButtonText: 'Aceptar'
+            })
+            }
+        }
+
+     </script>
+
+
 </html>
+
+<?php
+
+$data=$database->select("users","*");
+$password = "";
+$username = "";
+$user_exist = false;
+$err = "";
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    for($i = 0; $i < count($data); $i++){
+        if($data[$i]["username"] == $_POST['username']){
+            $user_exist = true;
+            $username = $_POST['username'];
+        }
+    }
+    if(isset($_POST['username']) && isset($_POST['password'])){
+        if($user_exist){
+            $password = $_POST ['password'];
+            $password = password_hash($password, PASSWORD_DEFAULT);
+            $database->update("users", 
+            ['password' => $password
+            ], ['username' => $_POST['username']
+            ]);
+            echo "<script>alert(1)</script>";
+        }else{
+            echo "<script>alert(2);</script>";
+        }
+    }else{
+      echo '<script>alert(3);</script>';
+    }
+}
+
+
+
+?>

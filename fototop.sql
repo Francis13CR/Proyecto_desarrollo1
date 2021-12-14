@@ -30,9 +30,11 @@ CREATE TABLE IF NOT EXISTS `images` (
   `id_admin_accept` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `ID_Autor` (`autor`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla fototop.images: ~10 rows (aproximadamente)
+/*!40000 ALTER TABLE `images` DISABLE KEYS */;
+/*!40000 ALTER TABLE `images` ENABLE KEYS */;
 
 -- Volcando estructura para tabla fototop.images_likes
 CREATE TABLE IF NOT EXISTS `images_likes` (
@@ -41,18 +43,31 @@ CREATE TABLE IF NOT EXISTS `images_likes` (
   `id_place` int(11) NOT NULL,
   `date_accepted` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=latin1;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla fototop.images_likes: ~6 rows (aproximadamente)
+/*!40000 ALTER TABLE `images_likes` DISABLE KEYS */;
+/*!40000 ALTER TABLE `images_likes` ENABLE KEYS */;
 
 -- Volcando estructura para tabla fototop.places_category
 CREATE TABLE IF NOT EXISTS `places_category` (
   `id_category` int(11) NOT NULL AUTO_INCREMENT,
   `name_category` text CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_category`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla fototop.places_category: ~8 rows (aproximadamente)
+/*!40000 ALTER TABLE `places_category` DISABLE KEYS */;
+INSERT INTO `places_category` (`id_category`, `name_category`) VALUES
+	(1, 'Montaña'),
+	(2, 'Animales'),
+	(3, 'Ciudad'),
+	(4, 'Playa'),
+	(11, 'Cultura'),
+	(12, 'Deporte'),
+	(13, 'Naturaleza'),
+	(14, 'Otros');
+/*!40000 ALTER TABLE `places_category` ENABLE KEYS */;
 
 -- Volcando estructura para tabla fototop.users
 CREATE TABLE IF NOT EXISTS `users` (
@@ -64,9 +79,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   `last_login` datetime NOT NULL,
   `date_created` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla fototop.users: ~4 rows (aproximadamente)
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`id`, `full_name`, `username`, `email`, `password`, `last_login`, `date_created`) VALUES
+	(17, '1234', '1234', 'ssssw@gmail.com', '$2y$10$r5MMuQp5CzzqMBDhwfjJZOMbhbe5R8G10XPO2JfuVCwWuL19770eS', '2021-12-14 19:48:45', '2021-12-10 19:49:47');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Volcando estructura para tabla fototop.user_admin
 CREATE TABLE IF NOT EXISTS `user_admin` (
@@ -78,7 +97,11 @@ CREATE TABLE IF NOT EXISTS `user_admin` (
   PRIMARY KEY (`id_admin`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
--- La exportación de datos fue deseleccionada.
+-- Volcando datos para la tabla fototop.user_admin: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `user_admin` DISABLE KEYS */;
+INSERT INTO `user_admin` (`id_admin`, `user_admin`, `email`, `password`, `last_login`) VALUES
+	(1, '123', '123@ucr.ac.cr', '12', '2021-12-14 19:40:42');
+/*!40000 ALTER TABLE `user_admin` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;

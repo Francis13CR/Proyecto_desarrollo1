@@ -127,7 +127,7 @@ if($_POST){
             "username"=>$username
         ]);
 
-        var_dump($password);
+        //var_dump($password);
 
 
     if($userAdmin){
