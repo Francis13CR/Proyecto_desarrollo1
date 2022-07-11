@@ -11,7 +11,7 @@ $database = new Medoo([
     'database_name' => 'fototop',
     'server' => 'localhost',
     'username' => 'root',
-    'password' => ''    
+    'password' => '1609'    
 ]);
 
 ?>
@@ -28,7 +28,7 @@ $database = new Medoo([
 
 <body>
 
-<section class="container  ">
+<section class="container">
     <!--HEADER-->
         <header class="logo">
             <a href="index.php">
@@ -52,7 +52,8 @@ $database = new Medoo([
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="password"></label>
-                        <input class="form-input mt-1" id="password" type="password" placeholder="Ingrese la contraseña" id="password"
+                        <input class="form-input mt-1" id="password" type="password" 
+                        placeholder="Ingrese la contraseña" id="password"
                             name="password" required>
                     </div>
                       <button type="submit" class="btn cursor centered mt-3">Iniciar sesión</button>
@@ -62,7 +63,8 @@ $database = new Medoo([
                     
                             <a href="singup.php" class="btn cursor">Registrarse</a>
 
-                            <a href="PassRecovery.php" class="side-margin-auto btn cursor ">Restablecer la contraseña</a>
+                            <a href="PassRecovery.php" 
+                            class="side-margin-auto btn cursor">Restablecer la contraseña</a>
                     </div>
                     
                 </section>
